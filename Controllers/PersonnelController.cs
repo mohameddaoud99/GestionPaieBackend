@@ -48,10 +48,35 @@ namespace PaieBack.Controllers
             }
             return Ok(new { status = 200, isSuccess = true, message = "Ajouter", EmployeeDetails = utilisateur });
 
-
-
-
         }
+
+        [HttpPut, ActionName("Putuserpaie")]
+        [Route("Putuserpaie")]
+        public IHttpActionResult Putuserpaie(string compteuser, utilisateur u)
+        {
+
+
+       
+            var utilisateur = userpaie.Set<utilisateur>().Where(c => c.compteuser == compteuser).First();
+
+
+            utilisateur.motdepasse = u.motdepasse;
+            
+
+            try
+            {
+                userpaie.SaveChanges();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+
+                return NotFound();
+
+            }
+
+            return Ok(utilisateur);
+        }
+
         [HttpGet, ActionName("mat")]
         [Route("mat")]
         public string mat()
