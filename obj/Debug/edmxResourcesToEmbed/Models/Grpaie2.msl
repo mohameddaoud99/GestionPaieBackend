@@ -1,0 +1,1609 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="grpaie2ModelStoreContainer" CdmEntityContainer="grpaie2Entities">
+    <EntitySetMapping Name="affectation">
+      <EntityTypeMapping TypeName="grpaie2Model.affectation">
+        <MappingFragment StoreEntitySet="affectation">
+          <ScalarProperty Name="CodAff" ColumnName="CodAff" />
+          <ScalarProperty Name="DesiAff" ColumnName="DesiAff" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="atelier">
+      <EntityTypeMapping TypeName="grpaie2Model.atelier">
+        <MappingFragment StoreEntitySet="atelier">
+          <ScalarProperty Name="codatelier" ColumnName="codatelier" />
+          <ScalarProperty Name="libelleatelier" ColumnName="libelleatelier" />
+          <ScalarProperty Name="sel" ColumnName="sel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="autrepoint">
+      <EntityTypeMapping TypeName="grpaie2Model.autrepoint">
+        <MappingFragment StoreEntitySet="autrepoint">
+          <ScalarProperty Name="rubrique" ColumnName="rubrique" />
+          <ScalarProperty Name="libelle" ColumnName="libelle" />
+          <ScalarProperty Name="montant" ColumnName="montant" />
+          <ScalarProperty Name="matr" ColumnName="matr" />
+          <ScalarProperty Name="nomprenom" ColumnName="nomprenom" />
+          <ScalarProperty Name="codfich" ColumnName="codfich" />
+          <ScalarProperty Name="codchantier" ColumnName="codchantier" />
+          <ScalarProperty Name="annee" ColumnName="annee" />
+          <ScalarProperty Name="mois" ColumnName="mois" />
+          <ScalarProperty Name="confirme" ColumnName="confirme" />
+          <ScalarProperty Name="nummois" ColumnName="nummois" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="banque">
+      <EntityTypeMapping TypeName="grpaie2Model.banque">
+        <MappingFragment StoreEntitySet="banque">
+          <ScalarProperty Name="Codbanque" ColumnName="Codbanque" />
+          <ScalarProperty Name="numcompte" ColumnName="numcompte" />
+          <ScalarProperty Name="Modele" ColumnName="Modele" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bpointage">
+      <EntityTypeMapping TypeName="grpaie2Model.bpointage">
+        <MappingFragment StoreEntitySet="bpointage">
+          <ScalarProperty Name="annee" ColumnName="annee" />
+          <ScalarProperty Name="matricule" ColumnName="matricule" />
+          <ScalarProperty Name="mois" ColumnName="mois" />
+          <ScalarProperty Name="nomprenom" ColumnName="nomprenom" />
+          <ScalarProperty Name="taux1" ColumnName="taux1" />
+          <ScalarProperty Name="taux2" ColumnName="taux2" />
+          <ScalarProperty Name="taux3" ColumnName="taux3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="brouillardpoint">
+      <EntityTypeMapping TypeName="grpaie2Model.brouillardpoint">
+        <MappingFragment StoreEntitySet="brouillardpoint">
+          <ScalarProperty Name="matr" ColumnName="matr" />
+          <ScalarProperty Name="nomprenom" ColumnName="nomprenom" />
+          <ScalarProperty Name="jourtrv" ColumnName="jourtrv" />
+          <ScalarProperty Name="heureTrv" ColumnName="heureTrv" />
+          <ScalarProperty Name="jourcong" ColumnName="jourcong" />
+          <ScalarProperty Name="jourfer" ColumnName="jourfer" />
+          <ScalarProperty Name="codrub" ColumnName="codrub" />
+          <ScalarProperty Name="libelle" ColumnName="libelle" />
+          <ScalarProperty Name="nbrmontant" ColumnName="nbrmontant" />
+          <ScalarProperty Name="mois" ColumnName="mois" />
+          <ScalarProperty Name="annee" ColumnName="annee" />
+          <ScalarProperty Name="codfich" ColumnName="codfich" />
+          <ScalarProperty Name="codchantier" ColumnName="codchantier" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="calendjf">
+      <EntityTypeMapping TypeName="grpaie2Model.calendjf">
+        <MappingFragment StoreEntitySet="calendjf">
+          <ScalarProperty Name="NUM" ColumnName="NUM" />
+          <ScalarProperty Name="date_du" ColumnName="date_du" />
+          <ScalarProperty Name="date_au" ColumnName="date_au" />
+          <ScalarProperty Name="libelle" ColumnName="libelle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="calendrier">
+      <EntityTypeMapping TypeName="grpaie2Model.calendrier">
+        <MappingFragment StoreEntitySet="calendrier">
+          <ScalarProperty Name="NUM" ColumnName="NUM" />
+          <ScalarProperty Name="datedu" ColumnName="datedu" />
+          <ScalarProperty Name="dateau" ColumnName="dateau" />
+          <ScalarProperty Name="libelle" ColumnName="libelle" />
+          <ScalarProperty Name="tdebLU1" ColumnName="tdebLU1" />
+          <ScalarProperty Name="tdebLU2" ColumnName="tdebLU2" />
+          <ScalarProperty Name="tdebLU3" ColumnName="tdebLU3" />
+          <ScalarProperty Name="tfinLU1" ColumnName="tfinLU1" />
+          <ScalarProperty Name="tfinLU2" ColumnName="tfinLU2" />
+          <ScalarProperty Name="tfinLU3" ColumnName="tfinLU3" />
+          <ScalarProperty Name="tdebMA1" ColumnName="tdebMA1" />
+          <ScalarProperty Name="tdebMA2" ColumnName="tdebMA2" />
+          <ScalarProperty Name="tdebMA3" ColumnName="tdebMA3" />
+          <ScalarProperty Name="tfinMA1" ColumnName="tfinMA1" />
+          <ScalarProperty Name="tfinMA2" ColumnName="tfinMA2" />
+          <ScalarProperty Name="tfinMA3" ColumnName="tfinMA3" />
+          <ScalarProperty Name="tdebME1" ColumnName="tdebME1" />
+          <ScalarProperty Name="tdebME2" ColumnName="tdebME2" />
+          <ScalarProperty Name="tdebME3" ColumnName="tdebME3" />
+          <ScalarProperty Name="tfinME1" ColumnName="tfinME1" />
+          <ScalarProperty Name="tfinME2" ColumnName="tfinME2" />
+          <ScalarProperty Name="tfinME3" ColumnName="tfinME3" />
+          <ScalarProperty Name="tdebJE1" ColumnName="tdebJE1" />
+          <ScalarProperty Name="tdebJE2" ColumnName="tdebJE2" />
+          <ScalarProperty Name="tdebJE3" ColumnName="tdebJE3" />
+          <ScalarProperty Name="tfinJE1" ColumnName="tfinJE1" />
+          <ScalarProperty Name="tfinJE2" ColumnName="tfinJE2" />
+          <ScalarProperty Name="tfinJE3" ColumnName="tfinJE3" />
+          <ScalarProperty Name="tdebVE1" ColumnName="tdebVE1" />
+          <ScalarProperty Name="tdebVE2" ColumnName="tdebVE2" />
+          <ScalarProperty Name="tdebVE3" ColumnName="tdebVE3" />
+          <ScalarProperty Name="tfinVE1" ColumnName="tfinVE1" />
+          <ScalarProperty Name="tfinVE2" ColumnName="tfinVE2" />
+          <ScalarProperty Name="tfinVE3" ColumnName="tfinVE3" />
+          <ScalarProperty Name="tdebSA1" ColumnName="tdebSA1" />
+          <ScalarProperty Name="tdebSA2" ColumnName="tdebSA2" />
+          <ScalarProperty Name="tdebSA3" ColumnName="tdebSA3" />
+          <ScalarProperty Name="tfinSA1" ColumnName="tfinSA1" />
+          <ScalarProperty Name="tfinSA2" ColumnName="tfinSA2" />
+          <ScalarProperty Name="tfinSA3" ColumnName="tfinSA3" />
+          <ScalarProperty Name="tdebDI1" ColumnName="tdebDI1" />
+          <ScalarProperty Name="tdebDI2" ColumnName="tdebDI2" />
+          <ScalarProperty Name="tdebDI3" ColumnName="tdebDI3" />
+          <ScalarProperty Name="tfinDI1" ColumnName="tfinDI1" />
+          <ScalarProperty Name="tfinDI2" ColumnName="tfinDI2" />
+          <ScalarProperty Name="tfinDI3" ColumnName="tfinDI3" />
+          <ScalarProperty Name="THLU" ColumnName="THLU" />
+          <ScalarProperty Name="THMA" ColumnName="THMA" />
+          <ScalarProperty Name="THME" ColumnName="THME" />
+          <ScalarProperty Name="THJE" ColumnName="THJE" />
+          <ScalarProperty Name="THVE" ColumnName="THVE" />
+          <ScalarProperty Name="THSA" ColumnName="THSA" />
+          <ScalarProperty Name="THDI" ColumnName="THDI" />
+          <ScalarProperty Name="TempsRepos" ColumnName="TempsRepos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="calendrierold">
+      <EntityTypeMapping TypeName="grpaie2Model.calendrierold">
+        <MappingFragment StoreEntitySet="calendrierold">
+          <ScalarProperty Name="NUM" ColumnName="NUM" />
+          <ScalarProperty Name="datedu" ColumnName="datedu" />
+          <ScalarProperty Name="dateau" ColumnName="dateau" />
+          <ScalarProperty Name="libelle" ColumnName="libelle" />
+          <ScalarProperty Name="tempdeb1" ColumnName="tempdeb1" />
+          <ScalarProperty Name="tempfin1" ColumnName="tempfin1" />
+          <ScalarProperty Name="tempdeb2" ColumnName="tempdeb2" />
+          <ScalarProperty Name="tempfin2" ColumnName="tempfin2" />
+          <ScalarProperty Name="tempdeb3" ColumnName="tempdeb3" />
+          <ScalarProperty Name="tempfin3" ColumnName="tempfin3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="chantier">
+      <EntityTypeMapping TypeName="grpaie2Model.chantier">
+        <MappingFragment StoreEntitySet="chantier">
+          <ScalarProperty Name="codchantier" ColumnName="codchantier" />
+          <ScalarProperty Name="libelle" ColumnName="libelle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="client">
+      <EntityTypeMapping TypeName="grpaie2Model.client">
+        <MappingFragment StoreEntitySet="client">
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="rsoc" ColumnName="rsoc" />
+          <ScalarProperty Name="adresse" ColumnName="adresse" />
+          <ScalarProperty Name="cp" ColumnName="cp" />
+          <ScalarProperty Name="descp" ColumnName="descp" />
+          <ScalarProperty Name="ville" ColumnName="ville" />
+          <ScalarProperty Name="pays" ColumnName="pays" />
+          <ScalarProperty Name="telephone" ColumnName="telephone" />
+          <ScalarProperty Name="fax" ColumnName="fax" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="site" ColumnName="site" />
+          <ScalarProperty Name="matriculef" ColumnName="matriculef" />
+          <ScalarProperty Name="banque" ColumnName="banque" />
+          <ScalarProperty Name="compteb" ColumnName="compteb" />
+          <ScalarProperty Name="comptec" ColumnName="comptec" />
+          <ScalarProperty Name="cltexport" ColumnName="cltexport" />
+          <ScalarProperty Name="timbref" ColumnName="timbref" />
+          <ScalarProperty Name="exon" ColumnName="exon" />
+          <ScalarProperty Name="majotva" ColumnName="majotva" />
+          <ScalarProperty Name="suspfodec" ColumnName="suspfodec" />
+          <ScalarProperty Name="responsable1" ColumnName="responsable1" />
+          <ScalarProperty Name="responsable2" ColumnName="responsable2" />
+          <ScalarProperty Name="responsable3" ColumnName="responsable3" />
+          <ScalarProperty Name="titre1" ColumnName="titre1" />
+          <ScalarProperty Name="titre2" ColumnName="titre2" />
+          <ScalarProperty Name="titre3" ColumnName="titre3" />
+          <ScalarProperty Name="gsm1" ColumnName="gsm1" />
+          <ScalarProperty Name="gsm2" ColumnName="gsm2" />
+          <ScalarProperty Name="gsm3" ColumnName="gsm3" />
+          <ScalarProperty Name="nposte1" ColumnName="nposte1" />
+          <ScalarProperty Name="nposte2" ColumnName="nposte2" />
+          <ScalarProperty Name="nposte3" ColumnName="nposte3" />
+          <ScalarProperty Name="tarif" ColumnName="tarif" />
+          <ScalarProperty Name="offretick" ColumnName="offretick" />
+          <ScalarProperty Name="Adresse1" ColumnName="Adresse1" />
+          <ScalarProperty Name="Commentaire" ColumnName="Commentaire" />
+          <ScalarProperty Name="bon" ColumnName="bon" />
+          <ScalarProperty Name="cin" ColumnName="cin" />
+          <ScalarProperty Name="typecli" ColumnName="typecli" />
+          <ScalarProperty Name="emp" ColumnName="emp" />
+          <ScalarProperty Name="seloffre" ColumnName="seloffre" />
+          <ScalarProperty Name="susptva" ColumnName="susptva" />
+          <ScalarProperty Name="decision" ColumnName="decision" />
+          <ScalarProperty Name="datec" ColumnName="datec" />
+          <ScalarProperty Name="activite" ColumnName="activite" />
+          <ScalarProperty Name="coder" ColumnName="coder" />
+          <ScalarProperty Name="tel1" ColumnName="tel1" />
+          <ScalarProperty Name="tel2" ColumnName="tel2" />
+          <ScalarProperty Name="telex" ColumnName="telex" />
+          <ScalarProperty Name="codes" ColumnName="codes" />
+          <ScalarProperty Name="nature" ColumnName="nature" />
+          <ScalarProperty Name="remise" ColumnName="remise" />
+          <ScalarProperty Name="typreg" ColumnName="typreg" />
+          <ScalarProperty Name="scredit" ColumnName="scredit" />
+          <ScalarProperty Name="srisque" ColumnName="srisque" />
+          <ScalarProperty Name="coderep" ColumnName="coderep" />
+          <ScalarProperty Name="desrep" ColumnName="desrep" />
+          <ScalarProperty Name="mtdebit" ColumnName="mtdebit" />
+          <ScalarProperty Name="mtcredit" ColumnName="mtcredit" />
+          <ScalarProperty Name="soldeini" ColumnName="soldeini" />
+          <ScalarProperty Name="solde" ColumnName="solde" />
+          <ScalarProperty Name="blockage" ColumnName="blockage" />
+          <ScalarProperty Name="desisec" ColumnName="desisec" />
+          <ScalarProperty Name="desireg" ColumnName="desireg" />
+          <ScalarProperty Name="desicp" ColumnName="desicp" />
+          <ScalarProperty Name="ventiler" ColumnName="ventiler" />
+          <ScalarProperty Name="livcours" ColumnName="livcours" />
+          <ScalarProperty Name="totregle" ColumnName="totregle" />
+          <ScalarProperty Name="aval1" ColumnName="aval1" />
+          <ScalarProperty Name="aval2" ColumnName="aval2" />
+          <ScalarProperty Name="datecin" ColumnName="datecin" />
+          <ScalarProperty Name="soldeinibs" ColumnName="soldeinibs" />
+          <ScalarProperty Name="rsocar" ColumnName="rsocar" />
+          <ScalarProperty Name="adressear" ColumnName="adressear" />
+          <ScalarProperty Name="soldebs" ColumnName="soldebs" />
+          <ScalarProperty Name="fidel" ColumnName="fidel" />
+          <ScalarProperty Name="datefidel" ColumnName="datefidel" />
+          <ScalarProperty Name="remfidel" ColumnName="remfidel" />
+          <ScalarProperty Name="typcarte" ColumnName="typcarte" />
+          <ScalarProperty Name="Matricule" ColumnName="Matricule" />
+          <ScalarProperty Name="numcarte" ColumnName="numcarte" />
+          <ScalarProperty Name="tauxconv" ColumnName="tauxconv" />
+          <ScalarProperty Name="datcreat" ColumnName="datcreat" />
+          <ScalarProperty Name="datexp" ColumnName="datexp" />
+          <ScalarProperty Name="chifaff" ColumnName="chifaff" />
+          <ScalarProperty Name="nbrpts" ColumnName="nbrpts" />
+          <ScalarProperty Name="catot" ColumnName="catot" />
+          <ScalarProperty Name="dernclot" ColumnName="dernclot" />
+          <ScalarProperty Name="soldeinitexer" ColumnName="soldeinitexer" />
+          <ScalarProperty Name="connaiss" ColumnName="connaiss" />
+          <ScalarProperty Name="profession" ColumnName="profession" />
+          <ScalarProperty Name="premAch" ColumnName="premAch" />
+          <ScalarProperty Name="nbreEnf" ColumnName="nbreEnf" />
+          <ScalarProperty Name="dat1" ColumnName="dat1" />
+          <ScalarProperty Name="dat2" ColumnName="dat2" />
+          <ScalarProperty Name="dat3" ColumnName="dat3" />
+          <ScalarProperty Name="dat4" ColumnName="dat4" />
+          <ScalarProperty Name="nom1" ColumnName="nom1" />
+          <ScalarProperty Name="nom2" ColumnName="nom2" />
+          <ScalarProperty Name="nom3" ColumnName="nom3" />
+          <ScalarProperty Name="nom4" ColumnName="nom4" />
+          <ScalarProperty Name="opf1" ColumnName="opf1" />
+          <ScalarProperty Name="opf2" ColumnName="opf2" />
+          <ScalarProperty Name="opf3" ColumnName="opf3" />
+          <ScalarProperty Name="opf4" ColumnName="opf4" />
+          <ScalarProperty Name="rsocconj" ColumnName="rsocconj" />
+          <ScalarProperty Name="datnaissconj" ColumnName="datnaissconj" />
+          <ScalarProperty Name="professconj" ColumnName="professconj" />
+          <ScalarProperty Name="datnaiss" ColumnName="datnaiss" />
+          <ScalarProperty Name="datedebaut" ColumnName="datedebaut" />
+          <ScalarProperty Name="datefinaut" ColumnName="datefinaut" />
+          <ScalarProperty Name="typcli" ColumnName="typcli" />
+          <ScalarProperty Name="regime" ColumnName="regime" />
+          <ScalarProperty Name="soldeinidevise" ColumnName="soldeinidevise" />
+          <ScalarProperty Name="usera" ColumnName="usera" />
+          <ScalarProperty Name="userm" ColumnName="userm" />
+          <ScalarProperty Name="users" ColumnName="users" />
+          <ScalarProperty Name="datemaj" ColumnName="datemaj" />
+          <ScalarProperty Name="soldeinibl" ColumnName="soldeinibl" />
+          <ScalarProperty Name="soldebl" ColumnName="soldebl" />
+          <ScalarProperty Name="sdinilivencours" ColumnName="sdinilivencours" />
+          <ScalarProperty Name="totreglesd" ColumnName="totreglesd" />
+          <ScalarProperty Name="soldecont" ColumnName="soldecont" />
+          <ScalarProperty Name="blnbon" ColumnName="blnbon" />
+          <ScalarProperty Name="NbPtsFid" ColumnName="NbPtsFid" />
+          <ScalarProperty Name="codepv" ColumnName="codepv" />
+          <ScalarProperty Name="contrat" ColumnName="contrat" />
+          <ScalarProperty Name="fact" ColumnName="fact" />
+          <ScalarProperty Name="comptec2" ColumnName="comptec2" />
+          <ScalarProperty Name="ptva" ColumnName="ptva" />
+          <ScalarProperty Name="reference" ColumnName="reference" />
+          <ScalarProperty Name="codesel" ColumnName="codesel" />
+          <ScalarProperty Name="soldeiniRapp" ColumnName="soldeiniRapp" />
+          <ScalarProperty Name="totreglerapp" ColumnName="totreglerapp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cnt">
+      <EntityTypeMapping TypeName="grpaie2Model.cnt">
+        <MappingFragment StoreEntitySet="cnt">
+          <ScalarProperty Name="Matr" ColumnName="Matr" />
+          <ScalarProperty Name="DateDeb" ColumnName="DateDeb" />
+          <ScalarProperty Name="Datefin" ColumnName="Datefin" />
+          <ScalarProperty Name="Libelle" ColumnName="Libelle" />
+          <ScalarProperty Name="Valid" ColumnName="Valid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="conge">
+      <EntityTypeMapping TypeName="grpaie2Model.conge">
+        <MappingFragment StoreEntitySet="conge">
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="payer" ColumnName="payer" />
+          <ScalarProperty Name="libelle" ColumnName="libelle" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="edition" ColumnName="edition" />
+          <ScalarProperty Name="AutreType" ColumnName="AutreType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ebp">
+      <EntityTypeMapping TypeName="grpaie2Model.ebp">
+        <MappingFragment StoreEntitySet="ebp">
+          <ScalarProperty Name="fiche" ColumnName="fiche" />
+          <ScalarProperty Name="libelle" ColumnName="libelle" />
+          <ScalarProperty Name="annee" ColumnName="annee" />
+          <ScalarProperty Name="mois" ColumnName="mois" />
+          <ScalarProperty Name="nummois" ColumnName="nummois" />
+          <ScalarProperty Name="matricule" ColumnName="matricule" />
+          <ScalarProperty Name="nomprenom" ColumnName="nomprenom" />
+          <ScalarProperty Name="cnssste" ColumnName="cnssste" />
+          <ScalarProperty Name="cnssempl" ColumnName="cnssempl" />
+          <ScalarProperty Name="categorie" ColumnName="categorie" />
+          <ScalarProperty Name="echelon" ColumnName="echelon" />
+          <ScalarProperty Name="sitf" ColumnName="sitf" />
+          <ScalarProperty Name="nbrenfant" ColumnName="nbrenfant" />
+          <ScalarProperty Name="regime" ColumnName="regime" />
+          <ScalarProperty Name="nomregime" ColumnName="nomregime" />
+          <ScalarProperty Name="salb" ColumnName="salb" />
+          <ScalarProperty Name="atl" ColumnName="atl" />
+          <ScalarProperty Name="desiatl" ColumnName="desiatl" />
+          <ScalarProperty Name="serv" ColumnName="serv" />
+          <ScalarProperty Name="servdes" ColumnName="servdes" />
+          <ScalarProperty Name="qual" ColumnName="qual" />
+          <ScalarProperty Name="qualdes" ColumnName="qualdes" />
+          <ScalarProperty Name="aff" ColumnName="aff" />
+          <ScalarProperty Name="affdes" ColumnName="affdes" />
+          <ScalarProperty Name="tit" ColumnName="tit" />
+          <ScalarProperty Name="titdes" ColumnName="titdes" />
+          <ScalarProperty Name="jhtrv" ColumnName="jhtrv" />
+          <ScalarProperty Name="jcong" ColumnName="jcong" />
+          <ScalarProperty Name="jfer" ColumnName="jfer" />
+          <ScalarProperty Name="habs" ColumnName="habs" />
+          <ScalarProperty Name="salbase" ColumnName="salbase" />
+          <ScalarProperty Name="toths" ColumnName="toths" />
+          <ScalarProperty Name="totprime" ColumnName="totprime" />
+          <ScalarProperty Name="salbrut" ColumnName="salbrut" />
+          <ScalarProperty Name="cnss" ColumnName="cnss" />
+          <ScalarProperty Name="tauxcnss" ColumnName="tauxcnss" />
+          <ScalarProperty Name="salimpo" ColumnName="salimpo" />
+          <ScalarProperty Name="impot" ColumnName="impot" />
+          <ScalarProperty Name="salnet" ColumnName="salnet" />
+          <ScalarProperty Name="netpaye" ColumnName="netpaye" />
+          <ScalarProperty Name="txcnss" ColumnName="txcnss" />
+          <ScalarProperty Name="txacctrv" ColumnName="txacctrv" />
+          <ScalarProperty Name="deccnss" ColumnName="deccnss" />
+          <ScalarProperty Name="banquesoc" ColumnName="banquesoc" />
+          <ScalarProperty Name="modepaie" ColumnName="modepaie" />
+          <ScalarProperty Name="codeint" ColumnName="codeint" />
+          <ScalarProperty Name="valcong" ColumnName="valcong" />
+          <ScalarProperty Name="valferie" ColumnName="valferie" />
+          <ScalarProperty Name="autres" ColumnName="autres" />
+          <ScalarProperty Name="TXCNAM" ColumnName="TXCNAM" />
+          <ScalarProperty Name="TAUXCNAM" ColumnName="TAUXCNAM" />
+          <ScalarProperty Name="CNAM" ColumnName="CNAM" />
+          <ScalarProperty Name="totpret" ColumnName="totpret" />
+          <ScalarProperty Name="decimpot" ColumnName="decimpot" />
+          <ScalarProperty Name="hfer" ColumnName="hfer" />
+          <ScalarProperty Name="hcong" ColumnName="hcong" />
+          <ScalarProperty Name="mtredevance" ColumnName="mtredevance" />
+          <ScalarProperty Name="tfp" ColumnName="tfp" />
+          <ScalarProperty Name="foprolos" ColumnName="foprolos" />
+          <ScalarProperty Name="chef" ColumnName="chef" />
+          <ScalarProperty Name="soldeconge" ColumnName="soldeconge" />
+          <ScalarProperty Name="impcss" ColumnName="impcss" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ebp_hist">
+      <EntityTypeMapping TypeName="grpaie2Model.ebp_hist">
+        <MappingFragment StoreEntitySet="ebp_hist">
+          <ScalarProperty Name="fiche" ColumnName="fiche" />
+          <ScalarProperty Name="numCalcul" ColumnName="numCalcul" />
+          <ScalarProperty Name="dateCalcul" ColumnName="dateCalcul" />
+          <ScalarProperty Name="userCalcul" ColumnName="userCalcul" />
+          <ScalarProperty Name="libelle" ColumnName="libelle" />
+          <ScalarProperty Name="annee" ColumnName="annee" />
+          <ScalarProperty Name="mois" ColumnName="mois" />
+          <ScalarProperty Name="nummois" ColumnName="nummois" />
+          <ScalarProperty Name="matricule" ColumnName="matricule" />
+          <ScalarProperty Name="nomprenom" ColumnName="nomprenom" />
+          <ScalarProperty Name="cnssste" ColumnName="cnssste" />
+          <ScalarProperty Name="cnssempl" ColumnName="cnssempl" />
+          <ScalarProperty Name="categorie" ColumnName="categorie" />
+          <ScalarProperty Name="echelon" ColumnName="echelon" />
+          <ScalarProperty Name="sitf" ColumnName="sitf" />
+          <ScalarProperty Name="nbrenfant" ColumnName="nbrenfant" />
+          <ScalarProperty Name="regime" ColumnName="regime" />
+          <ScalarProperty Name="nomregime" ColumnName="nomregime" />
+          <ScalarProperty Name="salb" ColumnName="salb" />
+          <ScalarProperty Name="atl" ColumnName="atl" />
+          <ScalarProperty Name="desiatl" ColumnName="desiatl" />
+          <ScalarProperty Name="serv" ColumnName="serv" />
+          <ScalarProperty Name="servdes" ColumnName="servdes" />
+          <ScalarProperty Name="qual" ColumnName="qual" />
+          <ScalarProperty Name="qualdes" ColumnName="qualdes" />
+          <ScalarProperty Name="aff" ColumnName="aff" />
+          <ScalarProperty Name="affdes" ColumnName="affdes" />
+          <ScalarProperty Name="tit" ColumnName="tit" />
+          <ScalarProperty Name="titdes" ColumnName="titdes" />
+          <ScalarProperty Name="jhtrv" ColumnName="jhtrv" />
+          <ScalarProperty Name="jcong" ColumnName="jcong" />
+          <ScalarProperty Name="jfer" ColumnName="jfer" />
+          <ScalarProperty Name="habs" ColumnName="habs" />
+          <ScalarProperty Name="salbase" ColumnName="salbase" />
+          <ScalarProperty Name="toths" ColumnName="toths" />
+          <ScalarProperty Name="totprime" ColumnName="totprime" />
+          <ScalarProperty Name="salbrut" ColumnName="salbrut" />
+          <ScalarProperty Name="cnss" ColumnName="cnss" />
+          <ScalarProperty Name="tauxcnss" ColumnName="tauxcnss" />
+          <ScalarProperty Name="salimpo" ColumnName="salimpo" />
+          <ScalarProperty Name="impot" ColumnName="impot" />
+          <ScalarProperty Name="salnet" ColumnName="salnet" />
+          <ScalarProperty Name="netpaye" ColumnName="netpaye" />
+          <ScalarProperty Name="txcnss" ColumnName="txcnss" />
+          <ScalarProperty Name="txacctrv" ColumnName="txacctrv" />
+          <ScalarProperty Name="deccnss" ColumnName="deccnss" />
+          <ScalarProperty Name="banquesoc" ColumnName="banquesoc" />
+          <ScalarProperty Name="modepaie" ColumnName="modepaie" />
+          <ScalarProperty Name="codeint" ColumnName="codeint" />
+          <ScalarProperty Name="valcong" ColumnName="valcong" />
+          <ScalarProperty Name="valferie" ColumnName="valferie" />
+          <ScalarProperty Name="autres" ColumnName="autres" />
+          <ScalarProperty Name="TXCNAM" ColumnName="TXCNAM" />
+          <ScalarProperty Name="TAUXCNAM" ColumnName="TAUXCNAM" />
+          <ScalarProperty Name="CNAM" ColumnName="CNAM" />
+          <ScalarProperty Name="totpret" ColumnName="totpret" />
+          <ScalarProperty Name="decimpot" ColumnName="decimpot" />
+          <ScalarProperty Name="hfer" ColumnName="hfer" />
+          <ScalarProperty Name="hcong" ColumnName="hcong" />
+          <ScalarProperty Name="mtredevance" ColumnName="mtredevance" />
+          <ScalarProperty Name="tfp" ColumnName="tfp" />
+          <ScalarProperty Name="foprolos" ColumnName="foprolos" />
+          <ScalarProperty Name="chef" ColumnName="chef" />
+          <ScalarProperty Name="soldeconge" ColumnName="soldeconge" />
+          <ScalarProperty Name="impcss" ColumnName="impcss" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ebparchive">
+      <EntityTypeMapping TypeName="grpaie2Model.ebparchive">
+        <MappingFragment StoreEntitySet="ebparchive">
+          <ScalarProperty Name="fiche" ColumnName="fiche" />
+          <ScalarProperty Name="libelle" ColumnName="libelle" />
+          <ScalarProperty Name="annee" ColumnName="annee" />
+          <ScalarProperty Name="mois" ColumnName="mois" />
+          <ScalarProperty Name="nummois" ColumnName="nummois" />
+          <ScalarProperty Name="matricule" ColumnName="matricule" />
+          <ScalarProperty Name="nomprenom" ColumnName="nomprenom" />
+          <ScalarProperty Name="cnssste" ColumnName="cnssste" />
+          <ScalarProperty Name="cnssempl" ColumnName="cnssempl" />
+          <ScalarProperty Name="categorie" ColumnName="categorie" />
+          <ScalarProperty Name="echelon" ColumnName="echelon" />
+          <ScalarProperty Name="sitf" ColumnName="sitf" />
+          <ScalarProperty Name="nbrenfant" ColumnName="nbrenfant" />
+          <ScalarProperty Name="regime" ColumnName="regime" />
+          <ScalarProperty Name="nomregime" ColumnName="nomregime" />
+          <ScalarProperty Name="salb" ColumnName="salb" />
+          <ScalarProperty Name="atl" ColumnName="atl" />
+          <ScalarProperty Name="desiatl" ColumnName="desiatl" />
+          <ScalarProperty Name="serv" ColumnName="serv" />
+          <ScalarProperty Name="servdes" ColumnName="servdes" />
+          <ScalarProperty Name="qual" ColumnName="qual" />
+          <ScalarProperty Name="qualdes" ColumnName="qualdes" />
+          <ScalarProperty Name="aff" ColumnName="aff" />
+          <ScalarProperty Name="affdes" ColumnName="affdes" />
+          <ScalarProperty Name="tit" ColumnName="tit" />
+          <ScalarProperty Name="titdes" ColumnName="titdes" />
+          <ScalarProperty Name="jhtrv" ColumnName="jhtrv" />
+          <ScalarProperty Name="jcong" ColumnName="jcong" />
+          <ScalarProperty Name="jfer" ColumnName="jfer" />
+          <ScalarProperty Name="habs" ColumnName="habs" />
+          <ScalarProperty Name="salbase" ColumnName="salbase" />
+          <ScalarProperty Name="toths" ColumnName="toths" />
+          <ScalarProperty Name="totprime" ColumnName="totprime" />
+          <ScalarProperty Name="salbrut" ColumnName="salbrut" />
+          <ScalarProperty Name="cnss" ColumnName="cnss" />
+          <ScalarProperty Name="tauxcnss" ColumnName="tauxcnss" />
+          <ScalarProperty Name="salimpo" ColumnName="salimpo" />
+          <ScalarProperty Name="impot" ColumnName="impot" />
+          <ScalarProperty Name="salnet" ColumnName="salnet" />
+          <ScalarProperty Name="netpaye" ColumnName="netpaye" />
+          <ScalarProperty Name="txcnss" ColumnName="txcnss" />
+          <ScalarProperty Name="txacctrv" ColumnName="txacctrv" />
+          <ScalarProperty Name="deccnss" ColumnName="deccnss" />
+          <ScalarProperty Name="banquesoc" ColumnName="banquesoc" />
+          <ScalarProperty Name="modepaie" ColumnName="modepaie" />
+          <ScalarProperty Name="codeint" ColumnName="codeint" />
+          <ScalarProperty Name="valcong" ColumnName="valcong" />
+          <ScalarProperty Name="valferie" ColumnName="valferie" />
+          <ScalarProperty Name="autres" ColumnName="autres" />
+          <ScalarProperty Name="TXCNAM" ColumnName="TXCNAM" />
+          <ScalarProperty Name="TAUXCNAM" ColumnName="TAUXCNAM" />
+          <ScalarProperty Name="CNAM" ColumnName="CNAM" />
+          <ScalarProperty Name="totpret" ColumnName="totpret" />
+          <ScalarProperty Name="decimpot" ColumnName="decimpot" />
+          <ScalarProperty Name="tfp" ColumnName="tfp" />
+          <ScalarProperty Name="foprolos" ColumnName="foprolos" />
+          <ScalarProperty Name="impcss" ColumnName="impcss" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ebptemp">
+      <EntityTypeMapping TypeName="grpaie2Model.ebptemp">
+        <MappingFragment StoreEntitySet="ebptemp">
+          <ScalarProperty Name="fiche" ColumnName="fiche" />
+          <ScalarProperty Name="libelle" ColumnName="libelle" />
+          <ScalarProperty Name="annee" ColumnName="annee" />
+          <ScalarProperty Name="mois" ColumnName="mois" />
+          <ScalarProperty Name="nummois" ColumnName="nummois" />
+          <ScalarProperty Name="matricule" ColumnName="matricule" />
+          <ScalarProperty Name="nomprenom" ColumnName="nomprenom" />
+          <ScalarProperty Name="cnssste" ColumnName="cnssste" />
+          <ScalarProperty Name="cnssempl" ColumnName="cnssempl" />
+          <ScalarProperty Name="categorie" ColumnName="categorie" />
+          <ScalarProperty Name="echelon" ColumnName="echelon" />
+          <ScalarProperty Name="sitf" ColumnName="sitf" />
+          <ScalarProperty Name="nbrenfant" ColumnName="nbrenfant" />
+          <ScalarProperty Name="regime" ColumnName="regime" />
+          <ScalarProperty Name="nomregime" ColumnName="nomregime" />
+          <ScalarProperty Name="salb" ColumnName="salb" />
+          <ScalarProperty Name="atl" ColumnName="atl" />
+          <ScalarProperty Name="desiatl" ColumnName="desiatl" />
+          <ScalarProperty Name="serv" ColumnName="serv" />
+          <ScalarProperty Name="servdes" ColumnName="servdes" />
+          <ScalarProperty Name="qual" ColumnName="qual" />
+          <ScalarProperty Name="qualdes" ColumnName="qualdes" />
+          <ScalarProperty Name="aff" ColumnName="aff" />
+          <ScalarProperty Name="affdes" ColumnName="affdes" />
+          <ScalarProperty Name="tit" ColumnName="tit" />
+          <ScalarProperty Name="titdes" ColumnName="titdes" />
+          <ScalarProperty Name="jhtrv" ColumnName="jhtrv" />
+          <ScalarProperty Name="jcong" ColumnName="jcong" />
+          <ScalarProperty Name="jfer" ColumnName="jfer" />
+          <ScalarProperty Name="habs" ColumnName="habs" />
+          <ScalarProperty Name="salbase" ColumnName="salbase" />
+          <ScalarProperty Name="toths" ColumnName="toths" />
+          <ScalarProperty Name="totprime" ColumnName="totprime" />
+          <ScalarProperty Name="salbrut" ColumnName="salbrut" />
+          <ScalarProperty Name="cnss" ColumnName="cnss" />
+          <ScalarProperty Name="tauxcnss" ColumnName="tauxcnss" />
+          <ScalarProperty Name="salimpo" ColumnName="salimpo" />
+          <ScalarProperty Name="impot" ColumnName="impot" />
+          <ScalarProperty Name="salnet" ColumnName="salnet" />
+          <ScalarProperty Name="netpaye" ColumnName="netpaye" />
+          <ScalarProperty Name="txcnss" ColumnName="txcnss" />
+          <ScalarProperty Name="txacctrv" ColumnName="txacctrv" />
+          <ScalarProperty Name="deccnss" ColumnName="deccnss" />
+          <ScalarProperty Name="banquesoc" ColumnName="banquesoc" />
+          <ScalarProperty Name="modepaie" ColumnName="modepaie" />
+          <ScalarProperty Name="codeint" ColumnName="codeint" />
+          <ScalarProperty Name="valcong" ColumnName="valcong" />
+          <ScalarProperty Name="valferie" ColumnName="valferie" />
+          <ScalarProperty Name="autres" ColumnName="autres" />
+          <ScalarProperty Name="TXCNAM" ColumnName="TXCNAM" />
+          <ScalarProperty Name="TAUXCNAM" ColumnName="TAUXCNAM" />
+          <ScalarProperty Name="CNAM" ColumnName="CNAM" />
+          <ScalarProperty Name="totpret" ColumnName="totpret" />
+          <ScalarProperty Name="decimpot" ColumnName="decimpot" />
+          <ScalarProperty Name="hfer" ColumnName="hfer" />
+          <ScalarProperty Name="hcong" ColumnName="hcong" />
+          <ScalarProperty Name="mtredevance" ColumnName="mtredevance" />
+          <ScalarProperty Name="tfp" ColumnName="tfp" />
+          <ScalarProperty Name="foprolos" ColumnName="foprolos" />
+          <ScalarProperty Name="chef" ColumnName="chef" />
+          <ScalarProperty Name="soldeconge" ColumnName="soldeconge" />
+          <ScalarProperty Name="impcss" ColumnName="impcss" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ecn">
+      <EntityTypeMapping TypeName="grpaie2Model.ecn">
+        <MappingFragment StoreEntitySet="ecn">
+          <ScalarProperty Name="annee" ColumnName="annee" />
+          <ScalarProperty Name="trimestre" ColumnName="trimestre" />
+          <ScalarProperty Name="txcotss" ColumnName="txcotss" />
+          <ScalarProperty Name="datearrive" ColumnName="datearrive" />
+          <ScalarProperty Name="modepaye" ColumnName="modepaye" />
+          <ScalarProperty Name="montant" ColumnName="montant" />
+          <ScalarProperty Name="caissele" ColumnName="caissele" />
+          <ScalarProperty Name="chequedu" ColumnName="chequedu" />
+          <ScalarProperty Name="banque" ColumnName="banque" />
+          <ScalarProperty Name="virement" ColumnName="virement" />
+          <ScalarProperty Name="mandat" ColumnName="mandat" />
+          <ScalarProperty Name="saldecss" ColumnName="saldecss" />
+          <ScalarProperty Name="saldecact" ColumnName="saldecact" />
+          <ScalarProperty Name="txcotact" ColumnName="txcotact" />
+          <ScalarProperty Name="nbsalarie" ColumnName="nbsalarie" />
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="montantk" ColumnName="montantk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="entpointage">
+      <EntityTypeMapping TypeName="grpaie2Model.entpointage">
+        <MappingFragment StoreEntitySet="entpointage">
+          <ScalarProperty Name="codfich" ColumnName="codfich" />
+          <ScalarProperty Name="codchantier" ColumnName="codchantier" />
+          <ScalarProperty Name="annee" ColumnName="annee" />
+          <ScalarProperty Name="mois" ColumnName="mois" />
+          <ScalarProperty Name="nummois" ColumnName="nummois" />
+          <ScalarProperty Name="Generer" ColumnName="Generer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fich">
+      <EntityTypeMapping TypeName="grpaie2Model.fich">
+        <MappingFragment StoreEntitySet="fich">
+          <ScalarProperty Name="codfich" ColumnName="codfich" />
+          <ScalarProperty Name="libelle" ColumnName="libelle" />
+          <ScalarProperty Name="datclot" ColumnName="datclot" />
+          <ScalarProperty Name="typefich" ColumnName="typefich" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fpointage">
+      <EntityTypeMapping TypeName="grpaie2Model.fpointage">
+        <MappingFragment StoreEntitySet="fpointage">
+          <ScalarProperty Name="annee" ColumnName="annee" />
+          <ScalarProperty Name="matricule" ColumnName="matricule" />
+          <ScalarProperty Name="mois" ColumnName="mois" />
+          <ScalarProperty Name="nomprenom" ColumnName="nomprenom" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="grille">
+      <EntityTypeMapping TypeName="grpaie2Model.grille">
+        <MappingFragment StoreEntitySet="grille">
+          <ScalarProperty Name="categorie" ColumnName="categorie" />
+          <ScalarProperty Name="echelon" ColumnName="echelon" />
+          <ScalarProperty Name="regime" ColumnName="regime" />
+          <ScalarProperty Name="ancumule" ColumnName="ancumule" />
+          <ScalarProperty Name="durechelon" ColumnName="durechelon" />
+          <ScalarProperty Name="salaire" ColumnName="salaire" />
+          <ScalarProperty Name="tauxhor" ColumnName="tauxhor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="grillesalaire">
+      <EntityTypeMapping TypeName="grpaie2Model.grillesalaire">
+        <MappingFragment StoreEntitySet="grillesalaire">
+          <ScalarProperty Name="ancumule" ColumnName="ancumule" />
+          <ScalarProperty Name="categorie" ColumnName="categorie" />
+          <ScalarProperty Name="durechelon" ColumnName="durechelon" />
+          <ScalarProperty Name="durechelle" ColumnName="durechelle" />
+          <ScalarProperty Name="echelle" ColumnName="echelle" />
+          <ScalarProperty Name="echelon" ColumnName="echelon" />
+          <ScalarProperty Name="regime" ColumnName="regime" />
+          <ScalarProperty Name="salaire" ColumnName="salaire" />
+          <ScalarProperty Name="tauxhor" ColumnName="tauxhor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="heursupp">
+      <EntityTypeMapping TypeName="grpaie2Model.heursupp">
+        <MappingFragment StoreEntitySet="heursupp">
+          <ScalarProperty Name="codheursupp" ColumnName="codheursupp" />
+          <ScalarProperty Name="taux" ColumnName="taux" />
+          <ScalarProperty Name="libelle" ColumnName="libelle" />
+          <ScalarProperty Name="nbrheursupp" ColumnName="nbrheursupp" />
+          <ScalarProperty Name="codfich" ColumnName="codfich" />
+          <ScalarProperty Name="codchantier" ColumnName="codchantier" />
+          <ScalarProperty Name="annee" ColumnName="annee" />
+          <ScalarProperty Name="mois" ColumnName="mois" />
+          <ScalarProperty Name="matr" ColumnName="matr" />
+          <ScalarProperty Name="nomprenom" ColumnName="nomprenom" />
+          <ScalarProperty Name="confirme" ColumnName="confirme" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="intervalle">
+      <EntityTypeMapping TypeName="grpaie2Model.intervalle">
+        <MappingFragment StoreEntitySet="intervalle">
+          <ScalarProperty Name="Interv" ColumnName="Interv" />
+          <ScalarProperty Name="NoteDU" ColumnName="NoteDU" />
+          <ScalarProperty Name="NoteAU" ColumnName="NoteAU" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lbp">
+      <EntityTypeMapping TypeName="grpaie2Model.lbp">
+        <MappingFragment StoreEntitySet="lbp">
+          <ScalarProperty Name="nbr" ColumnName="nbr" />
+          <ScalarProperty Name="fiche" ColumnName="fiche" />
+          <ScalarProperty Name="annee" ColumnName="annee" />
+          <ScalarProperty Name="mois" ColumnName="mois" />
+          <ScalarProperty Name="matricule" ColumnName="matricule" />
+          <ScalarProperty Name="rubrique" ColumnName="rubrique" />
+          <ScalarProperty Name="libelle" ColumnName="libelle" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="retenue" ColumnName="retenue" />
+          <ScalarProperty Name="gain" ColumnName="gain" />
+          <ScalarProperty Name="imposable" ColumnName="imposable" />
+          <ScalarProperty Name="cotisable" ColumnName="cotisable" />
+          <ScalarProperty Name="Group1" ColumnName="Group1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lbparchive">
+      <EntityTypeMapping TypeName="grpaie2Model.lbparchive">
+        <MappingFragment StoreEntitySet="lbparchive">
+          <ScalarProperty Name="nbr" ColumnName="nbr" />
+          <ScalarProperty Name="fiche" ColumnName="fiche" />
+          <ScalarProperty Name="annee" ColumnName="annee" />
+          <ScalarProperty Name="mois" ColumnName="mois" />
+          <ScalarProperty Name="matricule" ColumnName="matricule" />
+          <ScalarProperty Name="rubrique" ColumnName="rubrique" />
+          <ScalarProperty Name="libelle" ColumnName="libelle" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="retenue" ColumnName="retenue" />
+          <ScalarProperty Name="gain" ColumnName="gain" />
+          <ScalarProperty Name="imposable" ColumnName="imposable" />
+          <ScalarProperty Name="cotisable" ColumnName="cotisable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lbptemp">
+      <EntityTypeMapping TypeName="grpaie2Model.lbptemp">
+        <MappingFragment StoreEntitySet="lbptemp">
+          <ScalarProperty Name="nbr" ColumnName="nbr" />
+          <ScalarProperty Name="fiche" ColumnName="fiche" />
+          <ScalarProperty Name="annee" ColumnName="annee" />
+          <ScalarProperty Name="mois" ColumnName="mois" />
+          <ScalarProperty Name="matricule" ColumnName="matricule" />
+          <ScalarProperty Name="rubrique" ColumnName="rubrique" />
+          <ScalarProperty Name="libelle" ColumnName="libelle" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="retenue" ColumnName="retenue" />
+          <ScalarProperty Name="gain" ColumnName="gain" />
+          <ScalarProperty Name="imposable" ColumnName="imposable" />
+          <ScalarProperty Name="cotisable" ColumnName="cotisable" />
+          <ScalarProperty Name="Group1" ColumnName="Group1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lcn">
+      <EntityTypeMapping TypeName="grpaie2Model.lcn">
+        <MappingFragment StoreEntitySet="lcn">
+          <ScalarProperty Name="annee" ColumnName="annee" />
+          <ScalarProperty Name="trimestre" ColumnName="trimestre" />
+          <ScalarProperty Name="txcot" ColumnName="txcot" />
+          <ScalarProperty Name="numcnss" ColumnName="numcnss" />
+          <ScalarProperty Name="matricule" ColumnName="matricule" />
+          <ScalarProperty Name="mois1" ColumnName="mois1" />
+          <ScalarProperty Name="mois2" ColumnName="mois2" />
+          <ScalarProperty Name="mois3" ColumnName="mois3" />
+          <ScalarProperty Name="page" ColumnName="page" />
+          <ScalarProperty Name="numerordre" ColumnName="numerordre" />
+          <ScalarProperty Name="nomprenom" ColumnName="nomprenom" />
+          <ScalarProperty Name="categorie" ColumnName="categorie" />
+          <ScalarProperty Name="mois1k" ColumnName="mois1k" />
+          <ScalarProperty Name="mois2k" ColumnName="mois2k" />
+          <ScalarProperty Name="mois3k" ColumnName="mois3k" />
+          <ScalarProperty Name="sel" ColumnName="sel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lignepointage">
+      <EntityTypeMapping TypeName="grpaie2Model.lignepointage">
+        <MappingFragment StoreEntitySet="lignepointage">
+          <ScalarProperty Name="Matr" ColumnName="Matr" />
+          <ScalarProperty Name="Nomprenom" ColumnName="Nomprenom" />
+          <ScalarProperty Name="regime" ColumnName="regime" />
+          <ScalarProperty Name="jourtrv" ColumnName="jourtrv" />
+          <ScalarProperty Name="heuretrv" ColumnName="heuretrv" />
+          <ScalarProperty Name="Jourcong" ColumnName="Jourcong" />
+          <ScalarProperty Name="jourfer" ColumnName="jourfer" />
+          <ScalarProperty Name="codfich" ColumnName="codfich" />
+          <ScalarProperty Name="codchantier" ColumnName="codchantier" />
+          <ScalarProperty Name="annee" ColumnName="annee" />
+          <ScalarProperty Name="mois" ColumnName="mois" />
+          <ScalarProperty Name="confirme" ColumnName="confirme" />
+          <ScalarProperty Name="hcong" ColumnName="hcong" />
+          <ScalarProperty Name="hfer" ColumnName="hfer" />
+          <ScalarProperty Name="tfp" ColumnName="tfp" />
+          <ScalarProperty Name="foprolos" ColumnName="foprolos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ligneprime">
+      <EntityTypeMapping TypeName="grpaie2Model.ligneprime">
+        <MappingFragment StoreEntitySet="ligneprime">
+          <ScalarProperty Name="rubrique" ColumnName="rubrique" />
+          <ScalarProperty Name="designarub" ColumnName="designarub" />
+          <ScalarProperty Name="montant" ColumnName="montant" />
+          <ScalarProperty Name="matr" ColumnName="matr" />
+          <ScalarProperty Name="confirme" ColumnName="confirme" />
+          <ScalarProperty Name="fiche" ColumnName="fiche" />
+          <ScalarProperty Name="libelle" ColumnName="libelle" />
+          <ScalarProperty Name="nligne" ColumnName="nligne" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lignerub">
+      <EntityTypeMapping TypeName="grpaie2Model.lignerub">
+        <MappingFragment StoreEntitySet="lignerub">
+          <ScalarProperty Name="codrubrique" ColumnName="codrubrique" />
+          <ScalarProperty Name="condition" ColumnName="condition" />
+          <ScalarProperty Name="Formule" ColumnName="Formule" />
+          <ScalarProperty Name="confirme" ColumnName="confirme" />
+          <ScalarProperty Name="Ligne" ColumnName="Ligne" />
+          <ScalarProperty Name="plafond" ColumnName="plafond" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lmission">
+      <EntityTypeMapping TypeName="grpaie2Model.lmission">
+        <MappingFragment StoreEntitySet="lmission">
+          <ScalarProperty Name="nummission" ColumnName="nummission" />
+          <ScalarProperty Name="codeemp" ColumnName="codeemp" />
+          <ScalarProperty Name="libemp" ColumnName="libemp" />
+          <ScalarProperty Name="codequal" ColumnName="codequal" />
+          <ScalarProperty Name="libqual" ColumnName="libqual" />
+          <ScalarProperty Name="num" ColumnName="num" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="majconge">
+      <EntityTypeMapping TypeName="grpaie2Model.majconge">
+        <MappingFragment StoreEntitySet="majconge">
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="libelle" ColumnName="libelle" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="nbrjour" ColumnName="nbrjour" />
+          <ScalarProperty Name="nbrheure" ColumnName="nbrheure" />
+          <ScalarProperty Name="matricule" ColumnName="matricule" />
+          <ScalarProperty Name="nomprenom" ColumnName="nomprenom" />
+          <ScalarProperty Name="solde" ColumnName="solde" />
+          <ScalarProperty Name="datedepart" ColumnName="datedepart" />
+          <ScalarProperty Name="datefin" ColumnName="datefin" />
+          <ScalarProperty Name="payer" ColumnName="payer" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="majconge1">
+      <EntityTypeMapping TypeName="grpaie2Model.majconge1">
+        <MappingFragment StoreEntitySet="majconge1">
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="libelle" ColumnName="libelle" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="nbrjour" ColumnName="nbrjour" />
+          <ScalarProperty Name="nbrheure" ColumnName="nbrheure" />
+          <ScalarProperty Name="matricule" ColumnName="matricule" />
+          <ScalarProperty Name="nomprenom" ColumnName="nomprenom" />
+          <ScalarProperty Name="solde" ColumnName="solde" />
+          <ScalarProperty Name="datedepart" ColumnName="datedepart" />
+          <ScalarProperty Name="datefin" ColumnName="datefin" />
+          <ScalarProperty Name="payer" ColumnName="payer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="majpret">
+      <EntityTypeMapping TypeName="grpaie2Model.majpret">
+        <MappingFragment StoreEntitySet="majpret">
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="designa" ColumnName="designa" />
+          <ScalarProperty Name="date1ret" ColumnName="date1ret" />
+          <ScalarProperty Name="datepret" ColumnName="datepret" />
+          <ScalarProperty Name="blocage" ColumnName="blocage" />
+          <ScalarProperty Name="matricule" ColumnName="matricule" />
+          <ScalarProperty Name="nomprenom" ColumnName="nomprenom" />
+          <ScalarProperty Name="montret" ColumnName="montret" />
+          <ScalarProperty Name="montpret" ColumnName="montpret" />
+          <ScalarProperty Name="montrest" ColumnName="montrest" />
+          <ScalarProperty Name="fiche" ColumnName="fiche" />
+          <ScalarProperty Name="desifich" ColumnName="desifich" />
+          <ScalarProperty Name="dated" ColumnName="dated" />
+          <ScalarProperty Name="datef" ColumnName="datef" />
+          <ScalarProperty Name="MontInit" ColumnName="MontInit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mission">
+      <EntityTypeMapping TypeName="grpaie2Model.mission">
+        <MappingFragment StoreEntitySet="mission">
+          <ScalarProperty Name="nummission" ColumnName="nummission" />
+          <ScalarProperty Name="datesortie" ColumnName="datesortie" />
+          <ScalarProperty Name="dateretour" ColumnName="dateretour" />
+          <ScalarProperty Name="numao" ColumnName="numao" />
+          <ScalarProperty Name="nbjour" ColumnName="nbjour" />
+          <ScalarProperty Name="projet" ColumnName="projet" />
+          <ScalarProperty Name="lieuint" ColumnName="lieuint" />
+          <ScalarProperty Name="codecli" ColumnName="codecli" />
+          <ScalarProperty Name="rscli" ColumnName="rscli" />
+          <ScalarProperty Name="perscontac" ColumnName="perscontac" />
+          <ScalarProperty Name="codsui" ColumnName="codsui" />
+          <ScalarProperty Name="dessui" ColumnName="dessui" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="coddemand" ColumnName="coddemand" />
+          <ScalarProperty Name="libdemand" ColumnName="libdemand" />
+          <ScalarProperty Name="compterendu" ColumnName="compterendu" />
+          <ScalarProperty Name="generer" ColumnName="generer" />
+          <ScalarProperty Name="heurrdv" ColumnName="heurrdv" />
+          <ScalarProperty Name="typeint" ColumnName="typeint" />
+          <ScalarProperty Name="nbhest" ColumnName="nbhest" />
+          <ScalarProperty Name="cloture" ColumnName="cloture" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nbrjour">
+      <EntityTypeMapping TypeName="grpaie2Model.nbrjour">
+        <MappingFragment StoreEntitySet="nbrjour">
+          <ScalarProperty Name="nbrJour1" ColumnName="nbrJour" />
+          <ScalarProperty Name="matricule" ColumnName="matricule" />
+          <ScalarProperty Name="nomjour" ColumnName="nomjour" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nomjour">
+      <EntityTypeMapping TypeName="grpaie2Model.nomjour">
+        <MappingFragment StoreEntitySet="nomjour">
+          <ScalarProperty Name="annee" ColumnName="annee" />
+          <ScalarProperty Name="mois" ColumnName="mois" />
+          <ScalarProperty Name="nbjour" ColumnName="nbjour" />
+          <ScalarProperty Name="nomjour1" ColumnName="nomjour" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="persarchive">
+      <EntityTypeMapping TypeName="grpaie2Model.persarchive">
+        <MappingFragment StoreEntitySet="persarchive">
+          <ScalarProperty Name="MATR" ColumnName="MATR" />
+          <ScalarProperty Name="CAISSE" ColumnName="CAISSE" />
+          <ScalarProperty Name="ECHELON" ColumnName="ECHELON" />
+          <ScalarProperty Name="PAYEMENT" ColumnName="PAYEMENT" />
+          <ScalarProperty Name="NATIONAL" ColumnName="NATIONAL" />
+          <ScalarProperty Name="TRV_AN" ColumnName="TRV_AN" />
+          <ScalarProperty Name="NOMPRENOM1" ColumnName="NOMPRENOM1" />
+          <ScalarProperty Name="PRENOM1" ColumnName="PRENOM1" />
+          <ScalarProperty Name="PRENOM2" ColumnName="PRENOM2" />
+          <ScalarProperty Name="PRENOM3" ColumnName="PRENOM3" />
+          <ScalarProperty Name="PRENOM4" ColumnName="PRENOM4" />
+          <ScalarProperty Name="NBRENFANT" ColumnName="NBRENFANT" />
+          <ScalarProperty Name="CIN" ColumnName="CIN" />
+          <ScalarProperty Name="NUMCNSS" ColumnName="NUMCNSS" />
+          <ScalarProperty Name="SERV" ColumnName="SERV" />
+          <ScalarProperty Name="REGIME2" ColumnName="REGIME2" />
+          <ScalarProperty Name="REGIME1" ColumnName="REGIME1" />
+          <ScalarProperty Name="nomregime1" ColumnName="nomregime1" />
+          <ScalarProperty Name="SALB" ColumnName="SALB" />
+          <ScalarProperty Name="TIT" ColumnName="TIT" />
+          <ScalarProperty Name="SITF" ColumnName="SITF" />
+          <ScalarProperty Name="TXHOR" ColumnName="TXHOR" />
+          <ScalarProperty Name="TXCNSS" ColumnName="TXCNSS" />
+          <ScalarProperty Name="TELEPHONE" ColumnName="TELEPHONE" />
+          <ScalarProperty Name="NOMPRENOM2" ColumnName="NOMPRENOM2" />
+          <ScalarProperty Name="BANQUESTE" ColumnName="BANQUESTE" />
+          <ScalarProperty Name="BANQUEPER" ColumnName="BANQUEPER" />
+          <ScalarProperty Name="numcompte" ColumnName="numcompte" />
+          <ScalarProperty Name="DECIMPOT" ColumnName="DECIMPOT" />
+          <ScalarProperty Name="ARR1" ColumnName="ARR1" />
+          <ScalarProperty Name="COMPTEC" ColumnName="COMPTEC" />
+          <ScalarProperty Name="ATELIER" ColumnName="ATELIER" />
+          <ScalarProperty Name="ADRESSE" ColumnName="ADRESSE" />
+          <ScalarProperty Name="CAT" ColumnName="CAT" />
+          <ScalarProperty Name="CHEF" ColumnName="CHEF" />
+          <ScalarProperty Name="PRESENCE" ColumnName="PRESENCE" />
+          <ScalarProperty Name="QUAL" ColumnName="QUAL" />
+          <ScalarProperty Name="AFF" ColumnName="AFF" />
+          <ScalarProperty Name="SEXE" ColumnName="SEXE" />
+          <ScalarProperty Name="DATECHE" ColumnName="DATECHE" />
+          <ScalarProperty Name="PROCHEECHE" ColumnName="PROCHEECHE" />
+          <ScalarProperty Name="EMBO" ColumnName="EMBO" />
+          <ScalarProperty Name="NAIS" ColumnName="NAIS" />
+          <ScalarProperty Name="ACCtrv" ColumnName="ACCtrv" />
+          <ScalarProperty Name="DATESIT" ColumnName="DATESIT" />
+          <ScalarProperty Name="NAIS1" ColumnName="NAIS1" />
+          <ScalarProperty Name="NAIS2" ColumnName="NAIS2" />
+          <ScalarProperty Name="NAIS3" ColumnName="NAIS3" />
+          <ScalarProperty Name="NAIS4" ColumnName="NAIS4" />
+          <ScalarProperty Name="imagepersonnel" ColumnName="imagepersonnel" />
+          <ScalarProperty Name="SMIG" ColumnName="SMIG" />
+          <ScalarProperty Name="SUPH" ColumnName="SUPH" />
+          <ScalarProperty Name="DATECIN" ColumnName="DATECIN" />
+          <ScalarProperty Name="SoldInit" ColumnName="SoldInit" />
+          <ScalarProperty Name="DroitCong" ColumnName="DroitCong" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="assurance" ColumnName="assurance" />
+          <ScalarProperty Name="dates" ColumnName="dates" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="personnel">
+      <EntityTypeMapping TypeName="grpaie2Model.personnel">
+        <MappingFragment StoreEntitySet="personnel">
+          <ScalarProperty Name="MATR" ColumnName="MATR" />
+          <ScalarProperty Name="CAISSE" ColumnName="CAISSE" />
+          <ScalarProperty Name="ECHELON" ColumnName="ECHELON" />
+          <ScalarProperty Name="PAYEMENT" ColumnName="PAYEMENT" />
+          <ScalarProperty Name="NATIONAL" ColumnName="NATIONAL" />
+          <ScalarProperty Name="TRV_AN" ColumnName="TRV_AN" />
+          <ScalarProperty Name="NOMPRENOM1" ColumnName="NOMPRENOM1" />
+          <ScalarProperty Name="PRENOM1" ColumnName="PRENOM1" />
+          <ScalarProperty Name="PRENOM2" ColumnName="PRENOM2" />
+          <ScalarProperty Name="PRENOM3" ColumnName="PRENOM3" />
+          <ScalarProperty Name="PRENOM4" ColumnName="PRENOM4" />
+          <ScalarProperty Name="NBRENFANT" ColumnName="NBRENFANT" />
+          <ScalarProperty Name="CIN" ColumnName="CIN" />
+          <ScalarProperty Name="NUMCNSS" ColumnName="NUMCNSS" />
+          <ScalarProperty Name="SERV" ColumnName="SERV" />
+          <ScalarProperty Name="REGIME2" ColumnName="REGIME2" />
+          <ScalarProperty Name="REGIME1" ColumnName="REGIME1" />
+          <ScalarProperty Name="nomregime1" ColumnName="nomregime1" />
+          <ScalarProperty Name="SALB" ColumnName="SALB" />
+          <ScalarProperty Name="TIT" ColumnName="TIT" />
+          <ScalarProperty Name="SITF" ColumnName="SITF" />
+          <ScalarProperty Name="TXHOR" ColumnName="TXHOR" />
+          <ScalarProperty Name="TXCNSS" ColumnName="TXCNSS" />
+          <ScalarProperty Name="TELEPHONE" ColumnName="TELEPHONE" />
+          <ScalarProperty Name="NOMPRENOM2" ColumnName="NOMPRENOM2" />
+          <ScalarProperty Name="BANQUESTE" ColumnName="BANQUESTE" />
+          <ScalarProperty Name="BANQUEPER" ColumnName="BANQUEPER" />
+          <ScalarProperty Name="numcompte" ColumnName="numcompte" />
+          <ScalarProperty Name="DECIMPOT" ColumnName="DECIMPOT" />
+          <ScalarProperty Name="ARR1" ColumnName="ARR1" />
+          <ScalarProperty Name="COMPTEC" ColumnName="COMPTEC" />
+          <ScalarProperty Name="ATELIER" ColumnName="ATELIER" />
+          <ScalarProperty Name="ADRESSE" ColumnName="ADRESSE" />
+          <ScalarProperty Name="CAT" ColumnName="CAT" />
+          <ScalarProperty Name="CHEF" ColumnName="CHEF" />
+          <ScalarProperty Name="PRESENCE" ColumnName="PRESENCE" />
+          <ScalarProperty Name="QUAL" ColumnName="QUAL" />
+          <ScalarProperty Name="AFF" ColumnName="AFF" />
+          <ScalarProperty Name="SEXE" ColumnName="SEXE" />
+          <ScalarProperty Name="DATECHE" ColumnName="DATECHE" />
+          <ScalarProperty Name="PROCHEECHE" ColumnName="PROCHEECHE" />
+          <ScalarProperty Name="EMBO" ColumnName="EMBO" />
+          <ScalarProperty Name="NAIS" ColumnName="NAIS" />
+          <ScalarProperty Name="ACCtrv" ColumnName="ACCtrv" />
+          <ScalarProperty Name="DATESIT" ColumnName="DATESIT" />
+          <ScalarProperty Name="NAIS1" ColumnName="NAIS1" />
+          <ScalarProperty Name="NAIS2" ColumnName="NAIS2" />
+          <ScalarProperty Name="NAIS3" ColumnName="NAIS3" />
+          <ScalarProperty Name="NAIS4" ColumnName="NAIS4" />
+          <ScalarProperty Name="imagepersonnel" ColumnName="imagepersonnel" />
+          <ScalarProperty Name="SMIG" ColumnName="SMIG" />
+          <ScalarProperty Name="SUPH" ColumnName="SUPH" />
+          <ScalarProperty Name="DATECIN" ColumnName="DATECIN" />
+          <ScalarProperty Name="SoldInit" ColumnName="SoldInit" />
+          <ScalarProperty Name="DroitCong" ColumnName="DroitCong" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="assurance" ColumnName="assurance" />
+          <ScalarProperty Name="matpointeuse" ColumnName="matpointeuse" />
+          <ScalarProperty Name="redevance" ColumnName="redevance" />
+          <ScalarProperty Name="nbmois" ColumnName="nbmois" />
+          <ScalarProperty Name="tfp" ColumnName="tfp" />
+          <ScalarProperty Name="foprolos" ColumnName="foprolos" />
+          <ScalarProperty Name="comptecb" ColumnName="comptecb" />
+          <ScalarProperty Name="sel" ColumnName="sel" />
+          <ScalarProperty Name="DateDepart" ColumnName="DateDepart" />
+          <ScalarProperty Name="imagepath" ColumnName="imagepath" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="imagesize" ColumnName="imagesize" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="poijourtmp">
+      <EntityTypeMapping TypeName="grpaie2Model.poijourtmp">
+        <MappingFragment StoreEntitySet="poijourtmp">
+          <ScalarProperty Name="codfich" ColumnName="codfich" />
+          <ScalarProperty Name="codchan" ColumnName="codchan" />
+          <ScalarProperty Name="annee" ColumnName="annee" />
+          <ScalarProperty Name="mois" ColumnName="mois" />
+          <ScalarProperty Name="matricule" ColumnName="matricule" />
+          <ScalarProperty Name="j1" ColumnName="j1" />
+          <ScalarProperty Name="j2" ColumnName="j2" />
+          <ScalarProperty Name="j3" ColumnName="j3" />
+          <ScalarProperty Name="j4" ColumnName="j4" />
+          <ScalarProperty Name="j5" ColumnName="j5" />
+          <ScalarProperty Name="j6" ColumnName="j6" />
+          <ScalarProperty Name="j7" ColumnName="j7" />
+          <ScalarProperty Name="j8" ColumnName="j8" />
+          <ScalarProperty Name="j9" ColumnName="j9" />
+          <ScalarProperty Name="j10" ColumnName="j10" />
+          <ScalarProperty Name="j11" ColumnName="j11" />
+          <ScalarProperty Name="j12" ColumnName="j12" />
+          <ScalarProperty Name="j13" ColumnName="j13" />
+          <ScalarProperty Name="j14" ColumnName="j14" />
+          <ScalarProperty Name="j15" ColumnName="j15" />
+          <ScalarProperty Name="j16" ColumnName="j16" />
+          <ScalarProperty Name="j17" ColumnName="j17" />
+          <ScalarProperty Name="j18" ColumnName="j18" />
+          <ScalarProperty Name="j19" ColumnName="j19" />
+          <ScalarProperty Name="j20" ColumnName="j20" />
+          <ScalarProperty Name="j21" ColumnName="j21" />
+          <ScalarProperty Name="j22" ColumnName="j22" />
+          <ScalarProperty Name="j23" ColumnName="j23" />
+          <ScalarProperty Name="j24" ColumnName="j24" />
+          <ScalarProperty Name="j25" ColumnName="j25" />
+          <ScalarProperty Name="j26" ColumnName="j26" />
+          <ScalarProperty Name="j27" ColumnName="j27" />
+          <ScalarProperty Name="j28" ColumnName="j28" />
+          <ScalarProperty Name="j29" ColumnName="j29" />
+          <ScalarProperty Name="j30" ColumnName="j30" />
+          <ScalarProperty Name="j31" ColumnName="j31" />
+          <ScalarProperty Name="totheure" ColumnName="totheure" />
+          <ScalarProperty Name="totjour" ColumnName="totjour" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="poijourtmp1">
+      <EntityTypeMapping TypeName="grpaie2Model.poijourtmp1">
+        <MappingFragment StoreEntitySet="poijourtmp1">
+          <ScalarProperty Name="codfich" ColumnName="codfich" />
+          <ScalarProperty Name="codchan" ColumnName="codchan" />
+          <ScalarProperty Name="annee" ColumnName="annee" />
+          <ScalarProperty Name="mois" ColumnName="mois" />
+          <ScalarProperty Name="matricule" ColumnName="matricule" />
+          <ScalarProperty Name="j1" ColumnName="j1" />
+          <ScalarProperty Name="j2" ColumnName="j2" />
+          <ScalarProperty Name="j3" ColumnName="j3" />
+          <ScalarProperty Name="j4" ColumnName="j4" />
+          <ScalarProperty Name="j5" ColumnName="j5" />
+          <ScalarProperty Name="j6" ColumnName="j6" />
+          <ScalarProperty Name="j7" ColumnName="j7" />
+          <ScalarProperty Name="j8" ColumnName="j8" />
+          <ScalarProperty Name="j9" ColumnName="j9" />
+          <ScalarProperty Name="j10" ColumnName="j10" />
+          <ScalarProperty Name="j11" ColumnName="j11" />
+          <ScalarProperty Name="j12" ColumnName="j12" />
+          <ScalarProperty Name="j13" ColumnName="j13" />
+          <ScalarProperty Name="j14" ColumnName="j14" />
+          <ScalarProperty Name="j15" ColumnName="j15" />
+          <ScalarProperty Name="j16" ColumnName="j16" />
+          <ScalarProperty Name="j17" ColumnName="j17" />
+          <ScalarProperty Name="j18" ColumnName="j18" />
+          <ScalarProperty Name="j19" ColumnName="j19" />
+          <ScalarProperty Name="j20" ColumnName="j20" />
+          <ScalarProperty Name="j21" ColumnName="j21" />
+          <ScalarProperty Name="j22" ColumnName="j22" />
+          <ScalarProperty Name="j23" ColumnName="j23" />
+          <ScalarProperty Name="j24" ColumnName="j24" />
+          <ScalarProperty Name="j25" ColumnName="j25" />
+          <ScalarProperty Name="j26" ColumnName="j26" />
+          <ScalarProperty Name="j27" ColumnName="j27" />
+          <ScalarProperty Name="j28" ColumnName="j28" />
+          <ScalarProperty Name="j29" ColumnName="j29" />
+          <ScalarProperty Name="j30" ColumnName="j30" />
+          <ScalarProperty Name="j31" ColumnName="j31" />
+          <ScalarProperty Name="totheure" ColumnName="totheure" />
+          <ScalarProperty Name="totjour" ColumnName="totjour" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pointeuse">
+      <EntityTypeMapping TypeName="grpaie2Model.pointeuse">
+        <MappingFragment StoreEntitySet="pointeuse">
+          <ScalarProperty Name="code_machine" ColumnName="code_machine" />
+          <ScalarProperty Name="libelle_machine" ColumnName="libelle_machine" />
+          <ScalarProperty Name="frs_pointeuse" ColumnName="frs_pointeuse" />
+          <ScalarProperty Name="nom_base" ColumnName="nom_base" />
+          <ScalarProperty Name="nom_tab_pointage" ColumnName="nom_tab_pointage" />
+          <ScalarProperty Name="temp_pointage" ColumnName="temp_pointage" />
+          <ScalarProperty Name="nom_tab_personnel" ColumnName="nom_tab_personnel" />
+          <ScalarProperty Name="code_personnel" ColumnName="code_personnel" />
+          <ScalarProperty Name="nom_personnel" ColumnName="nom_personnel" />
+          <ScalarProperty Name="pre_personnel" ColumnName="pre_personnel" />
+          <ScalarProperty Name="cheminbd" ColumnName="cheminbd" />
+          <ScalarProperty Name="type_code_utilisateur" ColumnName="type_code_utilisateur" />
+          <ScalarProperty Name="type_base" ColumnName="type_base" />
+          <ScalarProperty Name="defaut" ColumnName="defaut" />
+          <ScalarProperty Name="correction_p" ColumnName="correction_p" />
+          <ScalarProperty Name="nbr_seance" ColumnName="nbr_seance" />
+          <ScalarProperty Name="IP_Machine" ColumnName="IP_Machine" />
+          <ScalarProperty Name="Port_Machine" ColumnName="Port_Machine" />
+          <ScalarProperty Name="ID_Machine" ColumnName="ID_Machine" />
+          <ScalarProperty Name="EmpStd" ColumnName="EmpStd" />
+          <ScalarProperty Name="type_pointage" ColumnName="type_pointage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pointjour">
+      <EntityTypeMapping TypeName="grpaie2Model.pointjour">
+        <MappingFragment StoreEntitySet="pointjour">
+          <ScalarProperty Name="codfich" ColumnName="codfich" />
+          <ScalarProperty Name="codchan" ColumnName="codchan" />
+          <ScalarProperty Name="annee" ColumnName="annee" />
+          <ScalarProperty Name="mois" ColumnName="mois" />
+          <ScalarProperty Name="matricule" ColumnName="matricule" />
+          <ScalarProperty Name="j1" ColumnName="j1" />
+          <ScalarProperty Name="j2" ColumnName="j2" />
+          <ScalarProperty Name="j3" ColumnName="j3" />
+          <ScalarProperty Name="j4" ColumnName="j4" />
+          <ScalarProperty Name="j5" ColumnName="j5" />
+          <ScalarProperty Name="j6" ColumnName="j6" />
+          <ScalarProperty Name="j7" ColumnName="j7" />
+          <ScalarProperty Name="j8" ColumnName="j8" />
+          <ScalarProperty Name="j9" ColumnName="j9" />
+          <ScalarProperty Name="j10" ColumnName="j10" />
+          <ScalarProperty Name="j11" ColumnName="j11" />
+          <ScalarProperty Name="j12" ColumnName="j12" />
+          <ScalarProperty Name="j13" ColumnName="j13" />
+          <ScalarProperty Name="j14" ColumnName="j14" />
+          <ScalarProperty Name="j15" ColumnName="j15" />
+          <ScalarProperty Name="j16" ColumnName="j16" />
+          <ScalarProperty Name="j17" ColumnName="j17" />
+          <ScalarProperty Name="j18" ColumnName="j18" />
+          <ScalarProperty Name="j19" ColumnName="j19" />
+          <ScalarProperty Name="j20" ColumnName="j20" />
+          <ScalarProperty Name="j21" ColumnName="j21" />
+          <ScalarProperty Name="j22" ColumnName="j22" />
+          <ScalarProperty Name="j23" ColumnName="j23" />
+          <ScalarProperty Name="j24" ColumnName="j24" />
+          <ScalarProperty Name="j25" ColumnName="j25" />
+          <ScalarProperty Name="j26" ColumnName="j26" />
+          <ScalarProperty Name="j27" ColumnName="j27" />
+          <ScalarProperty Name="j28" ColumnName="j28" />
+          <ScalarProperty Name="j29" ColumnName="j29" />
+          <ScalarProperty Name="j30" ColumnName="j30" />
+          <ScalarProperty Name="j31" ColumnName="j31" />
+          <ScalarProperty Name="totheure" ColumnName="totheure" />
+          <ScalarProperty Name="totjour" ColumnName="totjour" />
+          <ScalarProperty Name="salbase" ColumnName="salbase" />
+          <ScalarProperty Name="totprime" ColumnName="totprime" />
+          <ScalarProperty Name="salbrut" ColumnName="salbrut" />
+          <ScalarProperty Name="cnss" ColumnName="cnss" />
+          <ScalarProperty Name="salimpo" ColumnName="salimpo" />
+          <ScalarProperty Name="impot" ColumnName="impot" />
+          <ScalarProperty Name="salnet" ColumnName="salnet" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pret">
+      <EntityTypeMapping TypeName="grpaie2Model.pret">
+        <MappingFragment StoreEntitySet="pret">
+          <ScalarProperty Name="codpret" ColumnName="codpret" />
+          <ScalarProperty Name="desipret" ColumnName="desipret" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="primepers">
+      <EntityTypeMapping TypeName="grpaie2Model.primepers">
+        <MappingFragment StoreEntitySet="primepers">
+          <ScalarProperty Name="MATR" ColumnName="MATR" />
+          <ScalarProperty Name="codRUBRIQUE" ColumnName="codRUBRIQUE" />
+          <ScalarProperty Name="MONTANT" ColumnName="MONTANT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="qualification">
+      <EntityTypeMapping TypeName="grpaie2Model.qualification">
+        <MappingFragment StoreEntitySet="qualification">
+          <ScalarProperty Name="codequalif" ColumnName="codequalif" />
+          <ScalarProperty Name="qualificat" ColumnName="qualificat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rubrique">
+      <EntityTypeMapping TypeName="grpaie2Model.rubrique">
+        <MappingFragment StoreEntitySet="rubrique">
+          <ScalarProperty Name="codrubrique" ColumnName="codrubrique" />
+          <ScalarProperty Name="designarub" ColumnName="designarub" />
+          <ScalarProperty Name="libelle" ColumnName="libelle" />
+          <ScalarProperty Name="ncompte" ColumnName="ncompte" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="nature" ColumnName="nature" />
+          <ScalarProperty Name="imposable" ColumnName="imposable" />
+          <ScalarProperty Name="cotisable" ColumnName="cotisable" />
+          <ScalarProperty Name="regime" ColumnName="regime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="service">
+      <EntityTypeMapping TypeName="grpaie2Model.service">
+        <MappingFragment StoreEntitySet="service">
+          <ScalarProperty Name="codservice" ColumnName="codservice" />
+          <ScalarProperty Name="designaser" ColumnName="designaser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="situationadmin">
+      <EntityTypeMapping TypeName="grpaie2Model.situationadmin">
+        <MappingFragment StoreEntitySet="situationadmin">
+          <ScalarProperty Name="codesit" ColumnName="codesit" />
+          <ScalarProperty Name="sitadminis" ColumnName="sitadminis" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="societe">
+      <EntityTypeMapping TypeName="grpaie2Model.societe">
+        <MappingFragment StoreEntitySet="societe">
+          <ScalarProperty Name="CODSOC" ColumnName="CODSOC" />
+          <ScalarProperty Name="NOMSOCI" ColumnName="NOMSOCI" />
+          <ScalarProperty Name="ADRESSE" ColumnName="ADRESSE" />
+          <ScalarProperty Name="NBUREAU" ColumnName="NBUREAU" />
+          <ScalarProperty Name="CODETVA" ColumnName="CODETVA" />
+          <ScalarProperty Name="CODPOSTAL" ColumnName="CODPOSTAL" />
+          <ScalarProperty Name="CODUSE" ColumnName="CODUSE" />
+          <ScalarProperty Name="DATCLOT" ColumnName="DATCLOT" />
+          <ScalarProperty Name="DIRECTEUR" ColumnName="DIRECTEUR" />
+          <ScalarProperty Name="FOPROLOS" ColumnName="FOPROLOS" />
+          <ScalarProperty Name="NUMCNSS" ColumnName="NUMCNSS" />
+          <ScalarProperty Name="TFP" ColumnName="TFP" />
+          <ScalarProperty Name="ACCTRV" ColumnName="ACCTRV" />
+          <ScalarProperty Name="TXEMPLOYEUR" ColumnName="TXEMPLOYEUR" />
+          <ScalarProperty Name="TXEMPLOYER" ColumnName="TXEMPLOYER" />
+          <ScalarProperty Name="TELEFAX" ColumnName="TELEFAX" />
+          <ScalarProperty Name="TELEX" ColumnName="TELEX" />
+          <ScalarProperty Name="TELEPHONE" ColumnName="TELEPHONE" />
+          <ScalarProperty Name="VILLE" ColumnName="VILLE" />
+          <ScalarProperty Name="MODELE" ColumnName="MODELE" />
+          <ScalarProperty Name="TXARRONDI" ColumnName="TXARRONDI" />
+          <ScalarProperty Name="TYPEIRPP" ColumnName="TYPEIRPP" />
+          <ScalarProperty Name="jnormal" ColumnName="jnormal" />
+          <ScalarProperty Name="hnormal" ColumnName="hnormal" />
+          <ScalarProperty Name="clotfiches" ColumnName="clotfiches" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tempautrepoint">
+      <EntityTypeMapping TypeName="grpaie2Model.tempautrepoint">
+        <MappingFragment StoreEntitySet="tempautrepoint">
+          <ScalarProperty Name="rubrique" ColumnName="rubrique" />
+          <ScalarProperty Name="libelle" ColumnName="libelle" />
+          <ScalarProperty Name="montant" ColumnName="montant" />
+          <ScalarProperty Name="matr" ColumnName="matr" />
+          <ScalarProperty Name="nomprenom" ColumnName="nomprenom" />
+          <ScalarProperty Name="codfich" ColumnName="codfich" />
+          <ScalarProperty Name="codchantier" ColumnName="codchantier" />
+          <ScalarProperty Name="annee" ColumnName="annee" />
+          <ScalarProperty Name="mois" ColumnName="mois" />
+          <ScalarProperty Name="confirme" ColumnName="confirme" />
+          <ScalarProperty Name="nummois" ColumnName="nummois" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tempcot">
+      <EntityTypeMapping TypeName="grpaie2Model.tempcot">
+        <MappingFragment StoreEntitySet="tempcot">
+          <ScalarProperty Name="annee" ColumnName="annee" />
+          <ScalarProperty Name="mois" ColumnName="mois" />
+          <ScalarProperty Name="txcot" ColumnName="txcot" />
+          <ScalarProperty Name="matricule" ColumnName="matricule" />
+          <ScalarProperty Name="fiche" ColumnName="fiche" />
+          <ScalarProperty Name="salbrut" ColumnName="salbrut" />
+          <ScalarProperty Name="nomprenom" ColumnName="nomprenom" />
+          <ScalarProperty Name="numcnss" ColumnName="numcnss" />
+          <ScalarProperty Name="categorie" ColumnName="categorie" />
+          <ScalarProperty Name="sommek" ColumnName="sommek" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tempheursupp">
+      <EntityTypeMapping TypeName="grpaie2Model.tempheursupp">
+        <MappingFragment StoreEntitySet="tempheursupp">
+          <ScalarProperty Name="codheursupp" ColumnName="codheursupp" />
+          <ScalarProperty Name="taux" ColumnName="taux" />
+          <ScalarProperty Name="libelle" ColumnName="libelle" />
+          <ScalarProperty Name="nbrheursupp" ColumnName="nbrheursupp" />
+          <ScalarProperty Name="codfich" ColumnName="codfich" />
+          <ScalarProperty Name="codchantier" ColumnName="codchantier" />
+          <ScalarProperty Name="annee" ColumnName="annee" />
+          <ScalarProperty Name="mois" ColumnName="mois" />
+          <ScalarProperty Name="matr" ColumnName="matr" />
+          <ScalarProperty Name="nomprenom" ColumnName="nomprenom" />
+          <ScalarProperty Name="confirme" ColumnName="confirme" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="templignepointage">
+      <EntityTypeMapping TypeName="grpaie2Model.templignepointage">
+        <MappingFragment StoreEntitySet="templignepointage">
+          <ScalarProperty Name="Matr" ColumnName="Matr" />
+          <ScalarProperty Name="Nomprenom" ColumnName="Nomprenom" />
+          <ScalarProperty Name="regime" ColumnName="regime" />
+          <ScalarProperty Name="jourtrv" ColumnName="jourtrv" />
+          <ScalarProperty Name="heuretrv" ColumnName="heuretrv" />
+          <ScalarProperty Name="Jourcong" ColumnName="Jourcong" />
+          <ScalarProperty Name="jourfer" ColumnName="jourfer" />
+          <ScalarProperty Name="codfich" ColumnName="codfich" />
+          <ScalarProperty Name="codchantier" ColumnName="codchantier" />
+          <ScalarProperty Name="annee" ColumnName="annee" />
+          <ScalarProperty Name="mois" ColumnName="mois" />
+          <ScalarProperty Name="confirme" ColumnName="confirme" />
+          <ScalarProperty Name="hcong" ColumnName="hcong" />
+          <ScalarProperty Name="hfer" ColumnName="hfer" />
+          <ScalarProperty Name="tfp" ColumnName="tfp" />
+          <ScalarProperty Name="foprolos" ColumnName="foprolos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="templigneprime">
+      <EntityTypeMapping TypeName="grpaie2Model.templigneprime">
+        <MappingFragment StoreEntitySet="templigneprime">
+          <ScalarProperty Name="rubrique" ColumnName="rubrique" />
+          <ScalarProperty Name="designarub" ColumnName="designarub" />
+          <ScalarProperty Name="montant" ColumnName="montant" />
+          <ScalarProperty Name="matr" ColumnName="matr" />
+          <ScalarProperty Name="confirme" ColumnName="confirme" />
+          <ScalarProperty Name="fiche" ColumnName="fiche" />
+          <ScalarProperty Name="libelle" ColumnName="libelle" />
+          <ScalarProperty Name="nligne" ColumnName="nligne" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="templignerub">
+      <EntityTypeMapping TypeName="grpaie2Model.templignerub">
+        <MappingFragment StoreEntitySet="templignerub">
+          <ScalarProperty Name="codrubrique" ColumnName="codrubrique" />
+          <ScalarProperty Name="condition" ColumnName="condition" />
+          <ScalarProperty Name="Formule" ColumnName="Formule" />
+          <ScalarProperty Name="confirme" ColumnName="confirme" />
+          <ScalarProperty Name="ligne" ColumnName="ligne" />
+          <ScalarProperty Name="plafond" ColumnName="plafond" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tempmajconge">
+      <EntityTypeMapping TypeName="grpaie2Model.tempmajconge">
+        <MappingFragment StoreEntitySet="tempmajconge">
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="libelle" ColumnName="libelle" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="nbrjour" ColumnName="nbrjour" />
+          <ScalarProperty Name="nbrheure" ColumnName="nbrheure" />
+          <ScalarProperty Name="matricule" ColumnName="matricule" />
+          <ScalarProperty Name="nomprenom" ColumnName="nomprenom" />
+          <ScalarProperty Name="solde" ColumnName="solde" />
+          <ScalarProperty Name="datedepart" ColumnName="datedepart" />
+          <ScalarProperty Name="datefin" ColumnName="datefin" />
+          <ScalarProperty Name="payer" ColumnName="payer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ths">
+      <EntityTypeMapping TypeName="grpaie2Model.ths">
+        <MappingFragment StoreEntitySet="ths">
+          <ScalarProperty Name="codths" ColumnName="codths" />
+          <ScalarProperty Name="libelle" ColumnName="libelle" />
+          <ScalarProperty Name="taux" ColumnName="taux" />
+          <ScalarProperty Name="regime" ColumnName="regime" />
+          <ScalarProperty Name="MtSupp" ColumnName="MtSupp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="variable">
+      <EntityTypeMapping TypeName="grpaie2Model.variable">
+        <MappingFragment StoreEntitySet="variable">
+          <ScalarProperty Name="codVariable" ColumnName="codVariable" />
+          <ScalarProperty Name="Libelle" ColumnName="Libelle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vnote">
+      <EntityTypeMapping TypeName="grpaie2Model.vnote">
+        <MappingFragment StoreEntitySet="vnote">
+          <ScalarProperty Name="matricule" ColumnName="matricule" />
+          <ScalarProperty Name="annee" ColumnName="annee" />
+          <ScalarProperty Name="mois" ColumnName="mois" />
+          <ScalarProperty Name="note_rend" ColumnName="note_rend" />
+          <ScalarProperty Name="note_prod" ColumnName="note_prod" />
+          <ScalarProperty Name="nomprenom" ColumnName="nomprenom" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="emploi_temp">
+      <EntityTypeMapping TypeName="grpaie2Model.emploi_temp">
+        <MappingFragment StoreEntitySet="emploi_temp">
+          <ScalarProperty Name="datedu1" ColumnName="datedu1" />
+          <ScalarProperty Name="dateau1" ColumnName="dateau1" />
+          <ScalarProperty Name="datedu2" ColumnName="datedu2" />
+          <ScalarProperty Name="dateau2" ColumnName="dateau2" />
+          <ScalarProperty Name="tluds" ColumnName="tluds" />
+          <ScalarProperty Name="tmads" ColumnName="tmads" />
+          <ScalarProperty Name="tmeds" ColumnName="tmeds" />
+          <ScalarProperty Name="tjeds" ColumnName="tjeds" />
+          <ScalarProperty Name="tveds" ColumnName="tveds" />
+          <ScalarProperty Name="tsads" ColumnName="tsads" />
+          <ScalarProperty Name="tdids" ColumnName="tdids" />
+          <ScalarProperty Name="ttrds" ColumnName="ttrds" />
+          <ScalarProperty Name="tlusu" ColumnName="tlusu" />
+          <ScalarProperty Name="tmasu" ColumnName="tmasu" />
+          <ScalarProperty Name="tmesu" ColumnName="tmesu" />
+          <ScalarProperty Name="tjesu" ColumnName="tjesu" />
+          <ScalarProperty Name="tvesu" ColumnName="tvesu" />
+          <ScalarProperty Name="tsasu" ColumnName="tsasu" />
+          <ScalarProperty Name="tdisu" ColumnName="tdisu" />
+          <ScalarProperty Name="ttrsu" ColumnName="ttrsu" />
+          <ScalarProperty Name="TE11" ColumnName="TE11" />
+          <ScalarProperty Name="TE12" ColumnName="TE12" />
+          <ScalarProperty Name="TE13" ColumnName="TE13" />
+          <ScalarProperty Name="TE14" ColumnName="TE14" />
+          <ScalarProperty Name="TE15" ColumnName="TE15" />
+          <ScalarProperty Name="TE16" ColumnName="TE16" />
+          <ScalarProperty Name="TE17" ColumnName="TE17" />
+          <ScalarProperty Name="TS11" ColumnName="TS11" />
+          <ScalarProperty Name="TS12" ColumnName="TS12" />
+          <ScalarProperty Name="TS13" ColumnName="TS13" />
+          <ScalarProperty Name="TS14" ColumnName="TS14" />
+          <ScalarProperty Name="TS15" ColumnName="TS15" />
+          <ScalarProperty Name="TS16" ColumnName="TS16" />
+          <ScalarProperty Name="TS17" ColumnName="TS17" />
+          <ScalarProperty Name="TE21" ColumnName="TE21" />
+          <ScalarProperty Name="TE22" ColumnName="TE22" />
+          <ScalarProperty Name="TE23" ColumnName="TE23" />
+          <ScalarProperty Name="TE24" ColumnName="TE24" />
+          <ScalarProperty Name="TE25" ColumnName="TE25" />
+          <ScalarProperty Name="TE26" ColumnName="TE26" />
+          <ScalarProperty Name="TE27" ColumnName="TE27" />
+          <ScalarProperty Name="TS21" ColumnName="TS21" />
+          <ScalarProperty Name="TS22" ColumnName="TS22" />
+          <ScalarProperty Name="TS23" ColumnName="TS23" />
+          <ScalarProperty Name="TS24" ColumnName="TS24" />
+          <ScalarProperty Name="TS25" ColumnName="TS25" />
+          <ScalarProperty Name="TS26" ColumnName="TS26" />
+          <ScalarProperty Name="TS27" ColumnName="TS27" />
+          <ScalarProperty Name="TEE11" ColumnName="TEE11" />
+          <ScalarProperty Name="TEE12" ColumnName="TEE12" />
+          <ScalarProperty Name="TEE13" ColumnName="TEE13" />
+          <ScalarProperty Name="TEE14" ColumnName="TEE14" />
+          <ScalarProperty Name="TEE15" ColumnName="TEE15" />
+          <ScalarProperty Name="TEE16" ColumnName="TEE16" />
+          <ScalarProperty Name="TEE17" ColumnName="TEE17" />
+          <ScalarProperty Name="TSS11" ColumnName="TSS11" />
+          <ScalarProperty Name="TSS12" ColumnName="TSS12" />
+          <ScalarProperty Name="TSS13" ColumnName="TSS13" />
+          <ScalarProperty Name="TSS14" ColumnName="TSS14" />
+          <ScalarProperty Name="TSS15" ColumnName="TSS15" />
+          <ScalarProperty Name="TSS16" ColumnName="TSS16" />
+          <ScalarProperty Name="TSS17" ColumnName="TSS17" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="libelle" ColumnName="libelle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lbp_hist">
+      <EntityTypeMapping TypeName="grpaie2Model.lbp_hist">
+        <MappingFragment StoreEntitySet="lbp_hist">
+          <ScalarProperty Name="nbr" ColumnName="nbr" />
+          <ScalarProperty Name="fiche" ColumnName="fiche" />
+          <ScalarProperty Name="annee" ColumnName="annee" />
+          <ScalarProperty Name="mois" ColumnName="mois" />
+          <ScalarProperty Name="matricule" ColumnName="matricule" />
+          <ScalarProperty Name="rubrique" ColumnName="rubrique" />
+          <ScalarProperty Name="libelle" ColumnName="libelle" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="retenue" ColumnName="retenue" />
+          <ScalarProperty Name="gain" ColumnName="gain" />
+          <ScalarProperty Name="imposable" ColumnName="imposable" />
+          <ScalarProperty Name="cotisable" ColumnName="cotisable" />
+          <ScalarProperty Name="Group1" ColumnName="Group1" />
+          <ScalarProperty Name="numCalcul" ColumnName="numCalcul" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nomtable">
+      <EntityTypeMapping TypeName="grpaie2Model.nomtable">
+        <MappingFragment StoreEntitySet="nomtable">
+          <ScalarProperty Name="nomtable1" ColumnName="nomtable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trace_pointage">
+      <EntityTypeMapping TypeName="grpaie2Model.trace_pointage">
+        <MappingFragment StoreEntitySet="trace_pointage">
+          <ScalarProperty Name="Ancien_date" ColumnName="Ancien_date" />
+          <ScalarProperty Name="Ancien_time" ColumnName="Ancien_time" />
+          <ScalarProperty Name="nouv_date" ColumnName="nouv_date" />
+          <ScalarProperty Name="nouv_time" ColumnName="nouv_time" />
+          <ScalarProperty Name="matricule" ColumnName="matricule" />
+          <ScalarProperty Name="Nom_Pre" ColumnName="Nom_Pre" />
+          <ScalarProperty Name="date_maj" ColumnName="date_maj" />
+          <ScalarProperty Name="temp_maj" ColumnName="temp_maj" />
+          <ScalarProperty Name="operation" ColumnName="operation" />
+          <ScalarProperty Name="user" ColumnName="user" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

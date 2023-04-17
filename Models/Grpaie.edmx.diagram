@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0333b8c9346841aabfe4a3e0e9f1e065" Name="Diagram1">
+        <EntityTypeShape EntityType="grpaieModel.affectation" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.atelier" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.autrepoint" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.banque" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.bpointage" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.brouillardpoint" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.calendjf" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.calendrier" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.calendrierold" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.chantier" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.client" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.cnt" Width="1.5" PointX="2.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.conge" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.ebp" Width="1.5" PointX="10.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.ebp_hist" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.ebparchive" Width="1.5" PointX="0.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.ebptemp" Width="1.5" PointX="2.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.ecn" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.entpointage" Width="1.5" PointX="14.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.fich" Width="1.5" PointX="14.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.fpointage" Width="1.5" PointX="14.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.grille" Width="1.5" PointX="12.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.grillesalaire" Width="1.5" PointX="14.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.heursupp" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.intervalle" Width="1.5" PointX="16.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.lbp" Width="1.5" PointX="4.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.lbparchive" Width="1.5" PointX="16.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.lbptemp" Width="1.5" PointX="16.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.lcn" Width="1.5" PointX="16.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.lignepointage" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.ligneprime" Width="1.5" PointX="18.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.lignerub" Width="1.5" PointX="18.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.lmission" Width="1.5" PointX="18.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.majconge" Width="1.5" PointX="18.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.majconge1" Width="1.5" PointX="10.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.majpret" Width="1.5" PointX="12.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.mission" Width="1.5" PointX="20.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.nbrjour" Width="1.5" PointX="20.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.nomjour" Width="1.5" PointX="20.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.persarchive" Width="1.5" PointX="20.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.personnel" Width="1.5" PointX="4.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.poijourtmp" Width="1.5" PointX="22.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.poijourtmp1" Width="1.5" PointX="22.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.pointeuse" Width="1.5" PointX="14.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.pointjour" Width="1.5" PointX="16.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.pret" Width="1.5" PointX="22.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.primepers" Width="1.5" PointX="22.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.qualification" Width="1.5" PointX="24.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.rubrique" Width="1.5" PointX="24.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.service" Width="1.5" PointX="24.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.situationadmin" Width="1.5" PointX="24.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.societe" Width="1.5" PointX="10.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.tempautrepoint" Width="1.5" PointX="24.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.tempcot" Width="1.5" PointX="24.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.tempheursupp" Width="1.5" PointX="24.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.templignepointage" Width="1.5" PointX="18.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.templigneprime" Width="1.5" PointX="24.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.templignerub" Width="1.5" PointX="26.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.tempmajconge" Width="1.5" PointX="0.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.ths" Width="1.5" PointX="26.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.variable" Width="1.5" PointX="26.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.vnote" Width="1.5" PointX="26.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.emploi_temp" Width="1.5" PointX="26.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.lbp_hist" Width="1.5" PointX="20.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.nomtable" Width="1.5" PointX="26.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.trace_pointage" Width="1.5" PointX="28.75" PointY="0.75" IsExpanded="true" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="userpaieModelStoreContainer" CdmEntityContainer="userpaieEntities">
+    <EntitySetMapping Name="couleur">
+      <EntityTypeMapping TypeName="userpaieModel.couleur">
+        <MappingFragment StoreEntitySet="couleur">
+          <ScalarProperty Name="couleur1" ColumnName="couleur1" />
+          <ScalarProperty Name="couleur2" ColumnName="couleur2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="importation">
+      <EntityTypeMapping TypeName="userpaieModel.importation">
+        <MappingFragment StoreEntitySet="importation">
+          <ScalarProperty Name="menu" ColumnName="menu" />
+          <ScalarProperty Name="sousmenu" ColumnName="sousmenu" />
+          <ScalarProperty Name="cocher" ColumnName="cocher" />
+          <ScalarProperty Name="nomfichier" ColumnName="nomfichier" />
+          <ScalarProperty Name="nomtable" ColumnName="nomtable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="menu">
+      <EntityTypeMapping TypeName="userpaieModel.menu">
+        <MappingFragment StoreEntitySet="menu">
+          <ScalarProperty Name="menu1" ColumnName="menu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="menumotdepasse">
+      <EntityTypeMapping TypeName="userpaieModel.menumotdepasse">
+        <MappingFragment StoreEntitySet="menumotdepasse">
+          <ScalarProperty Name="menu" ColumnName="menu" />
+          <ScalarProperty Name="motdepasse" ColumnName="motdepasse" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="paramaitre">
+      <EntityTypeMapping TypeName="userpaieModel.paramaitre">
+        <MappingFragment StoreEntitySet="paramaitre">
+          <ScalarProperty Name="compteuser" ColumnName="compteuser" />
+          <ScalarProperty Name="CODSOC" ColumnName="CODSOC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="size">
+      <EntityTypeMapping TypeName="userpaieModel.size">
+        <MappingFragment StoreEntitySet="size">
+          <ScalarProperty Name="oldw" ColumnName="oldw" />
+          <ScalarProperty Name="oldh" ColumnName="oldh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="societe">
+      <EntityTypeMapping TypeName="userpaieModel.societe">
+        <MappingFragment StoreEntitySet="societe">
+          <ScalarProperty Name="CODSOC" ColumnName="CODSOC" />
+          <ScalarProperty Name="NOMSOCI" ColumnName="NOMSOCI" />
+          <ScalarProperty Name="ADRESSE" ColumnName="ADRESSE" />
+          <ScalarProperty Name="NBUREAU" ColumnName="NBUREAU" />
+          <ScalarProperty Name="CODETVA" ColumnName="CODETVA" />
+          <ScalarProperty Name="CODPOSTAL" ColumnName="CODPOSTAL" />
+          <ScalarProperty Name="CODUSE" ColumnName="CODUSE" />
+          <ScalarProperty Name="DATCLOT" ColumnName="DATCLOT" />
+          <ScalarProperty Name="DIRECTEUR" ColumnName="DIRECTEUR" />
+          <ScalarProperty Name="FOPROLOS" ColumnName="FOPROLOS" />
+          <ScalarProperty Name="NUMCNSS" ColumnName="NUMCNSS" />
+          <ScalarProperty Name="TFP" ColumnName="TFP" />
+          <ScalarProperty Name="ACCTRV" ColumnName="ACCTRV" />
+          <ScalarProperty Name="TXEMPLOYEUR" ColumnName="TXEMPLOYEUR" />
+          <ScalarProperty Name="TXEMPLOYER" ColumnName="TXEMPLOYER" />
+          <ScalarProperty Name="TELEFAX" ColumnName="TELEFAX" />
+          <ScalarProperty Name="TELEX" ColumnName="TELEX" />
+          <ScalarProperty Name="TELEPHONE" ColumnName="TELEPHONE" />
+          <ScalarProperty Name="VILLE" ColumnName="VILLE" />
+          <ScalarProperty Name="MODELE" ColumnName="MODELE" />
+          <ScalarProperty Name="TXARRONDI" ColumnName="TXARRONDI" />
+          <ScalarProperty Name="TYPEIRPP" ColumnName="TYPEIRPP" />
+          <ScalarProperty Name="jnormal" ColumnName="jnormal" />
+          <ScalarProperty Name="hnormal" ColumnName="hnormal" />
+          <ScalarProperty Name="clotfiches" ColumnName="clotfiches" />
+          <ScalarProperty Name="CNAMEMPLOYEUR" ColumnName="CNAMEMPLOYEUR" />
+          <ScalarProperty Name="CNAMEMPLOYE" ColumnName="CNAMEMPLOYE" />
+          <ScalarProperty Name="hortra" ColumnName="hortra" />
+          <ScalarProperty Name="GUTIL" ColumnName="GUTIL" />
+          <ScalarProperty Name="chantier" ColumnName="chantier" />
+          <ScalarProperty Name="nbrmois" ColumnName="nbrmois" />
+          <ScalarProperty Name="pointrub" ColumnName="pointrub" />
+          <ScalarProperty Name="nbrheure" ColumnName="nbrheure" />
+          <ScalarProperty Name="disquetcnss" ColumnName="disquetcnss" />
+          <ScalarProperty Name="suppbanque" ColumnName="suppbanque" />
+          <ScalarProperty Name="liaison_pointeuse" ColumnName="liaison_pointeuse" />
+          <ScalarProperty Name="mtredevance" ColumnName="mtredevance" />
+          <ScalarProperty Name="txredevance" ColumnName="txredevance" />
+          <ScalarProperty Name="parampoint" ColumnName="parampoint" />
+          <ScalarProperty Name="Synchronisation" ColumnName="Synchronisation" />
+          <ScalarProperty Name="majred" ColumnName="majred" />
+          <ScalarProperty Name="impotshs" ColumnName="impotshs" />
+          <ScalarProperty Name="sdconj" ColumnName="sdconj" />
+          <ScalarProperty Name="ParamRappel" ColumnName="ParamRappel" />
+          <ScalarProperty Name="calhmens" ColumnName="calhmens" />
+          <ScalarProperty Name="enthpoint" ColumnName="enthpoint" />
+          <ScalarProperty Name="calmmens" ColumnName="calmmens" />
+          <ScalarProperty Name="sortcal" ColumnName="sortcal" />
+          <ScalarProperty Name="rue" ColumnName="rue" />
+          <ScalarProperty Name="activite" ColumnName="activite" />
+          <ScalarProperty Name="numero" ColumnName="numero" />
+          <ScalarProperty Name="exercice" ColumnName="exercice" />
+          <ScalarProperty Name="codeacte" ColumnName="codeacte" />
+          <ScalarProperty Name="TMAJO" ColumnName="TMAJO" />
+          <ScalarProperty Name="mf" ColumnName="mf" />
+          <ScalarProperty Name="ParamAnn1" ColumnName="ParamAnn1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tmp">
+      <EntityTypeMapping TypeName="userpaieModel.tmp">
+        <MappingFragment StoreEntitySet="tmp">
+          <ScalarProperty Name="N_" ColumnName="N°" />
+          <ScalarProperty Name="module" ColumnName="module" />
+          <ScalarProperty Name="accee" ColumnName="accee" />
+          <ScalarProperty Name="societe" ColumnName="societe" />
+          <ScalarProperty Name="ajouter" ColumnName="ajouter" />
+          <ScalarProperty Name="SUPPRIMER" ColumnName="SUPPRIMER" />
+          <ScalarProperty Name="MODIFIER" ColumnName="MODIFIER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usersoc">
+      <EntityTypeMapping TypeName="userpaieModel.usersoc">
+        <MappingFragment StoreEntitySet="usersoc">
+          <ScalarProperty Name="CODEUSER" ColumnName="CODEUSER" />
+          <ScalarProperty Name="societe" ColumnName="societe" />
+          <ScalarProperty Name="accee" ColumnName="accee" />
+          <ScalarProperty Name="ecriture" ColumnName="ecriture" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="utilisateur">
+      <EntityTypeMapping TypeName="userpaieModel.utilisateur">
+        <MappingFragment StoreEntitySet="utilisateur">
+          <ScalarProperty Name="compteuser" ColumnName="compteuser" />
+          <ScalarProperty Name="motdepasse" ColumnName="motdepasse" />
+          <ScalarProperty Name="DERSOC" ColumnName="DERSOC" />
+          <ScalarProperty Name="actif" ColumnName="actif" />
+          <ScalarProperty Name="numvol" ColumnName="numvol" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="utilitaire">
+      <EntityTypeMapping TypeName="userpaieModel.utilitaire">
+        <MappingFragment StoreEntitySet="utilitaire">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Chemin" ColumnName="Chemin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acceemodule__">
+      <EntityTypeMapping TypeName="userpaieModel.acceemodule__">
+        <MappingFragment StoreEntitySet="acceemodule__">
+          <ScalarProperty Name="module" ColumnName="module" />
+          <ScalarProperty Name="accee" ColumnName="accee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nomtable">
+      <EntityTypeMapping TypeName="userpaieModel.nomtable">
+        <MappingFragment StoreEntitySet="nomtable">
+          <ScalarProperty Name="nomtable1" ColumnName="nomtable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

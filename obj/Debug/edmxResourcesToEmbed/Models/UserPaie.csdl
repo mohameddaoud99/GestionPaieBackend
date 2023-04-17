@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="userpaieModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="couleur">
+    <Key>
+      <PropertyRef Name="couleur1" />
+    </Key>
+    <Property Name="couleur1" Type="Int32" Nullable="false" />
+    <Property Name="couleur2" Type="Int32" />
+  </EntityType>
+  <EntityType Name="importation">
+    <Key>
+      <PropertyRef Name="menu" />
+      <PropertyRef Name="sousmenu" />
+    </Key>
+    <Property Name="menu" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="sousmenu" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cocher" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="nomfichier" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="nomtable" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="menu">
+    <Key>
+      <PropertyRef Name="menu1" />
+    </Key>
+    <Property Name="menu1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="menumotdepasse">
+    <Key>
+      <PropertyRef Name="menu" />
+      <PropertyRef Name="motdepasse" />
+    </Key>
+    <Property Name="menu" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="motdepasse" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="paramaitre">
+    <Key>
+      <PropertyRef Name="compteuser" />
+      <PropertyRef Name="CODSOC" />
+    </Key>
+    <Property Name="compteuser" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CODSOC" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="size">
+    <Key>
+      <PropertyRef Name="oldw" />
+      <PropertyRef Name="oldh" />
+    </Key>
+    <Property Name="oldw" Type="Int32" Nullable="false" />
+    <Property Name="oldh" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="societe">
+    <Key>
+      <PropertyRef Name="CODSOC" />
+    </Key>
+    <Property Name="CODSOC" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NOMSOCI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ADRESSE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NBUREAU" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="CODETVA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CODPOSTAL" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="CODUSE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="DATCLOT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DIRECTEUR" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="FOPROLOS" Type="Single" />
+    <Property Name="NUMCNSS" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="TFP" Type="Single" />
+    <Property Name="ACCTRV" Type="Single" />
+    <Property Name="TXEMPLOYEUR" Type="Single" />
+    <Property Name="TXEMPLOYER" Type="Single" />
+    <Property Name="TELEFAX" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="TELEX" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="TELEPHONE" Type="String" MaxLength="31" FixedLength="false" Unicode="false" />
+    <Property Name="VILLE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="MODELE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="TXARRONDI" Type="Single" Nullable="false" />
+    <Property Name="TYPEIRPP" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="jnormal" Type="Single" />
+    <Property Name="hnormal" Type="Single" />
+    <Property Name="clotfiches" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CNAMEMPLOYEUR" Type="Double" />
+    <Property Name="CNAMEMPLOYE" Type="Double" />
+    <Property Name="hortra" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="GUTIL" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="chantier" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="nbrmois" Type="Int32" />
+    <Property Name="pointrub" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="nbrheure" Type="Double" />
+    <Property Name="disquetcnss" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="suppbanque" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="liaison_pointeuse" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="mtredevance" Type="Double" />
+    <Property Name="txredevance" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="parampoint" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="Synchronisation" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="majred" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="impotshs" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="sdconj" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="ParamRappel" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="calhmens" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="enthpoint" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="calmmens" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="sortcal" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="rue" Type="String" MaxLength="72" FixedLength="false" Unicode="false" />
+    <Property Name="activite" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="numero" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="exercice" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="codeacte" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="TMAJO" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="mf" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ParamAnn1" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tmp">
+    <Key>
+      <PropertyRef Name="N_" />
+    </Key>
+    <Property Name="N_" Type="Int32" Nullable="false" />
+    <Property Name="module" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="accee" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="societe" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="ajouter" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="SUPPRIMER" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="MODIFIER" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="usersoc">
+    <Key>
+      <PropertyRef Name="CODEUSER" />
+      <PropertyRef Name="societe" />
+    </Key>
+    <Property Name="CODEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="societe" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="accee" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="ecriture" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="utilisateur">
+    <Key>
+      <PropertyRef Name="compteuser" />
+    </Key>
+    <Property Name="compteuser" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="motdepasse" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DERSOC" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="actif" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="numvol" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="type" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="utilitaire">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Chemin" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="acceemodule__">
+    <Key>
+      <PropertyRef Name="module" />
+    </Key>
+    <Property Name="module" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="accee" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="nomtable">
+    <Key>
+      <PropertyRef Name="nomtable1" />
+    </Key>
+    <Property Name="nomtable1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="userpaieEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="couleur" EntityType="Self.couleur" />
+    <EntitySet Name="importation" EntityType="Self.importation" />
+    <EntitySet Name="menu" EntityType="Self.menu" />
+    <EntitySet Name="menumotdepasse" EntityType="Self.menumotdepasse" />
+    <EntitySet Name="paramaitre" EntityType="Self.paramaitre" />
+    <EntitySet Name="size" EntityType="Self.size" />
+    <EntitySet Name="societe" EntityType="Self.societe" />
+    <EntitySet Name="tmp" EntityType="Self.tmp" />
+    <EntitySet Name="usersoc" EntityType="Self.usersoc" />
+    <EntitySet Name="utilisateur" EntityType="Self.utilisateur" />
+    <EntitySet Name="utilitaire" EntityType="Self.utilitaire" />
+    <EntitySet Name="acceemodule__" EntityType="Self.acceemodule__" />
+    <EntitySet Name="nomtable" EntityType="Self.nomtable" />
+  </EntityContainer>
+</Schema>

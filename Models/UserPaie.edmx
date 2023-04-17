@@ -1,0 +1,605 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="userpaieModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'def.userpaie.acceemodule__' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
+        <EntityType Name="acceemodule__">
+          <Key>
+            <PropertyRef Name="module" />
+          </Key>
+          <Property Name="module" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="accee" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="couleur">
+          <Key>
+            <PropertyRef Name="couleur1" />
+          </Key>
+          <Property Name="couleur1" Type="int" Nullable="false" />
+          <Property Name="couleur2" Type="int" />
+        </EntityType>
+        <EntityType Name="importation">
+          <Key>
+            <PropertyRef Name="menu" />
+            <PropertyRef Name="sousmenu" />
+          </Key>
+          <Property Name="menu" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="sousmenu" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="cocher" Type="varchar" MaxLength="1" />
+          <Property Name="nomfichier" Type="varchar" MaxLength="30" />
+          <Property Name="nomtable" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <!--Erreurs détectées durant la génération :
+avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.userpaie.isfile' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
+        <EntityType Name="isfile">
+          <Property Name="NTABLE" Type="varchar" MaxLength="50" />
+          <Property Name="CHAMP" Type="varchar" MaxLength="50" />
+          <Property Name="TAILLE" Type="int" />
+          <Property Name="TYPEC" Type="varchar" MaxLength="50" />
+          <Property Name="vide" Type="varchar" MaxLength="1" />
+        </EntityType>-->
+        <EntityType Name="menu">
+          <Key>
+            <PropertyRef Name="menu" />
+          </Key>
+          <Property Name="menu" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="menumotdepasse">
+          <Key>
+            <PropertyRef Name="menu" />
+            <PropertyRef Name="motdepasse" />
+          </Key>
+          <Property Name="menu" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="motdepasse" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'def.userpaie.nomtable' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
+        <EntityType Name="nomtable">
+          <Key>
+            <PropertyRef Name="nomtable" />
+          </Key>
+          <Property Name="nomtable" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <!--Erreurs détectées durant la génération :
+avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.userpaie.numserie' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
+        <EntityType Name="numserie">
+          <Property Name="numserie" Type="varchar" MaxLength="20" />
+        </EntityType>-->
+        <EntityType Name="paramaitre">
+          <Key>
+            <PropertyRef Name="compteuser" />
+            <PropertyRef Name="CODSOC" />
+          </Key>
+          <Property Name="compteuser" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="CODSOC" Type="varchar" MaxLength="5" Nullable="false" />
+        </EntityType>
+        <EntityType Name="size">
+          <Key>
+            <PropertyRef Name="oldw" />
+            <PropertyRef Name="oldh" />
+          </Key>
+          <Property Name="oldw" Type="int" Nullable="false" />
+          <Property Name="oldh" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="societe">
+          <Key>
+            <PropertyRef Name="CODSOC" />
+          </Key>
+          <Property Name="CODSOC" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="NOMSOCI" Type="varchar" MaxLength="50" />
+          <Property Name="ADRESSE" Type="varchar" MaxLength="100" />
+          <Property Name="NBUREAU" Type="varchar" MaxLength="2" />
+          <Property Name="CODETVA" Type="varchar" MaxLength="20" />
+          <Property Name="CODPOSTAL" Type="varchar" MaxLength="4" />
+          <Property Name="CODUSE" Type="varchar" MaxLength="1" />
+          <Property Name="DATCLOT" Type="varchar" MaxLength="10" />
+          <Property Name="DIRECTEUR" Type="varchar" MaxLength="30" />
+          <Property Name="FOPROLOS" Type="float" />
+          <Property Name="NUMCNSS" Type="varchar" MaxLength="11" />
+          <Property Name="TFP" Type="float" />
+          <Property Name="ACCTRV" Type="float" />
+          <Property Name="TXEMPLOYEUR" Type="float" />
+          <Property Name="TXEMPLOYER" Type="float" />
+          <Property Name="TELEFAX" Type="varchar" MaxLength="15" />
+          <Property Name="TELEX" Type="varchar" MaxLength="15" />
+          <Property Name="TELEPHONE" Type="varchar" MaxLength="31" />
+          <Property Name="VILLE" Type="varchar" MaxLength="15" />
+          <Property Name="MODELE" Type="varchar" MaxLength="1" />
+          <Property Name="TXARRONDI" Type="float" Nullable="false" />
+          <Property Name="TYPEIRPP" Type="varchar" MaxLength="1" />
+          <Property Name="jnormal" Type="float" />
+          <Property Name="hnormal" Type="float" />
+          <Property Name="clotfiches" Type="varchar" MaxLength="20" />
+          <Property Name="CNAMEMPLOYEUR" Type="double" />
+          <Property Name="CNAMEMPLOYE" Type="double" />
+          <Property Name="hortra" Type="varchar" MaxLength="1" />
+          <Property Name="GUTIL" Type="varchar" MaxLength="1" />
+          <Property Name="chantier" Type="varchar" MaxLength="1" />
+          <Property Name="nbrmois" Type="int" />
+          <Property Name="pointrub" Type="varchar" MaxLength="1" />
+          <Property Name="nbrheure" Type="double" />
+          <Property Name="disquetcnss" Type="varchar" MaxLength="1" />
+          <Property Name="suppbanque" Type="varchar" MaxLength="1" />
+          <Property Name="liaison_pointeuse" Type="varchar" MaxLength="1" />
+          <Property Name="mtredevance" Type="double" />
+          <Property Name="txredevance" Type="varchar" MaxLength="3" />
+          <Property Name="parampoint" Type="varchar" MaxLength="1" />
+          <Property Name="Synchronisation" Type="varchar" MaxLength="1" />
+          <Property Name="majred" Type="varchar" MaxLength="1" />
+          <Property Name="impotshs" Type="varchar" MaxLength="1" />
+          <Property Name="sdconj" Type="varchar" MaxLength="1" />
+          <Property Name="ParamRappel" Type="varchar" MaxLength="1" />
+          <Property Name="calhmens" Type="varchar" MaxLength="1" />
+          <Property Name="enthpoint" Type="varchar" MaxLength="1" />
+          <Property Name="calmmens" Type="varchar" MaxLength="1" />
+          <Property Name="sortcal" Type="varchar" MaxLength="1" />
+          <Property Name="rue" Type="varchar" MaxLength="72" />
+          <Property Name="activite" Type="varchar" MaxLength="40" />
+          <Property Name="numero" Type="varchar" MaxLength="4" />
+          <Property Name="exercice" Type="varchar" MaxLength="4" />
+          <Property Name="codeacte" Type="varchar" MaxLength="1" />
+          <Property Name="TMAJO" Type="varchar" MaxLength="1" />
+          <Property Name="mf" Type="varchar" MaxLength="20" />
+          <Property Name="ParamAnn1" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="tmp">
+          <Key>
+            <PropertyRef Name="N°" />
+          </Key>
+          <Property Name="N°" Type="int" Nullable="false" />
+          <Property Name="module" Type="varchar" MaxLength="50" />
+          <Property Name="accee" Type="varchar" MaxLength="1" />
+          <Property Name="societe" Type="varchar" MaxLength="8" />
+          <Property Name="ajouter" Type="varchar" MaxLength="1" />
+          <Property Name="SUPPRIMER" Type="varchar" MaxLength="1" />
+          <Property Name="MODIFIER" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <!--Erreurs détectées durant la génération :
+avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.userpaie.usermodule' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
+        <EntityType Name="usermodule">
+          <Property Name="codeuser" Type="varchar" MaxLength="50" />
+          <Property Name="module" Type="varchar" MaxLength="50" />
+          <Property Name="accee" Type="varchar" MaxLength="1" />
+          <Property Name="ecriture" Type="varchar" MaxLength="1" />
+          <Property Name="societe" Type="varchar" MaxLength="8" />
+          <Property Name="AJOUTER" Type="varchar" MaxLength="1" />
+          <Property Name="supprimer" Type="varchar" MaxLength="1" />
+          <Property Name="MODIFIER" Type="varchar" MaxLength="1" />
+        </EntityType>-->
+        <EntityType Name="usersoc">
+          <Key>
+            <PropertyRef Name="CODEUSER" />
+            <PropertyRef Name="societe" />
+          </Key>
+          <Property Name="CODEUSER" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="societe" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="accee" Type="varchar" MaxLength="1" />
+          <Property Name="ecriture" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="utilisateur">
+          <Key>
+            <PropertyRef Name="compteuser" />
+          </Key>
+          <Property Name="compteuser" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="motdepasse" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="DERSOC" Type="varchar" MaxLength="12" />
+          <Property Name="actif" Type="varchar" MaxLength="1" />
+          <Property Name="numvol" Type="varchar" MaxLength="12" />
+          <Property Name="type" Type="varchar" MaxLength="12" />
+        </EntityType>
+        <EntityType Name="utilitaire">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Code" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Chemin" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <EntityContainer Name="userpaieModelStoreContainer">
+          <EntitySet Name="couleur" EntityType="Self.couleur" Schema="userpaie" store:Type="Tables" />
+          <EntitySet Name="importation" EntityType="Self.importation" Schema="userpaie" store:Type="Tables" />
+          <EntitySet Name="menu" EntityType="Self.menu" Schema="userpaie" store:Type="Tables" />
+          <EntitySet Name="menumotdepasse" EntityType="Self.menumotdepasse" Schema="userpaie" store:Type="Tables" />
+          <EntitySet Name="paramaitre" EntityType="Self.paramaitre" Schema="userpaie" store:Type="Tables" />
+          <EntitySet Name="size" EntityType="Self.size" Schema="userpaie" store:Type="Tables" />
+          <EntitySet Name="societe" EntityType="Self.societe" Schema="userpaie" store:Type="Tables" />
+          <EntitySet Name="tmp" EntityType="Self.tmp" Schema="userpaie" store:Type="Tables" />
+          <EntitySet Name="usersoc" EntityType="Self.usersoc" Schema="userpaie" store:Type="Tables" />
+          <EntitySet Name="utilisateur" EntityType="Self.utilisateur" Schema="userpaie" store:Type="Tables" />
+          <EntitySet Name="utilitaire" EntityType="Self.utilitaire" Schema="userpaie" store:Type="Tables" />
+          <EntitySet Name="acceemodule__" EntityType="Self.acceemodule__" store:Type="Tables" store:Schema="userpaie">
+            <DefiningQuery>SELECT
+`acceemodule__`.`module`, 
+`acceemodule__`.`accee`
+FROM `acceemodule__` AS `acceemodule__`</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="nomtable" EntityType="Self.nomtable" store:Type="Tables" store:Schema="userpaie">
+            <DefiningQuery>SELECT
+`nomtable`.`nomtable`
+FROM `nomtable` AS `nomtable`</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="userpaieModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="couleur">
+          <Key>
+            <PropertyRef Name="couleur1" />
+          </Key>
+          <Property Name="couleur1" Type="Int32" Nullable="false" />
+          <Property Name="couleur2" Type="Int32" />
+        </EntityType>
+        <EntityType Name="importation">
+          <Key>
+            <PropertyRef Name="menu" />
+            <PropertyRef Name="sousmenu" />
+          </Key>
+          <Property Name="menu" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="sousmenu" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="cocher" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="nomfichier" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="nomtable" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="menu">
+          <Key>
+            <PropertyRef Name="menu1" />
+          </Key>
+          <Property Name="menu1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="menumotdepasse">
+          <Key>
+            <PropertyRef Name="menu" />
+            <PropertyRef Name="motdepasse" />
+          </Key>
+          <Property Name="menu" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="motdepasse" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="paramaitre">
+          <Key>
+            <PropertyRef Name="compteuser" />
+            <PropertyRef Name="CODSOC" />
+          </Key>
+          <Property Name="compteuser" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CODSOC" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="size">
+          <Key>
+            <PropertyRef Name="oldw" />
+            <PropertyRef Name="oldh" />
+          </Key>
+          <Property Name="oldw" Type="Int32" Nullable="false" />
+          <Property Name="oldh" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="societe">
+          <Key>
+            <PropertyRef Name="CODSOC" />
+          </Key>
+          <Property Name="CODSOC" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NOMSOCI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ADRESSE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NBUREAU" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="CODETVA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CODPOSTAL" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="CODUSE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="DATCLOT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="DIRECTEUR" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="FOPROLOS" Type="Single" />
+          <Property Name="NUMCNSS" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="TFP" Type="Single" />
+          <Property Name="ACCTRV" Type="Single" />
+          <Property Name="TXEMPLOYEUR" Type="Single" />
+          <Property Name="TXEMPLOYER" Type="Single" />
+          <Property Name="TELEFAX" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="TELEX" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="TELEPHONE" Type="String" MaxLength="31" FixedLength="false" Unicode="false" />
+          <Property Name="VILLE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="MODELE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="TXARRONDI" Type="Single" Nullable="false" />
+          <Property Name="TYPEIRPP" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="jnormal" Type="Single" />
+          <Property Name="hnormal" Type="Single" />
+          <Property Name="clotfiches" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CNAMEMPLOYEUR" Type="Double" />
+          <Property Name="CNAMEMPLOYE" Type="Double" />
+          <Property Name="hortra" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="GUTIL" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="chantier" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="nbrmois" Type="Int32" />
+          <Property Name="pointrub" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="nbrheure" Type="Double" />
+          <Property Name="disquetcnss" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="suppbanque" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="liaison_pointeuse" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="mtredevance" Type="Double" />
+          <Property Name="txredevance" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="parampoint" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Synchronisation" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="majred" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="impotshs" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="sdconj" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ParamRappel" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="calhmens" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="enthpoint" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="calmmens" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="sortcal" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="rue" Type="String" MaxLength="72" FixedLength="false" Unicode="false" />
+          <Property Name="activite" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="numero" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="exercice" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="codeacte" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="TMAJO" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="mf" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ParamAnn1" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tmp">
+          <Key>
+            <PropertyRef Name="N_" />
+          </Key>
+          <Property Name="N_" Type="Int32" Nullable="false" />
+          <Property Name="module" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="accee" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="societe" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="ajouter" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="SUPPRIMER" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="MODIFIER" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="usersoc">
+          <Key>
+            <PropertyRef Name="CODEUSER" />
+            <PropertyRef Name="societe" />
+          </Key>
+          <Property Name="CODEUSER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="societe" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="accee" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ecriture" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="utilisateur">
+          <Key>
+            <PropertyRef Name="compteuser" />
+          </Key>
+          <Property Name="compteuser" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="motdepasse" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DERSOC" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="actif" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="numvol" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="type" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="utilitaire">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Chemin" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="acceemodule__">
+          <Key>
+            <PropertyRef Name="module" />
+          </Key>
+          <Property Name="module" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="accee" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="nomtable">
+          <Key>
+            <PropertyRef Name="nomtable1" />
+          </Key>
+          <Property Name="nomtable1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="userpaieEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="couleur" EntityType="Self.couleur" />
+          <EntitySet Name="importation" EntityType="Self.importation" />
+          <EntitySet Name="menu" EntityType="Self.menu" />
+          <EntitySet Name="menumotdepasse" EntityType="Self.menumotdepasse" />
+          <EntitySet Name="paramaitre" EntityType="Self.paramaitre" />
+          <EntitySet Name="size" EntityType="Self.size" />
+          <EntitySet Name="societe" EntityType="Self.societe" />
+          <EntitySet Name="tmp" EntityType="Self.tmp" />
+          <EntitySet Name="usersoc" EntityType="Self.usersoc" />
+          <EntitySet Name="utilisateur" EntityType="Self.utilisateur" />
+          <EntitySet Name="utilitaire" EntityType="Self.utilitaire" />
+          <EntitySet Name="acceemodule__" EntityType="Self.acceemodule__" />
+          <EntitySet Name="nomtable" EntityType="Self.nomtable" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="userpaieModelStoreContainer" CdmEntityContainer="userpaieEntities">
+          <EntitySetMapping Name="couleur">
+            <EntityTypeMapping TypeName="userpaieModel.couleur">
+              <MappingFragment StoreEntitySet="couleur">
+                <ScalarProperty Name="couleur1" ColumnName="couleur1" />
+                <ScalarProperty Name="couleur2" ColumnName="couleur2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="importation">
+            <EntityTypeMapping TypeName="userpaieModel.importation">
+              <MappingFragment StoreEntitySet="importation">
+                <ScalarProperty Name="menu" ColumnName="menu" />
+                <ScalarProperty Name="sousmenu" ColumnName="sousmenu" />
+                <ScalarProperty Name="cocher" ColumnName="cocher" />
+                <ScalarProperty Name="nomfichier" ColumnName="nomfichier" />
+                <ScalarProperty Name="nomtable" ColumnName="nomtable" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="menu">
+            <EntityTypeMapping TypeName="userpaieModel.menu">
+              <MappingFragment StoreEntitySet="menu">
+                <ScalarProperty Name="menu1" ColumnName="menu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="menumotdepasse">
+            <EntityTypeMapping TypeName="userpaieModel.menumotdepasse">
+              <MappingFragment StoreEntitySet="menumotdepasse">
+                <ScalarProperty Name="menu" ColumnName="menu" />
+                <ScalarProperty Name="motdepasse" ColumnName="motdepasse" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="paramaitre">
+            <EntityTypeMapping TypeName="userpaieModel.paramaitre">
+              <MappingFragment StoreEntitySet="paramaitre">
+                <ScalarProperty Name="compteuser" ColumnName="compteuser" />
+                <ScalarProperty Name="CODSOC" ColumnName="CODSOC" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="size">
+            <EntityTypeMapping TypeName="userpaieModel.size">
+              <MappingFragment StoreEntitySet="size">
+                <ScalarProperty Name="oldw" ColumnName="oldw" />
+                <ScalarProperty Name="oldh" ColumnName="oldh" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="societe">
+            <EntityTypeMapping TypeName="userpaieModel.societe">
+              <MappingFragment StoreEntitySet="societe">
+                <ScalarProperty Name="CODSOC" ColumnName="CODSOC" />
+                <ScalarProperty Name="NOMSOCI" ColumnName="NOMSOCI" />
+                <ScalarProperty Name="ADRESSE" ColumnName="ADRESSE" />
+                <ScalarProperty Name="NBUREAU" ColumnName="NBUREAU" />
+                <ScalarProperty Name="CODETVA" ColumnName="CODETVA" />
+                <ScalarProperty Name="CODPOSTAL" ColumnName="CODPOSTAL" />
+                <ScalarProperty Name="CODUSE" ColumnName="CODUSE" />
+                <ScalarProperty Name="DATCLOT" ColumnName="DATCLOT" />
+                <ScalarProperty Name="DIRECTEUR" ColumnName="DIRECTEUR" />
+                <ScalarProperty Name="FOPROLOS" ColumnName="FOPROLOS" />
+                <ScalarProperty Name="NUMCNSS" ColumnName="NUMCNSS" />
+                <ScalarProperty Name="TFP" ColumnName="TFP" />
+                <ScalarProperty Name="ACCTRV" ColumnName="ACCTRV" />
+                <ScalarProperty Name="TXEMPLOYEUR" ColumnName="TXEMPLOYEUR" />
+                <ScalarProperty Name="TXEMPLOYER" ColumnName="TXEMPLOYER" />
+                <ScalarProperty Name="TELEFAX" ColumnName="TELEFAX" />
+                <ScalarProperty Name="TELEX" ColumnName="TELEX" />
+                <ScalarProperty Name="TELEPHONE" ColumnName="TELEPHONE" />
+                <ScalarProperty Name="VILLE" ColumnName="VILLE" />
+                <ScalarProperty Name="MODELE" ColumnName="MODELE" />
+                <ScalarProperty Name="TXARRONDI" ColumnName="TXARRONDI" />
+                <ScalarProperty Name="TYPEIRPP" ColumnName="TYPEIRPP" />
+                <ScalarProperty Name="jnormal" ColumnName="jnormal" />
+                <ScalarProperty Name="hnormal" ColumnName="hnormal" />
+                <ScalarProperty Name="clotfiches" ColumnName="clotfiches" />
+                <ScalarProperty Name="CNAMEMPLOYEUR" ColumnName="CNAMEMPLOYEUR" />
+                <ScalarProperty Name="CNAMEMPLOYE" ColumnName="CNAMEMPLOYE" />
+                <ScalarProperty Name="hortra" ColumnName="hortra" />
+                <ScalarProperty Name="GUTIL" ColumnName="GUTIL" />
+                <ScalarProperty Name="chantier" ColumnName="chantier" />
+                <ScalarProperty Name="nbrmois" ColumnName="nbrmois" />
+                <ScalarProperty Name="pointrub" ColumnName="pointrub" />
+                <ScalarProperty Name="nbrheure" ColumnName="nbrheure" />
+                <ScalarProperty Name="disquetcnss" ColumnName="disquetcnss" />
+                <ScalarProperty Name="suppbanque" ColumnName="suppbanque" />
+                <ScalarProperty Name="liaison_pointeuse" ColumnName="liaison_pointeuse" />
+                <ScalarProperty Name="mtredevance" ColumnName="mtredevance" />
+                <ScalarProperty Name="txredevance" ColumnName="txredevance" />
+                <ScalarProperty Name="parampoint" ColumnName="parampoint" />
+                <ScalarProperty Name="Synchronisation" ColumnName="Synchronisation" />
+                <ScalarProperty Name="majred" ColumnName="majred" />
+                <ScalarProperty Name="impotshs" ColumnName="impotshs" />
+                <ScalarProperty Name="sdconj" ColumnName="sdconj" />
+                <ScalarProperty Name="ParamRappel" ColumnName="ParamRappel" />
+                <ScalarProperty Name="calhmens" ColumnName="calhmens" />
+                <ScalarProperty Name="enthpoint" ColumnName="enthpoint" />
+                <ScalarProperty Name="calmmens" ColumnName="calmmens" />
+                <ScalarProperty Name="sortcal" ColumnName="sortcal" />
+                <ScalarProperty Name="rue" ColumnName="rue" />
+                <ScalarProperty Name="activite" ColumnName="activite" />
+                <ScalarProperty Name="numero" ColumnName="numero" />
+                <ScalarProperty Name="exercice" ColumnName="exercice" />
+                <ScalarProperty Name="codeacte" ColumnName="codeacte" />
+                <ScalarProperty Name="TMAJO" ColumnName="TMAJO" />
+                <ScalarProperty Name="mf" ColumnName="mf" />
+                <ScalarProperty Name="ParamAnn1" ColumnName="ParamAnn1" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tmp">
+            <EntityTypeMapping TypeName="userpaieModel.tmp">
+              <MappingFragment StoreEntitySet="tmp">
+                <ScalarProperty Name="N_" ColumnName="N°" />
+                <ScalarProperty Name="module" ColumnName="module" />
+                <ScalarProperty Name="accee" ColumnName="accee" />
+                <ScalarProperty Name="societe" ColumnName="societe" />
+                <ScalarProperty Name="ajouter" ColumnName="ajouter" />
+                <ScalarProperty Name="SUPPRIMER" ColumnName="SUPPRIMER" />
+                <ScalarProperty Name="MODIFIER" ColumnName="MODIFIER" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="usersoc">
+            <EntityTypeMapping TypeName="userpaieModel.usersoc">
+              <MappingFragment StoreEntitySet="usersoc">
+                <ScalarProperty Name="CODEUSER" ColumnName="CODEUSER" />
+                <ScalarProperty Name="societe" ColumnName="societe" />
+                <ScalarProperty Name="accee" ColumnName="accee" />
+                <ScalarProperty Name="ecriture" ColumnName="ecriture" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="utilisateur">
+            <EntityTypeMapping TypeName="userpaieModel.utilisateur">
+              <MappingFragment StoreEntitySet="utilisateur">
+                <ScalarProperty Name="compteuser" ColumnName="compteuser" />
+                <ScalarProperty Name="motdepasse" ColumnName="motdepasse" />
+                <ScalarProperty Name="DERSOC" ColumnName="DERSOC" />
+                <ScalarProperty Name="actif" ColumnName="actif" />
+                <ScalarProperty Name="numvol" ColumnName="numvol" />
+                <ScalarProperty Name="type" ColumnName="type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="utilitaire">
+            <EntityTypeMapping TypeName="userpaieModel.utilitaire">
+              <MappingFragment StoreEntitySet="utilitaire">
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Chemin" ColumnName="Chemin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="acceemodule__">
+            <EntityTypeMapping TypeName="userpaieModel.acceemodule__">
+              <MappingFragment StoreEntitySet="acceemodule__">
+                <ScalarProperty Name="module" ColumnName="module" />
+                <ScalarProperty Name="accee" ColumnName="accee" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="nomtable">
+            <EntityTypeMapping TypeName="userpaieModel.nomtable">
+              <MappingFragment StoreEntitySet="nomtable">
+                <ScalarProperty Name="nomtable1" ColumnName="nomtable" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Aucun" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

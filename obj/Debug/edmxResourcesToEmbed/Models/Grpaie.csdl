@@ -1,0 +1,1803 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="grpaieModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="affectation">
+    <Key>
+      <PropertyRef Name="CodAff" />
+    </Key>
+    <Property Name="CodAff" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DesiAff" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="atelier">
+    <Key>
+      <PropertyRef Name="codatelier" />
+    </Key>
+    <Property Name="codatelier" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="libelleatelier" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="sel" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="autrepoint">
+    <Key>
+      <PropertyRef Name="rubrique" />
+      <PropertyRef Name="matr" />
+      <PropertyRef Name="codfich" />
+      <PropertyRef Name="codchantier" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+    </Key>
+    <Property Name="rubrique" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="libelle" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="montant" Type="Single" />
+    <Property Name="matr" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nomprenom" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="codfich" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="codchantier" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="annee" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mois" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="confirme" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="nummois" Type="Int32" />
+  </EntityType>
+  <EntityType Name="banque">
+    <Key>
+      <PropertyRef Name="Codbanque" />
+    </Key>
+    <Property Name="Codbanque" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="numcompte" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Modele" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="bpointage">
+    <Key>
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="matricule" />
+      <PropertyRef Name="mois" />
+    </Key>
+    <Property Name="annee" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="matricule" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mois" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nomprenom" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="taux1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="taux2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="taux3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="brouillardpoint">
+    <Key>
+      <PropertyRef Name="matr" />
+      <PropertyRef Name="codrub" />
+      <PropertyRef Name="mois" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="codfich" />
+      <PropertyRef Name="codchantier" />
+    </Key>
+    <Property Name="matr" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nomprenom" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="jourtrv" Type="Single" />
+    <Property Name="heureTrv" Type="Single" />
+    <Property Name="jourcong" Type="Single" />
+    <Property Name="jourfer" Type="Single" />
+    <Property Name="codrub" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="libelle" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="nbrmontant" Type="Single" />
+    <Property Name="mois" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="annee" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="codfich" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="codchantier" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="calendjf">
+    <Key>
+      <PropertyRef Name="NUM" />
+    </Key>
+    <Property Name="NUM" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="date_du" Type="DateTime" />
+    <Property Name="date_au" Type="DateTime" />
+    <Property Name="libelle" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="calendrier">
+    <Key>
+      <PropertyRef Name="NUM" />
+    </Key>
+    <Property Name="NUM" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="datedu" Type="DateTime" />
+    <Property Name="dateau" Type="DateTime" />
+    <Property Name="libelle" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="tdebLU1" Type="Time" />
+    <Property Name="tdebLU2" Type="Time" />
+    <Property Name="tdebLU3" Type="Time" />
+    <Property Name="tfinLU1" Type="Time" />
+    <Property Name="tfinLU2" Type="Time" />
+    <Property Name="tfinLU3" Type="Time" />
+    <Property Name="tdebMA1" Type="Time" />
+    <Property Name="tdebMA2" Type="Time" />
+    <Property Name="tdebMA3" Type="Time" />
+    <Property Name="tfinMA1" Type="Time" />
+    <Property Name="tfinMA2" Type="Time" />
+    <Property Name="tfinMA3" Type="Time" />
+    <Property Name="tdebME1" Type="Time" />
+    <Property Name="tdebME2" Type="Time" />
+    <Property Name="tdebME3" Type="Time" />
+    <Property Name="tfinME1" Type="Time" />
+    <Property Name="tfinME2" Type="Time" />
+    <Property Name="tfinME3" Type="Time" />
+    <Property Name="tdebJE1" Type="Time" />
+    <Property Name="tdebJE2" Type="Time" />
+    <Property Name="tdebJE3" Type="Time" />
+    <Property Name="tfinJE1" Type="Time" />
+    <Property Name="tfinJE2" Type="Time" />
+    <Property Name="tfinJE3" Type="Time" />
+    <Property Name="tdebVE1" Type="Time" />
+    <Property Name="tdebVE2" Type="Time" />
+    <Property Name="tdebVE3" Type="Time" />
+    <Property Name="tfinVE1" Type="Time" />
+    <Property Name="tfinVE2" Type="Time" />
+    <Property Name="tfinVE3" Type="Time" />
+    <Property Name="tdebSA1" Type="Time" />
+    <Property Name="tdebSA2" Type="Time" />
+    <Property Name="tdebSA3" Type="Time" />
+    <Property Name="tfinSA1" Type="Time" />
+    <Property Name="tfinSA2" Type="Time" />
+    <Property Name="tfinSA3" Type="Time" />
+    <Property Name="tdebDI1" Type="Time" />
+    <Property Name="tdebDI2" Type="Time" />
+    <Property Name="tdebDI3" Type="Time" />
+    <Property Name="tfinDI1" Type="Time" />
+    <Property Name="tfinDI2" Type="Time" />
+    <Property Name="tfinDI3" Type="Time" />
+    <Property Name="THLU" Type="Time" />
+    <Property Name="THMA" Type="Time" />
+    <Property Name="THME" Type="Time" />
+    <Property Name="THJE" Type="Time" />
+    <Property Name="THVE" Type="Time" />
+    <Property Name="THSA" Type="Time" />
+    <Property Name="THDI" Type="Time" />
+    <Property Name="TempsRepos" Type="Time" />
+  </EntityType>
+  <EntityType Name="calendrierold">
+    <Key>
+      <PropertyRef Name="NUM" />
+    </Key>
+    <Property Name="NUM" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="datedu" Type="DateTime" />
+    <Property Name="dateau" Type="DateTime" />
+    <Property Name="libelle" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="tempdeb1" Type="Time" />
+    <Property Name="tempfin1" Type="Time" />
+    <Property Name="tempdeb2" Type="Time" />
+    <Property Name="tempfin2" Type="Time" />
+    <Property Name="tempdeb3" Type="Time" />
+    <Property Name="tempfin3" Type="Time" />
+  </EntityType>
+  <EntityType Name="chantier">
+    <Key>
+      <PropertyRef Name="codchantier" />
+    </Key>
+    <Property Name="codchantier" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="libelle" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="client">
+    <Key>
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="code" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="rsoc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="adresse" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Name="cp" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="descp" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ville" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="pays" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="telephone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="fax" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="site" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="matriculef" Type="String" MaxLength="17" FixedLength="false" Unicode="false" />
+    <Property Name="banque" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="compteb" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="comptec" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="cltexport" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="timbref" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="exon" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="majotva" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="suspfodec" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="responsable1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="responsable2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="responsable3" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="titre1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="titre2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="titre3" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="gsm1" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="gsm2" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="gsm3" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="nposte1" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="nposte2" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="nposte3" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="tarif" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="offretick" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="Adresse1" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="Commentaire" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="bon" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="cin" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="typecli" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="emp" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="seloffre" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="susptva" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="decision" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="datec" Type="DateTime" />
+    <Property Name="activite" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="coder" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="tel1" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="tel2" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="telex" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="codes" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="nature" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="remise" Type="Double" />
+    <Property Name="typreg" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="scredit" Type="Double" />
+    <Property Name="srisque" Type="Double" />
+    <Property Name="coderep" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="desrep" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="mtdebit" Type="Double" />
+    <Property Name="mtcredit" Type="Double" />
+    <Property Name="soldeini" Type="Double" />
+    <Property Name="solde" Type="Double" />
+    <Property Name="blockage" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="desisec" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="desireg" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="desicp" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ventiler" Type="Double" />
+    <Property Name="livcours" Type="Double" />
+    <Property Name="totregle" Type="Double" />
+    <Property Name="aval1" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="aval2" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="datecin" Type="DateTime" />
+    <Property Name="soldeinibs" Type="Double" />
+    <Property Name="rsocar" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="adressear" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="soldebs" Type="Double" />
+    <Property Name="fidel" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="datefidel" Type="DateTime" />
+    <Property Name="remfidel" Type="Double" />
+    <Property Name="typcarte" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="Matricule" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="numcarte" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="tauxconv" Type="Double" />
+    <Property Name="datcreat" Type="DateTime" />
+    <Property Name="datexp" Type="DateTime" />
+    <Property Name="chifaff" Type="Double" />
+    <Property Name="nbrpts" Type="Double" />
+    <Property Name="catot" Type="Double" />
+    <Property Name="dernclot" Type="DateTime" />
+    <Property Name="soldeinitexer" Type="Double" />
+    <Property Name="connaiss" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="profession" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="premAch" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="nbreEnf" Type="Int64" />
+    <Property Name="dat1" Type="DateTime" />
+    <Property Name="dat2" Type="DateTime" />
+    <Property Name="dat3" Type="DateTime" />
+    <Property Name="dat4" Type="DateTime" />
+    <Property Name="nom1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="nom2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="nom3" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="nom4" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="opf1" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="opf2" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="opf3" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="opf4" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="rsocconj" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="datnaissconj" Type="DateTime" />
+    <Property Name="professconj" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="datnaiss" Type="DateTime" />
+    <Property Name="datedebaut" Type="DateTime" />
+    <Property Name="datefinaut" Type="DateTime" />
+    <Property Name="typcli" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="regime" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="soldeinidevise" Type="Double" />
+    <Property Name="usera" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="userm" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="users" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="datemaj" Type="DateTime" />
+    <Property Name="soldeinibl" Type="Double" />
+    <Property Name="soldebl" Type="Double" />
+    <Property Name="sdinilivencours" Type="Double" />
+    <Property Name="totreglesd" Type="Double" />
+    <Property Name="soldecont" Type="Double" />
+    <Property Name="blnbon" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="NbPtsFid" Type="Double" />
+    <Property Name="codepv" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="contrat" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="fact" Type="Double" />
+    <Property Name="comptec2" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="ptva" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="reference" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="codesel" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="soldeiniRapp" Type="Double" Nullable="false" />
+    <Property Name="totreglerapp" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cnt">
+    <Key>
+      <PropertyRef Name="Matr" />
+      <PropertyRef Name="DateDeb" />
+    </Key>
+    <Property Name="Matr" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DateDeb" Type="DateTime" Nullable="false" />
+    <Property Name="Datefin" Type="DateTime" />
+    <Property Name="Libelle" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="Valid" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="conge">
+    <Key>
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="code" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="payer" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="libelle" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="type" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="edition" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="AutreType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ebp">
+    <Key>
+      <PropertyRef Name="fiche" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+      <PropertyRef Name="matricule" />
+    </Key>
+    <Property Name="fiche" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="libelle" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="annee" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mois" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nummois" Type="Int32" />
+    <Property Name="matricule" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nomprenom" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="cnssste" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="cnssempl" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="categorie" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="echelon" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="sitf" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="nbrenfant" Type="Int32" />
+    <Property Name="regime" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="nomregime" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="salb" Type="Single" />
+    <Property Name="atl" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="desiatl" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="serv" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="servdes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="qual" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="qualdes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="aff" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="affdes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="tit" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="titdes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="jhtrv" Type="Single" />
+    <Property Name="jcong" Type="Single" />
+    <Property Name="jfer" Type="Single" />
+    <Property Name="habs" Type="Single" />
+    <Property Name="salbase" Type="Single" />
+    <Property Name="toths" Type="Single" />
+    <Property Name="totprime" Type="Single" />
+    <Property Name="salbrut" Type="Single" />
+    <Property Name="cnss" Type="Single" />
+    <Property Name="tauxcnss" Type="Single" />
+    <Property Name="salimpo" Type="Single" />
+    <Property Name="impot" Type="Single" />
+    <Property Name="salnet" Type="Single" />
+    <Property Name="netpaye" Type="Single" />
+    <Property Name="txcnss" Type="Single" />
+    <Property Name="txacctrv" Type="Single" />
+    <Property Name="deccnss" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="banquesoc" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="modepaie" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="codeint" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="valcong" Type="Single" />
+    <Property Name="valferie" Type="Single" />
+    <Property Name="autres" Type="Double" />
+    <Property Name="TXCNAM" Type="Double" />
+    <Property Name="TAUXCNAM" Type="Double" />
+    <Property Name="CNAM" Type="Double" />
+    <Property Name="totpret" Type="Double" />
+    <Property Name="decimpot" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="hfer" Type="Double" />
+    <Property Name="hcong" Type="Double" />
+    <Property Name="mtredevance" Type="Double" />
+    <Property Name="tfp" Type="Double" />
+    <Property Name="foprolos" Type="Double" />
+    <Property Name="chef" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="soldeconge" Type="Double" />
+    <Property Name="impcss" Type="Double" />
+  </EntityType>
+  <EntityType Name="ebp_hist">
+    <Key>
+      <PropertyRef Name="numCalcul" />
+      <PropertyRef Name="matricule" />
+    </Key>
+    <Property Name="fiche" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="numCalcul" Type="Int64" Nullable="false" />
+    <Property Name="dateCalcul" Type="DateTime" />
+    <Property Name="userCalcul" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="libelle" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="annee" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="mois" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="nummois" Type="Int32" />
+    <Property Name="matricule" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nomprenom" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="cnssste" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="cnssempl" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="categorie" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="echelon" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="sitf" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="nbrenfant" Type="Int32" />
+    <Property Name="regime" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="nomregime" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="salb" Type="Single" />
+    <Property Name="atl" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="desiatl" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="serv" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="servdes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="qual" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="qualdes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="aff" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="affdes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="tit" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="titdes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="jhtrv" Type="Single" />
+    <Property Name="jcong" Type="Single" />
+    <Property Name="jfer" Type="Single" />
+    <Property Name="habs" Type="Single" />
+    <Property Name="salbase" Type="Single" />
+    <Property Name="toths" Type="Single" />
+    <Property Name="totprime" Type="Single" />
+    <Property Name="salbrut" Type="Single" />
+    <Property Name="cnss" Type="Single" />
+    <Property Name="tauxcnss" Type="Single" />
+    <Property Name="salimpo" Type="Single" />
+    <Property Name="impot" Type="Single" />
+    <Property Name="salnet" Type="Single" />
+    <Property Name="netpaye" Type="Single" />
+    <Property Name="txcnss" Type="Single" />
+    <Property Name="txacctrv" Type="Single" />
+    <Property Name="deccnss" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="banquesoc" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="modepaie" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="codeint" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="valcong" Type="Single" />
+    <Property Name="valferie" Type="Single" />
+    <Property Name="autres" Type="Double" />
+    <Property Name="TXCNAM" Type="Double" />
+    <Property Name="TAUXCNAM" Type="Double" />
+    <Property Name="CNAM" Type="Double" />
+    <Property Name="totpret" Type="Double" />
+    <Property Name="decimpot" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="hfer" Type="Double" />
+    <Property Name="hcong" Type="Double" />
+    <Property Name="mtredevance" Type="Double" />
+    <Property Name="tfp" Type="Double" />
+    <Property Name="foprolos" Type="Double" />
+    <Property Name="chef" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="soldeconge" Type="Double" />
+    <Property Name="impcss" Type="Double" />
+  </EntityType>
+  <EntityType Name="ebparchive">
+    <Key>
+      <PropertyRef Name="fiche" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+      <PropertyRef Name="matricule" />
+    </Key>
+    <Property Name="fiche" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="libelle" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="annee" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mois" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nummois" Type="Int32" />
+    <Property Name="matricule" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nomprenom" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="cnssste" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="cnssempl" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="categorie" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="echelon" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="sitf" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="nbrenfant" Type="Int32" />
+    <Property Name="regime" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="nomregime" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="salb" Type="Single" />
+    <Property Name="atl" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="desiatl" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="serv" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="servdes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="qual" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="qualdes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="aff" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="affdes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="tit" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="titdes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="jhtrv" Type="Single" />
+    <Property Name="jcong" Type="Single" />
+    <Property Name="jfer" Type="Single" />
+    <Property Name="habs" Type="Single" />
+    <Property Name="salbase" Type="Single" />
+    <Property Name="toths" Type="Single" />
+    <Property Name="totprime" Type="Single" />
+    <Property Name="salbrut" Type="Single" />
+    <Property Name="cnss" Type="Single" />
+    <Property Name="tauxcnss" Type="Single" />
+    <Property Name="salimpo" Type="Single" />
+    <Property Name="impot" Type="Single" />
+    <Property Name="salnet" Type="Single" />
+    <Property Name="netpaye" Type="Single" />
+    <Property Name="txcnss" Type="Single" />
+    <Property Name="txacctrv" Type="Single" />
+    <Property Name="deccnss" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="banquesoc" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="modepaie" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="codeint" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="valcong" Type="Single" />
+    <Property Name="valferie" Type="Single" />
+    <Property Name="autres" Type="Double" />
+    <Property Name="TXCNAM" Type="Double" />
+    <Property Name="TAUXCNAM" Type="Double" />
+    <Property Name="CNAM" Type="Double" />
+    <Property Name="totpret" Type="Double" />
+    <Property Name="decimpot" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="tfp" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="foprolos" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="impcss" Type="Double" />
+  </EntityType>
+  <EntityType Name="ebptemp">
+    <Key>
+      <PropertyRef Name="fiche" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+      <PropertyRef Name="matricule" />
+    </Key>
+    <Property Name="fiche" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="libelle" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="annee" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mois" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nummois" Type="Int32" />
+    <Property Name="matricule" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nomprenom" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="cnssste" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="cnssempl" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="categorie" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="echelon" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="sitf" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="nbrenfant" Type="Int32" />
+    <Property Name="regime" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="nomregime" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="salb" Type="Single" />
+    <Property Name="atl" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="desiatl" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="serv" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="servdes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="qual" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="qualdes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="aff" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="affdes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="tit" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="titdes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="jhtrv" Type="Single" />
+    <Property Name="jcong" Type="Single" />
+    <Property Name="jfer" Type="Single" />
+    <Property Name="habs" Type="Single" />
+    <Property Name="salbase" Type="Single" />
+    <Property Name="toths" Type="Single" />
+    <Property Name="totprime" Type="Single" />
+    <Property Name="salbrut" Type="Single" />
+    <Property Name="cnss" Type="Single" />
+    <Property Name="tauxcnss" Type="Single" />
+    <Property Name="salimpo" Type="Single" />
+    <Property Name="impot" Type="Single" />
+    <Property Name="salnet" Type="Single" />
+    <Property Name="netpaye" Type="Single" />
+    <Property Name="txcnss" Type="Single" />
+    <Property Name="txacctrv" Type="Single" />
+    <Property Name="deccnss" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="banquesoc" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="modepaie" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="codeint" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="valcong" Type="Single" />
+    <Property Name="valferie" Type="Single" />
+    <Property Name="autres" Type="Double" />
+    <Property Name="TXCNAM" Type="Double" />
+    <Property Name="TAUXCNAM" Type="Double" />
+    <Property Name="CNAM" Type="Double" />
+    <Property Name="totpret" Type="Double" />
+    <Property Name="decimpot" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="hfer" Type="Double" />
+    <Property Name="hcong" Type="Double" />
+    <Property Name="mtredevance" Type="Double" />
+    <Property Name="tfp" Type="Double" />
+    <Property Name="foprolos" Type="Double" />
+    <Property Name="chef" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="soldeconge" Type="Double" />
+    <Property Name="impcss" Type="Double" />
+  </EntityType>
+  <EntityType Name="ecn">
+    <Key>
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="trimestre" />
+      <PropertyRef Name="txcotss" />
+    </Key>
+    <Property Name="annee" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="trimestre" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="txcotss" Type="Single" Nullable="false" />
+    <Property Name="datearrive" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="modepaye" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="montant" Type="Double" />
+    <Property Name="caissele" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="chequedu" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="banque" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="virement" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="mandat" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="saldecss" Type="Double" />
+    <Property Name="saldecact" Type="Double" />
+    <Property Name="txcotact" Type="Single" />
+    <Property Name="nbsalarie" Type="Int32" />
+    <Property Name="total" Type="Double" />
+    <Property Name="montantk" Type="Double" />
+  </EntityType>
+  <EntityType Name="entpointage">
+    <Key>
+      <PropertyRef Name="codfich" />
+      <PropertyRef Name="codchantier" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+    </Key>
+    <Property Name="codfich" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="codchantier" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="annee" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mois" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nummois" Type="Int32" />
+    <Property Name="Generer" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="fich">
+    <Key>
+      <PropertyRef Name="codfich" />
+    </Key>
+    <Property Name="codfich" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="libelle" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="datclot" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="typefich" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="fpointage">
+    <Key>
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="matricule" />
+      <PropertyRef Name="mois" />
+    </Key>
+    <Property Name="annee" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="matricule" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mois" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nomprenom" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="grille">
+    <Key>
+      <PropertyRef Name="categorie" />
+      <PropertyRef Name="echelon" />
+      <PropertyRef Name="regime" />
+    </Key>
+    <Property Name="categorie" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="echelon" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="regime" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ancumule" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="durechelon" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="salaire" Type="Single" />
+    <Property Name="tauxhor" Type="Single" />
+  </EntityType>
+  <EntityType Name="grillesalaire">
+    <Key>
+      <PropertyRef Name="categorie" />
+      <PropertyRef Name="echelon" />
+      <PropertyRef Name="regime" />
+    </Key>
+    <Property Name="ancumule" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="categorie" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="durechelon" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="durechelle" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="echelle" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="echelon" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="regime" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="salaire" Type="Int32" />
+    <Property Name="tauxhor" Type="Int32" />
+  </EntityType>
+  <EntityType Name="heursupp">
+    <Key>
+      <PropertyRef Name="codheursupp" />
+      <PropertyRef Name="codfich" />
+      <PropertyRef Name="codchantier" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+      <PropertyRef Name="matr" />
+    </Key>
+    <Property Name="codheursupp" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="taux" Type="Int32" />
+    <Property Name="libelle" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="nbrheursupp" Type="Single" />
+    <Property Name="codfich" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="codchantier" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="annee" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mois" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="matr" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nomprenom" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="confirme" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="intervalle">
+    <Key>
+      <PropertyRef Name="Interv" />
+    </Key>
+    <Property Name="Interv" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NoteDU" Type="Single" />
+    <Property Name="NoteAU" Type="Single" />
+  </EntityType>
+  <EntityType Name="lbp">
+    <Key>
+      <PropertyRef Name="nbr" />
+      <PropertyRef Name="fiche" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+      <PropertyRef Name="matricule" />
+      <PropertyRef Name="rubrique" />
+    </Key>
+    <Property Name="nbr" Type="Int32" Nullable="false" />
+    <Property Name="fiche" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="annee" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mois" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="matricule" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="rubrique" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="libelle" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="nombre" Type="Single" Nullable="false" />
+    <Property Name="retenue" Type="Single" Nullable="false" />
+    <Property Name="gain" Type="Single" Nullable="false" />
+    <Property Name="imposable" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="cotisable" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="Group1" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="lbparchive">
+    <Key>
+      <PropertyRef Name="nbr" />
+      <PropertyRef Name="fiche" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+      <PropertyRef Name="matricule" />
+      <PropertyRef Name="rubrique" />
+    </Key>
+    <Property Name="nbr" Type="Int32" Nullable="false" />
+    <Property Name="fiche" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="annee" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mois" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="matricule" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="rubrique" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="libelle" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="nombre" Type="Single" />
+    <Property Name="retenue" Type="Single" />
+    <Property Name="gain" Type="Single" />
+    <Property Name="imposable" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="cotisable" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="lbptemp">
+    <Key>
+      <PropertyRef Name="nbr" />
+      <PropertyRef Name="fiche" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+      <PropertyRef Name="matricule" />
+      <PropertyRef Name="rubrique" />
+    </Key>
+    <Property Name="nbr" Type="Int32" Nullable="false" />
+    <Property Name="fiche" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="annee" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mois" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="matricule" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="rubrique" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="libelle" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="nombre" Type="Single" Nullable="false" />
+    <Property Name="retenue" Type="Single" Nullable="false" />
+    <Property Name="gain" Type="Single" Nullable="false" />
+    <Property Name="imposable" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="cotisable" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="Group1" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="lcn">
+    <Key>
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="trimestre" />
+      <PropertyRef Name="txcot" />
+      <PropertyRef Name="numcnss" />
+      <PropertyRef Name="matricule" />
+    </Key>
+    <Property Name="annee" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="trimestre" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="txcot" Type="Single" Nullable="false" />
+    <Property Name="numcnss" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="matricule" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mois1" Type="Double" />
+    <Property Name="mois2" Type="Double" />
+    <Property Name="mois3" Type="Double" />
+    <Property Name="page" Type="Int32" />
+    <Property Name="numerordre" Type="Int32" />
+    <Property Name="nomprenom" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="categorie" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="mois1k" Type="Double" />
+    <Property Name="mois2k" Type="Double" />
+    <Property Name="mois3k" Type="Double" />
+    <Property Name="sel" Type="Int32" />
+  </EntityType>
+  <EntityType Name="lignepointage">
+    <Key>
+      <PropertyRef Name="Matr" />
+      <PropertyRef Name="codfich" />
+      <PropertyRef Name="codchantier" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+    </Key>
+    <Property Name="Matr" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nomprenom" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="regime" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="jourtrv" Type="Single" />
+    <Property Name="heuretrv" Type="Single" />
+    <Property Name="Jourcong" Type="Single" />
+    <Property Name="jourfer" Type="Single" />
+    <Property Name="codfich" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="codchantier" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="annee" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mois" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="confirme" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="hcong" Type="Double" />
+    <Property Name="hfer" Type="Double" />
+    <Property Name="tfp" Type="Double" />
+    <Property Name="foprolos" Type="Double" />
+  </EntityType>
+  <EntityType Name="ligneprime">
+    <Key>
+      <PropertyRef Name="rubrique" />
+      <PropertyRef Name="matr" />
+      <PropertyRef Name="fiche" />
+      <PropertyRef Name="nligne" />
+    </Key>
+    <Property Name="rubrique" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="designarub" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="montant" Type="Single" />
+    <Property Name="matr" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="confirme" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="fiche" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="libelle" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="nligne" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="lignerub">
+    <Key>
+      <PropertyRef Name="codrubrique" />
+      <PropertyRef Name="condition" />
+      <PropertyRef Name="Ligne" />
+    </Key>
+    <Property Name="codrubrique" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="condition" Type="String" MaxLength="78" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Formule" Type="String" MaxLength="78" FixedLength="false" Unicode="false" />
+    <Property Name="confirme" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="Ligne" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="plafond" Type="Double" />
+  </EntityType>
+  <EntityType Name="lmission">
+    <Key>
+      <PropertyRef Name="nummission" />
+      <PropertyRef Name="codeemp" />
+    </Key>
+    <Property Name="nummission" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="codeemp" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="libemp" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="codequal" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="libqual" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="num" Type="Double" />
+  </EntityType>
+  <EntityType Name="majconge">
+    <Key>
+      <PropertyRef Name="matricule" />
+      <PropertyRef Name="datedepart" />
+    </Key>
+    <Property Name="code" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="libelle" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="type" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="nbrjour" Type="Single" />
+    <Property Name="nbrheure" Type="Single" />
+    <Property Name="matricule" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nomprenom" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="solde" Type="Single" />
+    <Property Name="datedepart" Type="DateTime" Nullable="false" />
+    <Property Name="datefin" Type="DateTime" />
+    <Property Name="payer" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="majconge1">
+    <Key>
+      <PropertyRef Name="matricule" />
+      <PropertyRef Name="datedepart" />
+    </Key>
+    <Property Name="code" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="libelle" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="type" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="nbrjour" Type="Single" />
+    <Property Name="nbrheure" Type="Single" />
+    <Property Name="matricule" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nomprenom" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="solde" Type="Single" />
+    <Property Name="datedepart" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="datefin" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="payer" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="majpret">
+    <Key>
+      <PropertyRef Name="code" />
+      <PropertyRef Name="datepret" />
+      <PropertyRef Name="matricule" />
+    </Key>
+    <Property Name="code" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="designa" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="date1ret" Type="DateTime" />
+    <Property Name="datepret" Type="DateTime" Nullable="false" />
+    <Property Name="blocage" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="matricule" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nomprenom" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="montret" Type="Single" />
+    <Property Name="montpret" Type="Single" />
+    <Property Name="montrest" Type="Single" />
+    <Property Name="fiche" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="desifich" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="dated" Type="DateTime" />
+    <Property Name="datef" Type="DateTime" />
+    <Property Name="MontInit" Type="Single" />
+  </EntityType>
+  <EntityType Name="mission">
+    <Key>
+      <PropertyRef Name="nummission" />
+    </Key>
+    <Property Name="nummission" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="datesortie" Type="DateTime" />
+    <Property Name="dateretour" Type="DateTime" />
+    <Property Name="numao" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="nbjour" Type="Double" />
+    <Property Name="projet" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="lieuint" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="codecli" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="rscli" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="perscontac" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="codsui" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="dessui" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="coddemand" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="libdemand" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="compterendu" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="generer" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="heurrdv" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="typeint" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="nbhest" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="cloture" Type="Int32" />
+  </EntityType>
+  <EntityType Name="nbrjour">
+    <Key>
+      <PropertyRef Name="nbrJour1" />
+      <PropertyRef Name="matricule" />
+    </Key>
+    <Property Name="nbrJour1" Type="Int32" Nullable="false" />
+    <Property Name="matricule" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nomjour" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="nomjour">
+    <Key>
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+      <PropertyRef Name="nbjour" />
+    </Key>
+    <Property Name="annee" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mois" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nbjour" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nomjour1" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="persarchive">
+    <Key>
+      <PropertyRef Name="MATR" />
+    </Key>
+    <Property Name="MATR" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CAISSE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="ECHELON" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="PAYEMENT" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="NATIONAL" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="TRV_AN" Type="Int32" />
+    <Property Name="NOMPRENOM1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="PRENOM1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PRENOM2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PRENOM3" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PRENOM4" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="NBRENFANT" Type="Int32" />
+    <Property Name="CIN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NUMCNSS" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="SERV" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="REGIME2" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="REGIME1" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="nomregime1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="SALB" Type="Single" />
+    <Property Name="TIT" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="SITF" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="TXHOR" Type="Single" />
+    <Property Name="TXCNSS" Type="Single" />
+    <Property Name="TELEPHONE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NOMPRENOM2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="BANQUESTE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="BANQUEPER" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="numcompte" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DECIMPOT" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="ARR1" Type="Int32" />
+    <Property Name="COMPTEC" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="ATELIER" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="ADRESSE" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="CAT" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="CHEF" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="PRESENCE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="QUAL" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="AFF" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="SEXE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="DATECHE" Type="DateTime" />
+    <Property Name="PROCHEECHE" Type="DateTime" />
+    <Property Name="EMBO" Type="DateTime" />
+    <Property Name="NAIS" Type="DateTime" />
+    <Property Name="ACCtrv" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="DATESIT" Type="DateTime" />
+    <Property Name="NAIS1" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NAIS2" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NAIS3" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NAIS4" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="imagepersonnel" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="SMIG" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="SUPH" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="DATECIN" Type="DateTime" />
+    <Property Name="SoldInit" Type="Double" />
+    <Property Name="DroitCong" Type="Double" />
+    <Property Name="Total" Type="Double" />
+    <Property Name="assurance" Type="Double" />
+    <Property Name="dates" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="personnel">
+    <Key>
+      <PropertyRef Name="MATR" />
+    </Key>
+    <Property Name="MATR" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CAISSE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="ECHELON" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="PAYEMENT" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="NATIONAL" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="TRV_AN" Type="Int32" />
+    <Property Name="NOMPRENOM1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="PRENOM1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PRENOM2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PRENOM3" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PRENOM4" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="NBRENFANT" Type="Int32" />
+    <Property Name="CIN" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NUMCNSS" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="SERV" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="REGIME2" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="REGIME1" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="nomregime1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="SALB" Type="Single" />
+    <Property Name="TIT" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="SITF" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="TXHOR" Type="Single" />
+    <Property Name="TXCNSS" Type="Single" />
+    <Property Name="TELEPHONE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NOMPRENOM2" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="BANQUESTE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="BANQUEPER" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="numcompte" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DECIMPOT" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="ARR1" Type="Int32" />
+    <Property Name="COMPTEC" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="ATELIER" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="ADRESSE" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="CAT" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="CHEF" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="PRESENCE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="QUAL" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="AFF" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="SEXE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="DATECHE" Type="DateTime" />
+    <Property Name="PROCHEECHE" Type="DateTime" />
+    <Property Name="EMBO" Type="DateTime" />
+    <Property Name="NAIS" Type="DateTime" />
+    <Property Name="ACCtrv" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="DATESIT" Type="DateTime" />
+    <Property Name="NAIS1" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NAIS2" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NAIS3" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NAIS4" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="imagepersonnel" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="SMIG" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="SUPH" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="DATECIN" Type="DateTime" />
+    <Property Name="SoldInit" Type="Double" />
+    <Property Name="DroitCong" Type="Double" />
+    <Property Name="Total" Type="Double" />
+    <Property Name="assurance" Type="Double" />
+    <Property Name="matpointeuse" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="redevance" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nbmois" Type="Double" />
+    <Property Name="tfp" Type="Double" Nullable="false" />
+    <Property Name="foprolos" Type="Double" />
+    <Property Name="comptecb" Type="Double" />
+    <Property Name="sel" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="DateDepart" Type="DateTime" />
+    <Property Name="imagepath" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="imagesize" Type="Int32" />
+  </EntityType>
+  <EntityType Name="poijourtmp">
+    <Key>
+      <PropertyRef Name="codfich" />
+      <PropertyRef Name="codchan" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+      <PropertyRef Name="matricule" />
+    </Key>
+    <Property Name="codfich" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="codchan" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="annee" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mois" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="matricule" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="j1" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j2" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j3" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j4" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j5" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j6" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j7" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j8" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j9" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j10" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j11" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j12" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j13" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j14" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j15" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j16" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j17" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j18" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j19" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j20" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j21" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j22" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j23" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j24" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j25" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j26" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j27" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j28" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j29" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j30" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j31" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="totheure" Type="Double" />
+    <Property Name="totjour" Type="Double" />
+    <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="poijourtmp1">
+    <Key>
+      <PropertyRef Name="codfich" />
+      <PropertyRef Name="codchan" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+      <PropertyRef Name="matricule" />
+    </Key>
+    <Property Name="codfich" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="codchan" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="annee" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mois" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="matricule" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="j1" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j2" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j3" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j4" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j5" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j6" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j7" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j8" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j9" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j10" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j11" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j12" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j13" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j14" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j15" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j16" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j17" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j18" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j19" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j20" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j21" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j22" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j23" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j24" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j25" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j26" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j27" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j28" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j29" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j30" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j31" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="totheure" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="totjour" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="type" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="pointeuse">
+    <Key>
+      <PropertyRef Name="code_machine" />
+    </Key>
+    <Property Name="code_machine" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="libelle_machine" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="frs_pointeuse" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="nom_base" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="nom_tab_pointage" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="temp_pointage" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="nom_tab_personnel" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="code_personnel" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="nom_personnel" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="pre_personnel" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="cheminbd" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="type_code_utilisateur" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="type_base" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="defaut" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="correction_p" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="nbr_seance" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="IP_Machine" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Port_Machine" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ID_Machine" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="EmpStd" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="type_pointage" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="pointjour">
+    <Key>
+      <PropertyRef Name="codfich" />
+      <PropertyRef Name="codchan" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+      <PropertyRef Name="matricule" />
+      <PropertyRef Name="Type" />
+    </Key>
+    <Property Name="codfich" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="codchan" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="annee" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mois" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="matricule" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="j1" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j2" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j3" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j4" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j5" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j6" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j7" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j8" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j9" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j10" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j11" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j12" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j13" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j14" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j15" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j16" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j17" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j18" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j19" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j20" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j21" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j22" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j23" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j24" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j25" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j26" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j27" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j28" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j29" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j30" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="j31" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="totheure" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="totjour" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="salbase" Type="Double" />
+    <Property Name="totprime" Type="Double" />
+    <Property Name="salbrut" Type="Double" />
+    <Property Name="cnss" Type="Double" />
+    <Property Name="salimpo" Type="Double" />
+    <Property Name="impot" Type="Double" />
+    <Property Name="salnet" Type="Double" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pret">
+    <Key>
+      <PropertyRef Name="codpret" />
+    </Key>
+    <Property Name="codpret" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="desipret" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="primepers">
+    <Key>
+      <PropertyRef Name="MATR" />
+      <PropertyRef Name="codRUBRIQUE" />
+    </Key>
+    <Property Name="MATR" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="codRUBRIQUE" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MONTANT" Type="Int32" />
+  </EntityType>
+  <EntityType Name="qualification">
+    <Key>
+      <PropertyRef Name="codequalif" />
+    </Key>
+    <Property Name="codequalif" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="qualificat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="rubrique">
+    <Key>
+      <PropertyRef Name="codrubrique" />
+    </Key>
+    <Property Name="codrubrique" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="designarub" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="libelle" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="ncompte" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="type" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="nature" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="imposable" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="cotisable" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="regime" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="service">
+    <Key>
+      <PropertyRef Name="codservice" />
+    </Key>
+    <Property Name="codservice" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="designaser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="situationadmin">
+    <Key>
+      <PropertyRef Name="codesit" />
+    </Key>
+    <Property Name="codesit" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="sitadminis" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="societe">
+    <Key>
+      <PropertyRef Name="CODSOC" />
+    </Key>
+    <Property Name="CODSOC" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NOMSOCI" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ADRESSE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NBUREAU" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="CODETVA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CODPOSTAL" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="CODUSE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="DATCLOT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="DIRECTEUR" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="FOPROLOS" Type="Single" />
+    <Property Name="NUMCNSS" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="TFP" Type="Single" />
+    <Property Name="ACCTRV" Type="Single" />
+    <Property Name="TXEMPLOYEUR" Type="Single" />
+    <Property Name="TXEMPLOYER" Type="Single" />
+    <Property Name="TELEFAX" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="TELEX" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="TELEPHONE" Type="String" MaxLength="31" FixedLength="false" Unicode="false" />
+    <Property Name="VILLE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="MODELE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="TXARRONDI" Type="Single" Nullable="false" />
+    <Property Name="TYPEIRPP" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="jnormal" Type="Single" />
+    <Property Name="hnormal" Type="Single" />
+    <Property Name="clotfiches" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tempautrepoint">
+    <Key>
+      <PropertyRef Name="rubrique" />
+      <PropertyRef Name="matr" />
+      <PropertyRef Name="codfich" />
+      <PropertyRef Name="codchantier" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+    </Key>
+    <Property Name="rubrique" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="libelle" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="montant" Type="Single" />
+    <Property Name="matr" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nomprenom" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="codfich" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="codchantier" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="annee" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mois" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="confirme" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="nummois" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tempcot">
+    <Key>
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+      <PropertyRef Name="txcot" />
+      <PropertyRef Name="matricule" />
+      <PropertyRef Name="fiche" />
+    </Key>
+    <Property Name="annee" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mois" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="txcot" Type="Double" Nullable="false" />
+    <Property Name="matricule" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fiche" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="salbrut" Type="Double" />
+    <Property Name="nomprenom" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="numcnss" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="categorie" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="sommek" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tempheursupp">
+    <Key>
+      <PropertyRef Name="codheursupp" />
+      <PropertyRef Name="codfich" />
+      <PropertyRef Name="codchantier" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+      <PropertyRef Name="matr" />
+    </Key>
+    <Property Name="codheursupp" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="taux" Type="Int32" />
+    <Property Name="libelle" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="nbrheursupp" Type="Single" />
+    <Property Name="codfich" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="codchantier" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="annee" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mois" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="matr" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nomprenom" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="confirme" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="templignepointage">
+    <Key>
+      <PropertyRef Name="Matr" />
+      <PropertyRef Name="codfich" />
+      <PropertyRef Name="codchantier" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+    </Key>
+    <Property Name="Matr" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nomprenom" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="regime" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="jourtrv" Type="Single" />
+    <Property Name="heuretrv" Type="Single" />
+    <Property Name="Jourcong" Type="Single" />
+    <Property Name="jourfer" Type="Single" />
+    <Property Name="codfich" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="codchantier" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="annee" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mois" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="confirme" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="hcong" Type="Double" />
+    <Property Name="hfer" Type="Double" />
+    <Property Name="tfp" Type="Double" />
+    <Property Name="foprolos" Type="Double" />
+  </EntityType>
+  <EntityType Name="templigneprime">
+    <Key>
+      <PropertyRef Name="rubrique" />
+      <PropertyRef Name="matr" />
+      <PropertyRef Name="fiche" />
+      <PropertyRef Name="nligne" />
+    </Key>
+    <Property Name="rubrique" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="designarub" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="montant" Type="Single" />
+    <Property Name="matr" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="confirme" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="fiche" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="libelle" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="nligne" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="templignerub">
+    <Key>
+      <PropertyRef Name="codrubrique" />
+      <PropertyRef Name="condition" />
+      <PropertyRef Name="ligne" />
+    </Key>
+    <Property Name="codrubrique" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="condition" Type="String" MaxLength="78" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Formule" Type="String" MaxLength="78" FixedLength="false" Unicode="false" />
+    <Property Name="confirme" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="ligne" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="plafond" Type="Double" />
+  </EntityType>
+  <EntityType Name="tempmajconge">
+    <Key>
+      <PropertyRef Name="matricule" />
+      <PropertyRef Name="datedepart" />
+    </Key>
+    <Property Name="code" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="libelle" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="type" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="nbrjour" Type="Single" />
+    <Property Name="nbrheure" Type="Single" />
+    <Property Name="matricule" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nomprenom" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="solde" Type="Single" />
+    <Property Name="datedepart" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="datefin" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="payer" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ths">
+    <Key>
+      <PropertyRef Name="codths" />
+    </Key>
+    <Property Name="codths" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="libelle" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="taux" Type="Int32" />
+    <Property Name="regime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MtSupp" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="variable">
+    <Key>
+      <PropertyRef Name="codVariable" />
+    </Key>
+    <Property Name="codVariable" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Libelle" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vnote">
+    <Key>
+      <PropertyRef Name="matricule" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+    </Key>
+    <Property Name="matricule" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="annee" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mois" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="note_rend" Type="Single" />
+    <Property Name="note_prod" Type="Int32" />
+    <Property Name="nomprenom" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="emploi_temp">
+    <Key>
+      <PropertyRef Name="datedu1" />
+      <PropertyRef Name="dateau1" />
+      <PropertyRef Name="datedu2" />
+      <PropertyRef Name="dateau2" />
+      <PropertyRef Name="tluds" />
+      <PropertyRef Name="tmads" />
+      <PropertyRef Name="tmeds" />
+      <PropertyRef Name="tjeds" />
+      <PropertyRef Name="tveds" />
+      <PropertyRef Name="tsads" />
+      <PropertyRef Name="tdids" />
+      <PropertyRef Name="ttrds" />
+      <PropertyRef Name="tlusu" />
+      <PropertyRef Name="tmasu" />
+      <PropertyRef Name="tmesu" />
+      <PropertyRef Name="tjesu" />
+      <PropertyRef Name="tvesu" />
+      <PropertyRef Name="tsasu" />
+      <PropertyRef Name="tdisu" />
+      <PropertyRef Name="ttrsu" />
+      <PropertyRef Name="TE11" />
+      <PropertyRef Name="TE12" />
+      <PropertyRef Name="TE13" />
+      <PropertyRef Name="TE14" />
+      <PropertyRef Name="TE15" />
+      <PropertyRef Name="TE16" />
+      <PropertyRef Name="TE17" />
+      <PropertyRef Name="TS11" />
+      <PropertyRef Name="TS12" />
+      <PropertyRef Name="TS13" />
+      <PropertyRef Name="TS14" />
+      <PropertyRef Name="TS15" />
+      <PropertyRef Name="TS16" />
+      <PropertyRef Name="TS17" />
+      <PropertyRef Name="TE21" />
+      <PropertyRef Name="TE22" />
+      <PropertyRef Name="TE23" />
+      <PropertyRef Name="TE24" />
+      <PropertyRef Name="TE25" />
+      <PropertyRef Name="TE26" />
+      <PropertyRef Name="TE27" />
+      <PropertyRef Name="TS21" />
+      <PropertyRef Name="TS22" />
+      <PropertyRef Name="TS23" />
+      <PropertyRef Name="TS24" />
+      <PropertyRef Name="TS25" />
+      <PropertyRef Name="TS26" />
+      <PropertyRef Name="TS27" />
+      <PropertyRef Name="TEE11" />
+      <PropertyRef Name="TEE12" />
+      <PropertyRef Name="TEE13" />
+      <PropertyRef Name="TEE14" />
+      <PropertyRef Name="TEE15" />
+      <PropertyRef Name="TEE16" />
+      <PropertyRef Name="TEE17" />
+      <PropertyRef Name="TSS11" />
+      <PropertyRef Name="TSS12" />
+      <PropertyRef Name="TSS13" />
+      <PropertyRef Name="TSS14" />
+      <PropertyRef Name="TSS15" />
+      <PropertyRef Name="TSS16" />
+      <PropertyRef Name="TSS17" />
+      <PropertyRef Name="Code" />
+      <PropertyRef Name="libelle" />
+    </Key>
+    <Property Name="datedu1" Type="DateTime" Nullable="false" />
+    <Property Name="dateau1" Type="DateTime" Nullable="false" />
+    <Property Name="datedu2" Type="DateTime" Nullable="false" />
+    <Property Name="dateau2" Type="DateTime" Nullable="false" />
+    <Property Name="tluds" Type="Time" Nullable="false" />
+    <Property Name="tmads" Type="Time" Nullable="false" />
+    <Property Name="tmeds" Type="Time" Nullable="false" />
+    <Property Name="tjeds" Type="Time" Nullable="false" />
+    <Property Name="tveds" Type="Time" Nullable="false" />
+    <Property Name="tsads" Type="Time" Nullable="false" />
+    <Property Name="tdids" Type="Time" Nullable="false" />
+    <Property Name="ttrds" Type="Time" Nullable="false" />
+    <Property Name="tlusu" Type="Time" Nullable="false" />
+    <Property Name="tmasu" Type="Time" Nullable="false" />
+    <Property Name="tmesu" Type="Time" Nullable="false" />
+    <Property Name="tjesu" Type="Time" Nullable="false" />
+    <Property Name="tvesu" Type="Time" Nullable="false" />
+    <Property Name="tsasu" Type="Time" Nullable="false" />
+    <Property Name="tdisu" Type="Time" Nullable="false" />
+    <Property Name="ttrsu" Type="Time" Nullable="false" />
+    <Property Name="TE11" Type="Time" Nullable="false" />
+    <Property Name="TE12" Type="Time" Nullable="false" />
+    <Property Name="TE13" Type="Time" Nullable="false" />
+    <Property Name="TE14" Type="Time" Nullable="false" />
+    <Property Name="TE15" Type="Time" Nullable="false" />
+    <Property Name="TE16" Type="Time" Nullable="false" />
+    <Property Name="TE17" Type="Time" Nullable="false" />
+    <Property Name="TS11" Type="Time" Nullable="false" />
+    <Property Name="TS12" Type="Time" Nullable="false" />
+    <Property Name="TS13" Type="Time" Nullable="false" />
+    <Property Name="TS14" Type="Time" Nullable="false" />
+    <Property Name="TS15" Type="Time" Nullable="false" />
+    <Property Name="TS16" Type="Time" Nullable="false" />
+    <Property Name="TS17" Type="Time" Nullable="false" />
+    <Property Name="TE21" Type="Time" Nullable="false" />
+    <Property Name="TE22" Type="Time" Nullable="false" />
+    <Property Name="TE23" Type="Time" Nullable="false" />
+    <Property Name="TE24" Type="Time" Nullable="false" />
+    <Property Name="TE25" Type="Time" Nullable="false" />
+    <Property Name="TE26" Type="Time" Nullable="false" />
+    <Property Name="TE27" Type="Time" Nullable="false" />
+    <Property Name="TS21" Type="Time" Nullable="false" />
+    <Property Name="TS22" Type="Time" Nullable="false" />
+    <Property Name="TS23" Type="Time" Nullable="false" />
+    <Property Name="TS24" Type="Time" Nullable="false" />
+    <Property Name="TS25" Type="Time" Nullable="false" />
+    <Property Name="TS26" Type="Time" Nullable="false" />
+    <Property Name="TS27" Type="Time" Nullable="false" />
+    <Property Name="TEE11" Type="Time" Nullable="false" />
+    <Property Name="TEE12" Type="Time" Nullable="false" />
+    <Property Name="TEE13" Type="Time" Nullable="false" />
+    <Property Name="TEE14" Type="Time" Nullable="false" />
+    <Property Name="TEE15" Type="Time" Nullable="false" />
+    <Property Name="TEE16" Type="Time" Nullable="false" />
+    <Property Name="TEE17" Type="Time" Nullable="false" />
+    <Property Name="TSS11" Type="Time" Nullable="false" />
+    <Property Name="TSS12" Type="Time" Nullable="false" />
+    <Property Name="TSS13" Type="Time" Nullable="false" />
+    <Property Name="TSS14" Type="Time" Nullable="false" />
+    <Property Name="TSS15" Type="Time" Nullable="false" />
+    <Property Name="TSS16" Type="Time" Nullable="false" />
+    <Property Name="TSS17" Type="Time" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="libelle" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="lbp_hist">
+    <Key>
+      <PropertyRef Name="nbr" />
+      <PropertyRef Name="fiche" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+      <PropertyRef Name="matricule" />
+      <PropertyRef Name="rubrique" />
+      <PropertyRef Name="nombre" />
+      <PropertyRef Name="retenue" />
+      <PropertyRef Name="gain" />
+    </Key>
+    <Property Name="nbr" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fiche" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="annee" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mois" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="matricule" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="rubrique" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="libelle" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="nombre" Type="Single" Nullable="false" />
+    <Property Name="retenue" Type="Single" Nullable="false" />
+    <Property Name="gain" Type="Single" Nullable="false" />
+    <Property Name="imposable" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="cotisable" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="Group1" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="numCalcul" Type="Int64" />
+  </EntityType>
+  <EntityType Name="nomtable">
+    <Key>
+      <PropertyRef Name="nomtable1" />
+    </Key>
+    <Property Name="nomtable1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="trace_pointage">
+    <Key>
+      <PropertyRef Name="Ancien_date" />
+      <PropertyRef Name="Ancien_time" />
+      <PropertyRef Name="nouv_date" />
+      <PropertyRef Name="nouv_time" />
+      <PropertyRef Name="matricule" />
+      <PropertyRef Name="Nom_Pre" />
+      <PropertyRef Name="date_maj" />
+      <PropertyRef Name="temp_maj" />
+      <PropertyRef Name="operation" />
+    </Key>
+    <Property Name="Ancien_date" Type="DateTime" Nullable="false" />
+    <Property Name="Ancien_time" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nouv_date" Type="DateTime" Nullable="false" />
+    <Property Name="nouv_time" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="matricule" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nom_Pre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="date_maj" Type="DateTime" Nullable="false" />
+    <Property Name="temp_maj" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="operation" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="user" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="grpaieEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="affectation" EntityType="Self.affectation" />
+    <EntitySet Name="atelier" EntityType="Self.atelier" />
+    <EntitySet Name="autrepoint" EntityType="Self.autrepoint" />
+    <EntitySet Name="banque" EntityType="Self.banque" />
+    <EntitySet Name="bpointage" EntityType="Self.bpointage" />
+    <EntitySet Name="brouillardpoint" EntityType="Self.brouillardpoint" />
+    <EntitySet Name="calendjf" EntityType="Self.calendjf" />
+    <EntitySet Name="calendrier" EntityType="Self.calendrier" />
+    <EntitySet Name="calendrierold" EntityType="Self.calendrierold" />
+    <EntitySet Name="chantier" EntityType="Self.chantier" />
+    <EntitySet Name="client" EntityType="Self.client" />
+    <EntitySet Name="cnt" EntityType="Self.cnt" />
+    <EntitySet Name="conge" EntityType="Self.conge" />
+    <EntitySet Name="ebp" EntityType="Self.ebp" />
+    <EntitySet Name="ebp_hist" EntityType="Self.ebp_hist" />
+    <EntitySet Name="ebparchive" EntityType="Self.ebparchive" />
+    <EntitySet Name="ebptemp" EntityType="Self.ebptemp" />
+    <EntitySet Name="ecn" EntityType="Self.ecn" />
+    <EntitySet Name="entpointage" EntityType="Self.entpointage" />
+    <EntitySet Name="fich" EntityType="Self.fich" />
+    <EntitySet Name="fpointage" EntityType="Self.fpointage" />
+    <EntitySet Name="grille" EntityType="Self.grille" />
+    <EntitySet Name="grillesalaire" EntityType="Self.grillesalaire" />
+    <EntitySet Name="heursupp" EntityType="Self.heursupp" />
+    <EntitySet Name="intervalle" EntityType="Self.intervalle" />
+    <EntitySet Name="lbp" EntityType="Self.lbp" />
+    <EntitySet Name="lbparchive" EntityType="Self.lbparchive" />
+    <EntitySet Name="lbptemp" EntityType="Self.lbptemp" />
+    <EntitySet Name="lcn" EntityType="Self.lcn" />
+    <EntitySet Name="lignepointage" EntityType="Self.lignepointage" />
+    <EntitySet Name="ligneprime" EntityType="Self.ligneprime" />
+    <EntitySet Name="lignerub" EntityType="Self.lignerub" />
+    <EntitySet Name="lmission" EntityType="Self.lmission" />
+    <EntitySet Name="majconge" EntityType="Self.majconge" />
+    <EntitySet Name="majconge1" EntityType="Self.majconge1" />
+    <EntitySet Name="majpret" EntityType="Self.majpret" />
+    <EntitySet Name="mission" EntityType="Self.mission" />
+    <EntitySet Name="nbrjour" EntityType="Self.nbrjour" />
+    <EntitySet Name="nomjour" EntityType="Self.nomjour" />
+    <EntitySet Name="persarchive" EntityType="Self.persarchive" />
+    <EntitySet Name="personnel" EntityType="Self.personnel" />
+    <EntitySet Name="poijourtmp" EntityType="Self.poijourtmp" />
+    <EntitySet Name="poijourtmp1" EntityType="Self.poijourtmp1" />
+    <EntitySet Name="pointeuse" EntityType="Self.pointeuse" />
+    <EntitySet Name="pointjour" EntityType="Self.pointjour" />
+    <EntitySet Name="pret" EntityType="Self.pret" />
+    <EntitySet Name="primepers" EntityType="Self.primepers" />
+    <EntitySet Name="qualification" EntityType="Self.qualification" />
+    <EntitySet Name="rubrique" EntityType="Self.rubrique" />
+    <EntitySet Name="service" EntityType="Self.service" />
+    <EntitySet Name="situationadmin" EntityType="Self.situationadmin" />
+    <EntitySet Name="societe" EntityType="Self.societe" />
+    <EntitySet Name="tempautrepoint" EntityType="Self.tempautrepoint" />
+    <EntitySet Name="tempcot" EntityType="Self.tempcot" />
+    <EntitySet Name="tempheursupp" EntityType="Self.tempheursupp" />
+    <EntitySet Name="templignepointage" EntityType="Self.templignepointage" />
+    <EntitySet Name="templigneprime" EntityType="Self.templigneprime" />
+    <EntitySet Name="templignerub" EntityType="Self.templignerub" />
+    <EntitySet Name="tempmajconge" EntityType="Self.tempmajconge" />
+    <EntitySet Name="ths" EntityType="Self.ths" />
+    <EntitySet Name="variable" EntityType="Self.variable" />
+    <EntitySet Name="vnote" EntityType="Self.vnote" />
+    <EntitySet Name="emploi_temp" EntityType="Self.emploi_temp" />
+    <EntitySet Name="lbp_hist" EntityType="Self.lbp_hist" />
+    <EntitySet Name="nomtable" EntityType="Self.nomtable" />
+    <EntitySet Name="trace_pointage" EntityType="Self.trace_pointage" />
+  </EntityContainer>
+</Schema>

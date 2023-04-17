@@ -1,0 +1,2151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="grpaieModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="affectation">
+    <Key>
+      <PropertyRef Name="CodAff" />
+    </Key>
+    <Property Name="CodAff" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="DesiAff" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="atelier">
+    <Key>
+      <PropertyRef Name="codatelier" />
+    </Key>
+    <Property Name="codatelier" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="libelleatelier" Type="varchar" MaxLength="40" />
+    <Property Name="sel" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="autrepoint">
+    <Key>
+      <PropertyRef Name="rubrique" />
+      <PropertyRef Name="matr" />
+      <PropertyRef Name="codfich" />
+      <PropertyRef Name="codchantier" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+    </Key>
+    <Property Name="rubrique" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="libelle" Type="varchar" MaxLength="30" />
+    <Property Name="montant" Type="float" />
+    <Property Name="matr" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="nomprenom" Type="varchar" MaxLength="40" />
+    <Property Name="codfich" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="codchantier" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="annee" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="mois" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="confirme" Type="varchar" MaxLength="1" />
+    <Property Name="nummois" Type="int" />
+  </EntityType>
+  <EntityType Name="banque">
+    <Key>
+      <PropertyRef Name="Codbanque" />
+    </Key>
+    <Property Name="Codbanque" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="numcompte" Type="varchar" MaxLength="20" />
+    <Property Name="Modele" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="bpointage">
+    <Key>
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="matricule" />
+      <PropertyRef Name="mois" />
+    </Key>
+    <Property Name="annee" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="matricule" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="mois" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="nomprenom" Type="varchar" MaxLength="30" />
+    <Property Name="taux1" Type="varchar" MaxLength="50" />
+    <Property Name="taux2" Type="varchar" MaxLength="50" />
+    <Property Name="taux3" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="brouillardpoint">
+    <Key>
+      <PropertyRef Name="matr" />
+      <PropertyRef Name="codrub" />
+      <PropertyRef Name="mois" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="codfich" />
+      <PropertyRef Name="codchantier" />
+    </Key>
+    <Property Name="matr" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="nomprenom" Type="varchar" MaxLength="30" />
+    <Property Name="jourtrv" Type="float" />
+    <Property Name="heureTrv" Type="float" />
+    <Property Name="jourcong" Type="float" />
+    <Property Name="jourfer" Type="float" />
+    <Property Name="codrub" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="libelle" Type="varchar" MaxLength="30" />
+    <Property Name="nbrmontant" Type="float" />
+    <Property Name="mois" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="annee" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="codfich" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="codchantier" Type="varchar" MaxLength="3" Nullable="false" />
+  </EntityType>
+  <EntityType Name="calendjf">
+    <Key>
+      <PropertyRef Name="NUM" />
+    </Key>
+    <Property Name="NUM" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="date_du" Type="date" />
+    <Property Name="date_au" Type="date" />
+    <Property Name="libelle" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="calendrier">
+    <Key>
+      <PropertyRef Name="NUM" />
+    </Key>
+    <Property Name="NUM" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="datedu" Type="date" />
+    <Property Name="dateau" Type="date" />
+    <Property Name="libelle" Type="varchar" MaxLength="200" />
+    <Property Name="tdebLU1" Type="time" Precision="0" />
+    <Property Name="tdebLU2" Type="time" Precision="0" />
+    <Property Name="tdebLU3" Type="time" Precision="0" />
+    <Property Name="tfinLU1" Type="time" Precision="0" />
+    <Property Name="tfinLU2" Type="time" Precision="0" />
+    <Property Name="tfinLU3" Type="time" Precision="0" />
+    <Property Name="tdebMA1" Type="time" Precision="0" />
+    <Property Name="tdebMA2" Type="time" Precision="0" />
+    <Property Name="tdebMA3" Type="time" Precision="0" />
+    <Property Name="tfinMA1" Type="time" Precision="0" />
+    <Property Name="tfinMA2" Type="time" Precision="0" />
+    <Property Name="tfinMA3" Type="time" Precision="0" />
+    <Property Name="tdebME1" Type="time" Precision="0" />
+    <Property Name="tdebME2" Type="time" Precision="0" />
+    <Property Name="tdebME3" Type="time" Precision="0" />
+    <Property Name="tfinME1" Type="time" Precision="0" />
+    <Property Name="tfinME2" Type="time" Precision="0" />
+    <Property Name="tfinME3" Type="time" Precision="0" />
+    <Property Name="tdebJE1" Type="time" Precision="0" />
+    <Property Name="tdebJE2" Type="time" Precision="0" />
+    <Property Name="tdebJE3" Type="time" Precision="0" />
+    <Property Name="tfinJE1" Type="time" Precision="0" />
+    <Property Name="tfinJE2" Type="time" Precision="0" />
+    <Property Name="tfinJE3" Type="time" Precision="0" />
+    <Property Name="tdebVE1" Type="time" Precision="0" />
+    <Property Name="tdebVE2" Type="time" Precision="0" />
+    <Property Name="tdebVE3" Type="time" Precision="0" />
+    <Property Name="tfinVE1" Type="time" Precision="0" />
+    <Property Name="tfinVE2" Type="time" Precision="0" />
+    <Property Name="tfinVE3" Type="time" Precision="0" />
+    <Property Name="tdebSA1" Type="time" Precision="0" />
+    <Property Name="tdebSA2" Type="time" Precision="0" />
+    <Property Name="tdebSA3" Type="time" Precision="0" />
+    <Property Name="tfinSA1" Type="time" Precision="0" />
+    <Property Name="tfinSA2" Type="time" Precision="0" />
+    <Property Name="tfinSA3" Type="time" Precision="0" />
+    <Property Name="tdebDI1" Type="time" Precision="0" />
+    <Property Name="tdebDI2" Type="time" Precision="0" />
+    <Property Name="tdebDI3" Type="time" Precision="0" />
+    <Property Name="tfinDI1" Type="time" Precision="0" />
+    <Property Name="tfinDI2" Type="time" Precision="0" />
+    <Property Name="tfinDI3" Type="time" Precision="0" />
+    <Property Name="THLU" Type="time" Precision="0" />
+    <Property Name="THMA" Type="time" Precision="0" />
+    <Property Name="THME" Type="time" Precision="0" />
+    <Property Name="THJE" Type="time" Precision="0" />
+    <Property Name="THVE" Type="time" Precision="0" />
+    <Property Name="THSA" Type="time" Precision="0" />
+    <Property Name="THDI" Type="time" Precision="0" />
+    <Property Name="TempsRepos" Type="time" Precision="0" />
+  </EntityType>
+  <EntityType Name="calendrierold">
+    <Key>
+      <PropertyRef Name="NUM" />
+    </Key>
+    <Property Name="NUM" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="datedu" Type="date" />
+    <Property Name="dateau" Type="date" />
+    <Property Name="libelle" Type="varchar" MaxLength="200" />
+    <Property Name="tempdeb1" Type="time" Precision="0" />
+    <Property Name="tempfin1" Type="time" Precision="0" />
+    <Property Name="tempdeb2" Type="time" Precision="0" />
+    <Property Name="tempfin2" Type="time" Precision="0" />
+    <Property Name="tempdeb3" Type="time" Precision="0" />
+    <Property Name="tempfin3" Type="time" Precision="0" />
+  </EntityType>
+  <EntityType Name="chantier">
+    <Key>
+      <PropertyRef Name="codchantier" />
+    </Key>
+    <Property Name="codchantier" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="libelle" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <!--Erreurs détectées durant la génération :
+avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.grpaie.checkinout' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
+        <EntityType Name="checkinout">
+          <Property Name="USERID" Type="varchar" MaxLength="50" />
+          <Property Name="CHECKTIME" Type="datetime" Precision="0" />
+          <Property Name="CHECKTYPE" Type="text" />
+          <Property Name="VERIFYCODE" Type="int" />
+          <Property Name="SENSORID" Type="text" />
+          <Property Name="Memoinfo" Type="text" />
+          <Property Name="WorkCode" Type="text" />
+          <Property Name="sn" Type="text" />
+          <Property Name="UserExtFmt" Type="int" />
+          <Property Name="choix" Type="varchar" MaxLength="50" />
+          <Property Name="type" Type="varchar" MaxLength="1" />
+        </EntityType>-->
+  <EntityType Name="client">
+    <Key>
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="code" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="rsoc" Type="varchar" MaxLength="50" />
+    <Property Name="adresse" Type="varchar" MaxLength="120" />
+    <Property Name="cp" Type="varchar" MaxLength="6" />
+    <Property Name="descp" Type="varchar" MaxLength="30" />
+    <Property Name="ville" Type="varchar" MaxLength="40" />
+    <Property Name="pays" Type="varchar" MaxLength="50" />
+    <Property Name="telephone" Type="varchar" MaxLength="15" />
+    <Property Name="fax" Type="varchar" MaxLength="15" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="site" Type="varchar" MaxLength="50" />
+    <Property Name="matriculef" Type="varchar" MaxLength="17" />
+    <Property Name="banque" Type="varchar" MaxLength="32" />
+    <Property Name="compteb" Type="varchar" MaxLength="32" />
+    <Property Name="comptec" Type="varchar" MaxLength="8" />
+    <Property Name="cltexport" Type="varchar" MaxLength="1" />
+    <Property Name="timbref" Type="varchar" MaxLength="1" />
+    <Property Name="exon" Type="varchar" MaxLength="1" />
+    <Property Name="majotva" Type="varchar" MaxLength="1" />
+    <Property Name="suspfodec" Type="varchar" MaxLength="1" />
+    <Property Name="responsable1" Type="varchar" MaxLength="30" />
+    <Property Name="responsable2" Type="varchar" MaxLength="30" />
+    <Property Name="responsable3" Type="varchar" MaxLength="30" />
+    <Property Name="titre1" Type="varchar" MaxLength="20" />
+    <Property Name="titre2" Type="varchar" MaxLength="20" />
+    <Property Name="titre3" Type="varchar" MaxLength="20" />
+    <Property Name="gsm1" Type="varchar" MaxLength="15" />
+    <Property Name="gsm2" Type="varchar" MaxLength="15" />
+    <Property Name="gsm3" Type="varchar" MaxLength="15" />
+    <Property Name="nposte1" Type="varchar" MaxLength="3" />
+    <Property Name="nposte2" Type="varchar" MaxLength="3" />
+    <Property Name="nposte3" Type="varchar" MaxLength="3" />
+    <Property Name="tarif" Type="varchar" MaxLength="7" />
+    <Property Name="offretick" Type="varchar" MaxLength="1" />
+    <Property Name="Adresse1" Type="varchar" MaxLength="40" />
+    <Property Name="Commentaire" Type="text" />
+    <Property Name="bon" Type="varchar" MaxLength="1" />
+    <Property Name="cin" Type="varchar" MaxLength="8" />
+    <Property Name="typecli" Type="varchar" MaxLength="1" />
+    <Property Name="emp" Type="varchar" MaxLength="1" />
+    <Property Name="seloffre" Type="varchar" MaxLength="1" />
+    <Property Name="susptva" Type="varchar" MaxLength="1" />
+    <Property Name="decision" Type="varchar" MaxLength="35" />
+    <Property Name="datec" Type="date" />
+    <Property Name="activite" Type="varchar" MaxLength="50" />
+    <Property Name="coder" Type="varchar" MaxLength="3" />
+    <Property Name="tel1" Type="varchar" MaxLength="15" />
+    <Property Name="tel2" Type="varchar" MaxLength="15" />
+    <Property Name="telex" Type="varchar" MaxLength="15" />
+    <Property Name="codes" Type="varchar" MaxLength="3" />
+    <Property Name="nature" Type="varchar" MaxLength="10" />
+    <Property Name="remise" Type="double" />
+    <Property Name="typreg" Type="varchar" MaxLength="15" />
+    <Property Name="scredit" Type="double" />
+    <Property Name="srisque" Type="double" />
+    <Property Name="coderep" Type="varchar" MaxLength="3" />
+    <Property Name="desrep" Type="varchar" MaxLength="30" />
+    <Property Name="mtdebit" Type="double" />
+    <Property Name="mtcredit" Type="double" />
+    <Property Name="soldeini" Type="double" />
+    <Property Name="solde" Type="double" />
+    <Property Name="blockage" Type="varchar" MaxLength="1" />
+    <Property Name="desisec" Type="varchar" MaxLength="30" />
+    <Property Name="desireg" Type="varchar" MaxLength="30" />
+    <Property Name="desicp" Type="varchar" MaxLength="30" />
+    <Property Name="ventiler" Type="double" />
+    <Property Name="livcours" Type="double" />
+    <Property Name="totregle" Type="double" />
+    <Property Name="aval1" Type="varchar" MaxLength="40" />
+    <Property Name="aval2" Type="varchar" MaxLength="40" />
+    <Property Name="datecin" Type="date" />
+    <Property Name="soldeinibs" Type="double" />
+    <Property Name="rsocar" Type="varchar" MaxLength="40" />
+    <Property Name="adressear" Type="varchar" MaxLength="40" />
+    <Property Name="soldebs" Type="double" />
+    <Property Name="fidel" Type="varchar" MaxLength="1" />
+    <Property Name="datefidel" Type="date" />
+    <Property Name="remfidel" Type="double" />
+    <Property Name="typcarte" Type="varchar" MaxLength="1" />
+    <Property Name="Matricule" Type="varchar" MaxLength="15" />
+    <Property Name="numcarte" Type="varchar" MaxLength="10" />
+    <Property Name="tauxconv" Type="double" />
+    <Property Name="datcreat" Type="date" />
+    <Property Name="datexp" Type="date" />
+    <Property Name="chifaff" Type="double" />
+    <Property Name="nbrpts" Type="double" />
+    <Property Name="catot" Type="double" />
+    <Property Name="dernclot" Type="date" />
+    <Property Name="soldeinitexer" Type="double" />
+    <Property Name="connaiss" Type="varchar" MaxLength="80" />
+    <Property Name="profession" Type="varchar" MaxLength="80" />
+    <Property Name="premAch" Type="varchar" MaxLength="1" />
+    <Property Name="nbreEnf" Type="bigint" />
+    <Property Name="dat1" Type="date" />
+    <Property Name="dat2" Type="date" />
+    <Property Name="dat3" Type="date" />
+    <Property Name="dat4" Type="date" />
+    <Property Name="nom1" Type="varchar" MaxLength="20" />
+    <Property Name="nom2" Type="varchar" MaxLength="20" />
+    <Property Name="nom3" Type="varchar" MaxLength="20" />
+    <Property Name="nom4" Type="varchar" MaxLength="20" />
+    <Property Name="opf1" Type="varchar" MaxLength="1" />
+    <Property Name="opf2" Type="varchar" MaxLength="1" />
+    <Property Name="opf3" Type="varchar" MaxLength="1" />
+    <Property Name="opf4" Type="varchar" MaxLength="1" />
+    <Property Name="rsocconj" Type="varchar" MaxLength="50" />
+    <Property Name="datnaissconj" Type="date" />
+    <Property Name="professconj" Type="varchar" MaxLength="80" />
+    <Property Name="datnaiss" Type="date" />
+    <Property Name="datedebaut" Type="date" />
+    <Property Name="datefinaut" Type="date" />
+    <Property Name="typcli" Type="varchar" MaxLength="10" />
+    <Property Name="regime" Type="varchar" MaxLength="1" />
+    <Property Name="soldeinidevise" Type="double" />
+    <Property Name="usera" Type="varchar" MaxLength="2" />
+    <Property Name="userm" Type="varchar" MaxLength="2" />
+    <Property Name="users" Type="varchar" MaxLength="2" />
+    <Property Name="datemaj" Type="date" />
+    <Property Name="soldeinibl" Type="double" />
+    <Property Name="soldebl" Type="double" />
+    <Property Name="sdinilivencours" Type="double" />
+    <Property Name="totreglesd" Type="double" />
+    <Property Name="soldecont" Type="double" />
+    <Property Name="blnbon" Type="varchar" MaxLength="1" />
+    <Property Name="NbPtsFid" Type="double" />
+    <Property Name="codepv" Type="char" MaxLength="2" />
+    <Property Name="contrat" Type="varchar" MaxLength="1" />
+    <Property Name="fact" Type="double" />
+    <Property Name="comptec2" Type="varchar" MaxLength="8" />
+    <Property Name="ptva" Type="varchar" MaxLength="1" />
+    <Property Name="reference" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="codesel" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="soldeiniRapp" Type="double" Nullable="false" />
+    <Property Name="totreglerapp" Type="double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cnt">
+    <Key>
+      <PropertyRef Name="Matr" />
+      <PropertyRef Name="DateDeb" />
+    </Key>
+    <Property Name="Matr" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="DateDeb" Type="date" Nullable="false" />
+    <Property Name="Datefin" Type="date" />
+    <Property Name="Libelle" Type="varchar" MaxLength="40" />
+    <Property Name="Valid" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <!--Erreurs détectées durant la génération :
+avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.grpaie.cond_for' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
+        <EntityType Name="cond_for">
+          <Property Name="valformule" Type="float" />
+          <Property Name="valcondition" Type="varchar" MaxLength="1" />
+        </EntityType>-->
+  <EntityType Name="conge">
+    <Key>
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="code" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="payer" Type="varchar" MaxLength="3" />
+    <Property Name="libelle" Type="varchar" MaxLength="30" />
+    <Property Name="type" Type="varchar" MaxLength="10" />
+    <Property Name="edition" Type="varchar" MaxLength="5" />
+    <Property Name="AutreType" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <!--Erreurs détectées durant la génération :
+avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.grpaie.cumul' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
+        <EntityType Name="cumul">
+          <Property Name="MMMMM" Type="varchar" MaxLength="5" />
+          <Property Name="JJMMAAAA" Type="varchar" MaxLength="12" />
+          <Property Name="TTT" Type="varchar" MaxLength="3" />
+          <Property Name="E1" Type="varchar" MaxLength="4" />
+          <Property Name="S1" Type="varchar" MaxLength="4" />
+          <Property Name="E2" Type="varchar" MaxLength="4" />
+          <Property Name="S2" Type="varchar" MaxLength="4" />
+          <Property Name="ES1" Type="varchar" MaxLength="4" />
+          <Property Name="SS1" Type="varchar" MaxLength="4" />
+          <Property Name="ES2" Type="varchar" MaxLength="4" />
+          <Property Name="SS2" Type="varchar" MaxLength="4" />
+          <Property Name="SA1" Type="varchar" MaxLength="4" />
+          <Property Name="EA1" Type="varchar" MaxLength="4" />
+          <Property Name="SA2" Type="varchar" MaxLength="4" />
+          <Property Name="EA2" Type="varchar" MaxLength="4" />
+          <Property Name="CM1" Type="varchar" MaxLength="4" />
+          <Property Name="CS1" Type="varchar" MaxLength="4" />
+          <Property Name="CA1" Type="varchar" MaxLength="4" />
+          <Property Name="sAN" Type="varchar" MaxLength="4" />
+          <Property Name="RED" Type="varchar" MaxLength="4" />
+          <Property Name="TOT" Type="varchar" MaxLength="4" />
+          <Property Name="MAT" Type="varchar" MaxLength="2" />
+          <Property Name="RET" Type="varchar" MaxLength="4" />
+          <Property Name="CAB" Type="varchar" MaxLength="2" />
+          <Property Name="JOU" Type="varchar" MaxLength="2" />
+          <Property Name="HSN" Type="varchar" MaxLength="4" />
+          <Property Name="AJO" Type="varchar" MaxLength="4" />
+          <Property Name="HAB" Type="varchar" MaxLength="4" />
+          <Property Name="AUT" Type="varchar" MaxLength="4" />
+          <Property Name="JUS" Type="varchar" MaxLength="4" />
+          <Property Name="NON" Type="varchar" MaxLength="4" />
+          <Property Name="HSJF" Type="varchar" MaxLength="4" />
+          <Property Name="HSNF" Type="varchar" MaxLength="4" />
+          <Property Name="HSJR" Type="varchar" MaxLength="4" />
+          <Property Name="HSNR" Type="varchar" MaxLength="4" />
+        </EntityType>-->
+  <!--Erreurs détectées durant la génération :
+avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.grpaie.cumul1' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
+        <EntityType Name="cumul1">
+          <Property Name="pointage" Type="text" />
+        </EntityType>-->
+  <EntityType Name="ebp">
+    <Key>
+      <PropertyRef Name="fiche" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+      <PropertyRef Name="matricule" />
+    </Key>
+    <Property Name="fiche" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="libelle" Type="varchar" MaxLength="30" />
+    <Property Name="annee" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="mois" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="nummois" Type="int" />
+    <Property Name="matricule" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="nomprenom" Type="varchar" MaxLength="40" />
+    <Property Name="cnssste" Type="varchar" MaxLength="11" />
+    <Property Name="cnssempl" Type="varchar" MaxLength="11" />
+    <Property Name="categorie" Type="varchar" MaxLength="3" />
+    <Property Name="echelon" Type="varchar" MaxLength="2" />
+    <Property Name="sitf" Type="varchar" MaxLength="1" />
+    <Property Name="nbrenfant" Type="int" />
+    <Property Name="regime" Type="varchar" MaxLength="1" />
+    <Property Name="nomregime" Type="varchar" MaxLength="30" />
+    <Property Name="salb" Type="float" />
+    <Property Name="atl" Type="varchar" MaxLength="3" />
+    <Property Name="desiatl" Type="varchar" MaxLength="50" />
+    <Property Name="serv" Type="varchar" MaxLength="3" />
+    <Property Name="servdes" Type="varchar" MaxLength="50" />
+    <Property Name="qual" Type="varchar" MaxLength="3" />
+    <Property Name="qualdes" Type="varchar" MaxLength="50" />
+    <Property Name="aff" Type="varchar" MaxLength="3" />
+    <Property Name="affdes" Type="varchar" MaxLength="50" />
+    <Property Name="tit" Type="varchar" MaxLength="3" />
+    <Property Name="titdes" Type="varchar" MaxLength="50" />
+    <Property Name="jhtrv" Type="float" />
+    <Property Name="jcong" Type="float" />
+    <Property Name="jfer" Type="float" />
+    <Property Name="habs" Type="float" />
+    <Property Name="salbase" Type="float" />
+    <Property Name="toths" Type="float" />
+    <Property Name="totprime" Type="float" />
+    <Property Name="salbrut" Type="float" />
+    <Property Name="cnss" Type="float" />
+    <Property Name="tauxcnss" Type="float" />
+    <Property Name="salimpo" Type="float" />
+    <Property Name="impot" Type="float" />
+    <Property Name="salnet" Type="float" />
+    <Property Name="netpaye" Type="float" />
+    <Property Name="txcnss" Type="float" />
+    <Property Name="txacctrv" Type="float" />
+    <Property Name="deccnss" Type="varchar" MaxLength="1" />
+    <Property Name="banquesoc" Type="varchar" MaxLength="15" />
+    <Property Name="modepaie" Type="varchar" MaxLength="8" />
+    <Property Name="codeint" Type="varchar" MaxLength="1" />
+    <Property Name="valcong" Type="float" />
+    <Property Name="valferie" Type="float" />
+    <Property Name="autres" Type="double" />
+    <Property Name="TXCNAM" Type="double" />
+    <Property Name="TAUXCNAM" Type="double" />
+    <Property Name="CNAM" Type="double" />
+    <Property Name="totpret" Type="double" />
+    <Property Name="decimpot" Type="varchar" MaxLength="1" />
+    <Property Name="hfer" Type="double" />
+    <Property Name="hcong" Type="double" />
+    <Property Name="mtredevance" Type="double" />
+    <Property Name="tfp" Type="double" />
+    <Property Name="foprolos" Type="double" />
+    <Property Name="chef" Type="varchar" MaxLength="50" />
+    <Property Name="soldeconge" Type="double" />
+    <Property Name="impcss" Type="double" />
+  </EntityType>
+  <EntityType Name="ebp_hist">
+    <Key>
+      <PropertyRef Name="numCalcul" />
+      <PropertyRef Name="matricule" />
+    </Key>
+    <Property Name="fiche" Type="varchar" MaxLength="3" />
+    <Property Name="numCalcul" Type="bigint" Nullable="false" />
+    <Property Name="dateCalcul" Type="datetime" Precision="0" />
+    <Property Name="userCalcul" Type="varchar" MaxLength="50" />
+    <Property Name="libelle" Type="varchar" MaxLength="30" />
+    <Property Name="annee" Type="varchar" MaxLength="4" />
+    <Property Name="mois" Type="varchar" MaxLength="12" />
+    <Property Name="nummois" Type="int" />
+    <Property Name="matricule" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="nomprenom" Type="varchar" MaxLength="40" />
+    <Property Name="cnssste" Type="varchar" MaxLength="11" />
+    <Property Name="cnssempl" Type="varchar" MaxLength="11" />
+    <Property Name="categorie" Type="varchar" MaxLength="3" />
+    <Property Name="echelon" Type="varchar" MaxLength="2" />
+    <Property Name="sitf" Type="varchar" MaxLength="1" />
+    <Property Name="nbrenfant" Type="int" />
+    <Property Name="regime" Type="varchar" MaxLength="1" />
+    <Property Name="nomregime" Type="varchar" MaxLength="30" />
+    <Property Name="salb" Type="float" />
+    <Property Name="atl" Type="varchar" MaxLength="3" />
+    <Property Name="desiatl" Type="varchar" MaxLength="50" />
+    <Property Name="serv" Type="varchar" MaxLength="3" />
+    <Property Name="servdes" Type="varchar" MaxLength="50" />
+    <Property Name="qual" Type="varchar" MaxLength="3" />
+    <Property Name="qualdes" Type="varchar" MaxLength="50" />
+    <Property Name="aff" Type="varchar" MaxLength="3" />
+    <Property Name="affdes" Type="varchar" MaxLength="50" />
+    <Property Name="tit" Type="varchar" MaxLength="3" />
+    <Property Name="titdes" Type="varchar" MaxLength="50" />
+    <Property Name="jhtrv" Type="float" />
+    <Property Name="jcong" Type="float" />
+    <Property Name="jfer" Type="float" />
+    <Property Name="habs" Type="float" />
+    <Property Name="salbase" Type="float" />
+    <Property Name="toths" Type="float" />
+    <Property Name="totprime" Type="float" />
+    <Property Name="salbrut" Type="float" />
+    <Property Name="cnss" Type="float" />
+    <Property Name="tauxcnss" Type="float" />
+    <Property Name="salimpo" Type="float" />
+    <Property Name="impot" Type="float" />
+    <Property Name="salnet" Type="float" />
+    <Property Name="netpaye" Type="float" />
+    <Property Name="txcnss" Type="float" />
+    <Property Name="txacctrv" Type="float" />
+    <Property Name="deccnss" Type="varchar" MaxLength="1" />
+    <Property Name="banquesoc" Type="varchar" MaxLength="15" />
+    <Property Name="modepaie" Type="varchar" MaxLength="8" />
+    <Property Name="codeint" Type="varchar" MaxLength="1" />
+    <Property Name="valcong" Type="float" />
+    <Property Name="valferie" Type="float" />
+    <Property Name="autres" Type="double" />
+    <Property Name="TXCNAM" Type="double" />
+    <Property Name="TAUXCNAM" Type="double" />
+    <Property Name="CNAM" Type="double" />
+    <Property Name="totpret" Type="double" />
+    <Property Name="decimpot" Type="varchar" MaxLength="1" />
+    <Property Name="hfer" Type="double" />
+    <Property Name="hcong" Type="double" />
+    <Property Name="mtredevance" Type="double" />
+    <Property Name="tfp" Type="double" />
+    <Property Name="foprolos" Type="double" />
+    <Property Name="chef" Type="varchar" MaxLength="50" />
+    <Property Name="soldeconge" Type="double" />
+    <Property Name="impcss" Type="double" />
+  </EntityType>
+  <EntityType Name="ebparchive">
+    <Key>
+      <PropertyRef Name="fiche" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+      <PropertyRef Name="matricule" />
+    </Key>
+    <Property Name="fiche" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="libelle" Type="varchar" MaxLength="30" />
+    <Property Name="annee" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="mois" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="nummois" Type="int" />
+    <Property Name="matricule" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="nomprenom" Type="varchar" MaxLength="40" />
+    <Property Name="cnssste" Type="varchar" MaxLength="11" />
+    <Property Name="cnssempl" Type="varchar" MaxLength="11" />
+    <Property Name="categorie" Type="varchar" MaxLength="3" />
+    <Property Name="echelon" Type="varchar" MaxLength="2" />
+    <Property Name="sitf" Type="varchar" MaxLength="1" />
+    <Property Name="nbrenfant" Type="int" />
+    <Property Name="regime" Type="varchar" MaxLength="1" />
+    <Property Name="nomregime" Type="varchar" MaxLength="30" />
+    <Property Name="salb" Type="float" />
+    <Property Name="atl" Type="varchar" MaxLength="3" />
+    <Property Name="desiatl" Type="varchar" MaxLength="50" />
+    <Property Name="serv" Type="varchar" MaxLength="3" />
+    <Property Name="servdes" Type="varchar" MaxLength="50" />
+    <Property Name="qual" Type="varchar" MaxLength="3" />
+    <Property Name="qualdes" Type="varchar" MaxLength="50" />
+    <Property Name="aff" Type="varchar" MaxLength="3" />
+    <Property Name="affdes" Type="varchar" MaxLength="50" />
+    <Property Name="tit" Type="varchar" MaxLength="3" />
+    <Property Name="titdes" Type="varchar" MaxLength="50" />
+    <Property Name="jhtrv" Type="float" />
+    <Property Name="jcong" Type="float" />
+    <Property Name="jfer" Type="float" />
+    <Property Name="habs" Type="float" />
+    <Property Name="salbase" Type="float" />
+    <Property Name="toths" Type="float" />
+    <Property Name="totprime" Type="float" />
+    <Property Name="salbrut" Type="float" />
+    <Property Name="cnss" Type="float" />
+    <Property Name="tauxcnss" Type="float" />
+    <Property Name="salimpo" Type="float" />
+    <Property Name="impot" Type="float" />
+    <Property Name="salnet" Type="float" />
+    <Property Name="netpaye" Type="float" />
+    <Property Name="txcnss" Type="float" />
+    <Property Name="txacctrv" Type="float" />
+    <Property Name="deccnss" Type="varchar" MaxLength="1" />
+    <Property Name="banquesoc" Type="varchar" MaxLength="15" />
+    <Property Name="modepaie" Type="varchar" MaxLength="8" />
+    <Property Name="codeint" Type="varchar" MaxLength="1" />
+    <Property Name="valcong" Type="float" />
+    <Property Name="valferie" Type="float" />
+    <Property Name="autres" Type="double" />
+    <Property Name="TXCNAM" Type="double" />
+    <Property Name="TAUXCNAM" Type="double" />
+    <Property Name="CNAM" Type="double" />
+    <Property Name="totpret" Type="double" />
+    <Property Name="decimpot" Type="varchar" MaxLength="1" />
+    <Property Name="tfp" Type="varchar" MaxLength="1" />
+    <Property Name="foprolos" Type="varchar" MaxLength="1" />
+    <Property Name="impcss" Type="double" />
+  </EntityType>
+  <EntityType Name="ebptemp">
+    <Key>
+      <PropertyRef Name="fiche" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+      <PropertyRef Name="matricule" />
+    </Key>
+    <Property Name="fiche" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="libelle" Type="varchar" MaxLength="30" />
+    <Property Name="annee" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="mois" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="nummois" Type="int" />
+    <Property Name="matricule" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="nomprenom" Type="varchar" MaxLength="40" />
+    <Property Name="cnssste" Type="varchar" MaxLength="11" />
+    <Property Name="cnssempl" Type="varchar" MaxLength="11" />
+    <Property Name="categorie" Type="varchar" MaxLength="3" />
+    <Property Name="echelon" Type="varchar" MaxLength="2" />
+    <Property Name="sitf" Type="varchar" MaxLength="1" />
+    <Property Name="nbrenfant" Type="int" />
+    <Property Name="regime" Type="varchar" MaxLength="1" />
+    <Property Name="nomregime" Type="varchar" MaxLength="30" />
+    <Property Name="salb" Type="float" />
+    <Property Name="atl" Type="varchar" MaxLength="3" />
+    <Property Name="desiatl" Type="varchar" MaxLength="50" />
+    <Property Name="serv" Type="varchar" MaxLength="3" />
+    <Property Name="servdes" Type="varchar" MaxLength="50" />
+    <Property Name="qual" Type="varchar" MaxLength="3" />
+    <Property Name="qualdes" Type="varchar" MaxLength="50" />
+    <Property Name="aff" Type="varchar" MaxLength="3" />
+    <Property Name="affdes" Type="varchar" MaxLength="50" />
+    <Property Name="tit" Type="varchar" MaxLength="3" />
+    <Property Name="titdes" Type="varchar" MaxLength="50" />
+    <Property Name="jhtrv" Type="float" />
+    <Property Name="jcong" Type="float" />
+    <Property Name="jfer" Type="float" />
+    <Property Name="habs" Type="float" />
+    <Property Name="salbase" Type="float" />
+    <Property Name="toths" Type="float" />
+    <Property Name="totprime" Type="float" />
+    <Property Name="salbrut" Type="float" />
+    <Property Name="cnss" Type="float" />
+    <Property Name="tauxcnss" Type="float" />
+    <Property Name="salimpo" Type="float" />
+    <Property Name="impot" Type="float" />
+    <Property Name="salnet" Type="float" />
+    <Property Name="netpaye" Type="float" />
+    <Property Name="txcnss" Type="float" />
+    <Property Name="txacctrv" Type="float" />
+    <Property Name="deccnss" Type="varchar" MaxLength="1" />
+    <Property Name="banquesoc" Type="varchar" MaxLength="15" />
+    <Property Name="modepaie" Type="varchar" MaxLength="8" />
+    <Property Name="codeint" Type="varchar" MaxLength="1" />
+    <Property Name="valcong" Type="float" />
+    <Property Name="valferie" Type="float" />
+    <Property Name="autres" Type="double" />
+    <Property Name="TXCNAM" Type="double" />
+    <Property Name="TAUXCNAM" Type="double" />
+    <Property Name="CNAM" Type="double" />
+    <Property Name="totpret" Type="double" />
+    <Property Name="decimpot" Type="varchar" MaxLength="1" />
+    <Property Name="hfer" Type="double" />
+    <Property Name="hcong" Type="double" />
+    <Property Name="mtredevance" Type="double" />
+    <Property Name="tfp" Type="double" />
+    <Property Name="foprolos" Type="double" />
+    <Property Name="chef" Type="varchar" MaxLength="50" />
+    <Property Name="soldeconge" Type="double" />
+    <Property Name="impcss" Type="double" />
+  </EntityType>
+  <EntityType Name="ecn">
+    <Key>
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="trimestre" />
+      <PropertyRef Name="txcotss" />
+    </Key>
+    <Property Name="annee" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="trimestre" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="txcotss" Type="float" Nullable="false" />
+    <Property Name="datearrive" Type="varchar" MaxLength="10" />
+    <Property Name="modepaye" Type="varchar" MaxLength="15" />
+    <Property Name="montant" Type="double" />
+    <Property Name="caissele" Type="varchar" MaxLength="15" />
+    <Property Name="chequedu" Type="varchar" MaxLength="15" />
+    <Property Name="banque" Type="varchar" MaxLength="15" />
+    <Property Name="virement" Type="varchar" MaxLength="15" />
+    <Property Name="mandat" Type="varchar" MaxLength="15" />
+    <Property Name="saldecss" Type="double" />
+    <Property Name="saldecact" Type="double" />
+    <Property Name="txcotact" Type="float" />
+    <Property Name="nbsalarie" Type="int" />
+    <Property Name="total" Type="double" />
+    <Property Name="montantk" Type="double" />
+  </EntityType>
+  <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'def.grpaie.emploi_temp' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
+  <EntityType Name="emploi_temp">
+    <Key>
+      <PropertyRef Name="datedu1" />
+      <PropertyRef Name="dateau1" />
+      <PropertyRef Name="datedu2" />
+      <PropertyRef Name="dateau2" />
+      <PropertyRef Name="tluds" />
+      <PropertyRef Name="tmads" />
+      <PropertyRef Name="tmeds" />
+      <PropertyRef Name="tjeds" />
+      <PropertyRef Name="tveds" />
+      <PropertyRef Name="tsads" />
+      <PropertyRef Name="tdids" />
+      <PropertyRef Name="ttrds" />
+      <PropertyRef Name="tlusu" />
+      <PropertyRef Name="tmasu" />
+      <PropertyRef Name="tmesu" />
+      <PropertyRef Name="tjesu" />
+      <PropertyRef Name="tvesu" />
+      <PropertyRef Name="tsasu" />
+      <PropertyRef Name="tdisu" />
+      <PropertyRef Name="ttrsu" />
+      <PropertyRef Name="TE11" />
+      <PropertyRef Name="TE12" />
+      <PropertyRef Name="TE13" />
+      <PropertyRef Name="TE14" />
+      <PropertyRef Name="TE15" />
+      <PropertyRef Name="TE16" />
+      <PropertyRef Name="TE17" />
+      <PropertyRef Name="TS11" />
+      <PropertyRef Name="TS12" />
+      <PropertyRef Name="TS13" />
+      <PropertyRef Name="TS14" />
+      <PropertyRef Name="TS15" />
+      <PropertyRef Name="TS16" />
+      <PropertyRef Name="TS17" />
+      <PropertyRef Name="TE21" />
+      <PropertyRef Name="TE22" />
+      <PropertyRef Name="TE23" />
+      <PropertyRef Name="TE24" />
+      <PropertyRef Name="TE25" />
+      <PropertyRef Name="TE26" />
+      <PropertyRef Name="TE27" />
+      <PropertyRef Name="TS21" />
+      <PropertyRef Name="TS22" />
+      <PropertyRef Name="TS23" />
+      <PropertyRef Name="TS24" />
+      <PropertyRef Name="TS25" />
+      <PropertyRef Name="TS26" />
+      <PropertyRef Name="TS27" />
+      <PropertyRef Name="TEE11" />
+      <PropertyRef Name="TEE12" />
+      <PropertyRef Name="TEE13" />
+      <PropertyRef Name="TEE14" />
+      <PropertyRef Name="TEE15" />
+      <PropertyRef Name="TEE16" />
+      <PropertyRef Name="TEE17" />
+      <PropertyRef Name="TSS11" />
+      <PropertyRef Name="TSS12" />
+      <PropertyRef Name="TSS13" />
+      <PropertyRef Name="TSS14" />
+      <PropertyRef Name="TSS15" />
+      <PropertyRef Name="TSS16" />
+      <PropertyRef Name="TSS17" />
+      <PropertyRef Name="Code" />
+      <PropertyRef Name="libelle" />
+    </Key>
+    <Property Name="datedu1" Type="date" Nullable="false" />
+    <Property Name="dateau1" Type="date" Nullable="false" />
+    <Property Name="datedu2" Type="date" Nullable="false" />
+    <Property Name="dateau2" Type="date" Nullable="false" />
+    <Property Name="tluds" Type="time" Precision="0" Nullable="false" />
+    <Property Name="tmads" Type="time" Precision="0" Nullable="false" />
+    <Property Name="tmeds" Type="time" Precision="0" Nullable="false" />
+    <Property Name="tjeds" Type="time" Precision="0" Nullable="false" />
+    <Property Name="tveds" Type="time" Precision="0" Nullable="false" />
+    <Property Name="tsads" Type="time" Precision="0" Nullable="false" />
+    <Property Name="tdids" Type="time" Precision="0" Nullable="false" />
+    <Property Name="ttrds" Type="time" Precision="0" Nullable="false" />
+    <Property Name="tlusu" Type="time" Precision="0" Nullable="false" />
+    <Property Name="tmasu" Type="time" Precision="0" Nullable="false" />
+    <Property Name="tmesu" Type="time" Precision="0" Nullable="false" />
+    <Property Name="tjesu" Type="time" Precision="0" Nullable="false" />
+    <Property Name="tvesu" Type="time" Precision="0" Nullable="false" />
+    <Property Name="tsasu" Type="time" Precision="0" Nullable="false" />
+    <Property Name="tdisu" Type="time" Precision="0" Nullable="false" />
+    <Property Name="ttrsu" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TE11" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TE12" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TE13" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TE14" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TE15" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TE16" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TE17" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TS11" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TS12" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TS13" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TS14" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TS15" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TS16" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TS17" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TE21" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TE22" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TE23" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TE24" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TE25" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TE26" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TE27" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TS21" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TS22" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TS23" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TS24" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TS25" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TS26" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TS27" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TEE11" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TEE12" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TEE13" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TEE14" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TEE15" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TEE16" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TEE17" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TSS11" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TSS12" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TSS13" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TSS14" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TSS15" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TSS16" Type="time" Precision="0" Nullable="false" />
+    <Property Name="TSS17" Type="time" Precision="0" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="libelle" Type="varchar" MaxLength="150" Nullable="false" />
+  </EntityType>
+  <EntityType Name="entpointage">
+    <Key>
+      <PropertyRef Name="codfich" />
+      <PropertyRef Name="codchantier" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+    </Key>
+    <Property Name="codfich" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="codchantier" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="annee" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="mois" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="nummois" Type="int" />
+    <Property Name="Generer" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="fich">
+    <Key>
+      <PropertyRef Name="codfich" />
+    </Key>
+    <Property Name="codfich" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="libelle" Type="varchar" MaxLength="30" />
+    <Property Name="datclot" Type="varchar" MaxLength="10" />
+    <Property Name="typefich" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="fpointage">
+    <Key>
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="matricule" />
+      <PropertyRef Name="mois" />
+    </Key>
+    <Property Name="annee" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="matricule" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="mois" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="nomprenom" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="grille">
+    <Key>
+      <PropertyRef Name="categorie" />
+      <PropertyRef Name="echelon" />
+      <PropertyRef Name="regime" />
+    </Key>
+    <Property Name="categorie" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="echelon" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="regime" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="ancumule" Type="varchar" MaxLength="2" />
+    <Property Name="durechelon" Type="varchar" MaxLength="2" />
+    <Property Name="salaire" Type="float" />
+    <Property Name="tauxhor" Type="float" />
+  </EntityType>
+  <EntityType Name="grillesalaire">
+    <Key>
+      <PropertyRef Name="categorie" />
+      <PropertyRef Name="echelon" />
+      <PropertyRef Name="regime" />
+    </Key>
+    <Property Name="ancumule" Type="varchar" MaxLength="2" />
+    <Property Name="categorie" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="durechelon" Type="varchar" MaxLength="2" />
+    <Property Name="durechelle" Type="varchar" MaxLength="2" />
+    <Property Name="echelle" Type="varchar" MaxLength="2" />
+    <Property Name="echelon" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="regime" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="salaire" Type="int" />
+    <Property Name="tauxhor" Type="int" />
+  </EntityType>
+  <EntityType Name="heursupp">
+    <Key>
+      <PropertyRef Name="codheursupp" />
+      <PropertyRef Name="codfich" />
+      <PropertyRef Name="codchantier" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+      <PropertyRef Name="matr" />
+    </Key>
+    <Property Name="codheursupp" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="taux" Type="int" />
+    <Property Name="libelle" Type="varchar" MaxLength="30" />
+    <Property Name="nbrheursupp" Type="float" />
+    <Property Name="codfich" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="codchantier" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="annee" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="mois" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="matr" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="nomprenom" Type="varchar" MaxLength="40" />
+    <Property Name="confirme" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <!--Erreurs détectées durant la génération :
+avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.grpaie.historiquepret' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
+        <EntityType Name="historiquepret">
+          <Property Name="code" Type="varchar" MaxLength="2" />
+          <Property Name="designa" Type="varchar" MaxLength="30" />
+          <Property Name="date1ret" Type="varchar" MaxLength="8" />
+          <Property Name="datepret" Type="varchar" MaxLength="8" />
+          <Property Name="blocage" Type="varchar" MaxLength="1" />
+          <Property Name="matricule" Type="varchar" MaxLength="8" />
+          <Property Name="nomprenom" Type="varchar" MaxLength="30" />
+          <Property Name="montret" Type="float" />
+          <Property Name="montpret" Type="float" />
+          <Property Name="montrest" Type="float" />
+          <Property Name="fiche" Type="varchar" MaxLength="3" />
+          <Property Name="desifich" Type="varchar" MaxLength="30" />
+        </EntityType>-->
+  <EntityType Name="intervalle">
+    <Key>
+      <PropertyRef Name="Interv" />
+    </Key>
+    <Property Name="Interv" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="NoteDU" Type="float" />
+    <Property Name="NoteAU" Type="float" />
+  </EntityType>
+  <EntityType Name="lbp">
+    <Key>
+      <PropertyRef Name="nbr" />
+      <PropertyRef Name="fiche" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+      <PropertyRef Name="matricule" />
+      <PropertyRef Name="rubrique" />
+    </Key>
+    <Property Name="nbr" Type="int" Nullable="false" />
+    <Property Name="fiche" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="annee" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="mois" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="matricule" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="rubrique" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="libelle" Type="varchar" MaxLength="30" />
+    <Property Name="nombre" Type="float" Nullable="false" />
+    <Property Name="retenue" Type="float" Nullable="false" />
+    <Property Name="gain" Type="float" Nullable="false" />
+    <Property Name="imposable" Type="varchar" MaxLength="1" />
+    <Property Name="cotisable" Type="varchar" MaxLength="1" />
+    <Property Name="Group1" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'def.grpaie.lbp_hist' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
+  <EntityType Name="lbp_hist">
+    <Key>
+      <PropertyRef Name="nbr" />
+      <PropertyRef Name="fiche" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+      <PropertyRef Name="matricule" />
+      <PropertyRef Name="rubrique" />
+      <PropertyRef Name="nombre" />
+      <PropertyRef Name="retenue" />
+      <PropertyRef Name="gain" />
+    </Key>
+    <Property Name="nbr" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="fiche" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="annee" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="mois" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="matricule" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="rubrique" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="libelle" Type="varchar" MaxLength="30" />
+    <Property Name="nombre" Type="float" Nullable="false" />
+    <Property Name="retenue" Type="float" Nullable="false" />
+    <Property Name="gain" Type="float" Nullable="false" />
+    <Property Name="imposable" Type="varchar" MaxLength="1" />
+    <Property Name="cotisable" Type="varchar" MaxLength="1" />
+    <Property Name="Group1" Type="varchar" MaxLength="1" />
+    <Property Name="numCalcul" Type="bigint" />
+  </EntityType>
+  <EntityType Name="lbparchive">
+    <Key>
+      <PropertyRef Name="nbr" />
+      <PropertyRef Name="fiche" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+      <PropertyRef Name="matricule" />
+      <PropertyRef Name="rubrique" />
+    </Key>
+    <Property Name="nbr" Type="int" Nullable="false" />
+    <Property Name="fiche" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="annee" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="mois" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="matricule" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="rubrique" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="libelle" Type="varchar" MaxLength="30" />
+    <Property Name="nombre" Type="float" />
+    <Property Name="retenue" Type="float" />
+    <Property Name="gain" Type="float" />
+    <Property Name="imposable" Type="varchar" MaxLength="1" />
+    <Property Name="cotisable" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="lbptemp">
+    <Key>
+      <PropertyRef Name="nbr" />
+      <PropertyRef Name="fiche" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+      <PropertyRef Name="matricule" />
+      <PropertyRef Name="rubrique" />
+    </Key>
+    <Property Name="nbr" Type="int" Nullable="false" />
+    <Property Name="fiche" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="annee" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="mois" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="matricule" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="rubrique" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="libelle" Type="varchar" MaxLength="30" />
+    <Property Name="nombre" Type="float" Nullable="false" />
+    <Property Name="retenue" Type="float" Nullable="false" />
+    <Property Name="gain" Type="float" Nullable="false" />
+    <Property Name="imposable" Type="varchar" MaxLength="1" />
+    <Property Name="cotisable" Type="varchar" MaxLength="1" />
+    <Property Name="Group1" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="lcn">
+    <Key>
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="trimestre" />
+      <PropertyRef Name="txcot" />
+      <PropertyRef Name="numcnss" />
+      <PropertyRef Name="matricule" />
+    </Key>
+    <Property Name="annee" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="trimestre" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="txcot" Type="float" Nullable="false" />
+    <Property Name="numcnss" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="matricule" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="mois1" Type="double" />
+    <Property Name="mois2" Type="double" />
+    <Property Name="mois3" Type="double" />
+    <Property Name="page" Type="int" />
+    <Property Name="numerordre" Type="int" />
+    <Property Name="nomprenom" Type="varchar" MaxLength="60" />
+    <Property Name="categorie" Type="varchar" MaxLength="3" />
+    <Property Name="mois1k" Type="double" />
+    <Property Name="mois2k" Type="double" />
+    <Property Name="mois3k" Type="double" />
+    <Property Name="sel" Type="int" />
+  </EntityType>
+  <!--Erreurs détectées durant la génération :
+avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.grpaie.lignecalendrier' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
+        <EntityType Name="lignecalendrier">
+          <Property Name="num" Type="varchar" MaxLength="5" />
+          <Property Name="matr" Type="varchar" MaxLength="8" />
+          <Property Name="userid" Type="varchar" MaxLength="8" />
+          <Property Name="nomprenom" Type="varchar" MaxLength="30" />
+          <Property Name="dateau" Type="date" />
+          <Property Name="datedu" Type="date" />
+          <Property Name="libelle" Type="varchar" MaxLength="50" />
+        </EntityType>-->
+  <EntityType Name="lignepointage">
+    <Key>
+      <PropertyRef Name="Matr" />
+      <PropertyRef Name="codfich" />
+      <PropertyRef Name="codchantier" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+    </Key>
+    <Property Name="Matr" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="Nomprenom" Type="varchar" MaxLength="40" />
+    <Property Name="regime" Type="varchar" MaxLength="1" />
+    <Property Name="jourtrv" Type="float" />
+    <Property Name="heuretrv" Type="float" />
+    <Property Name="Jourcong" Type="float" />
+    <Property Name="jourfer" Type="float" />
+    <Property Name="codfich" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="codchantier" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="annee" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="mois" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="confirme" Type="varchar" MaxLength="1" />
+    <Property Name="hcong" Type="double" />
+    <Property Name="hfer" Type="double" />
+    <Property Name="tfp" Type="double" />
+    <Property Name="foprolos" Type="double" />
+  </EntityType>
+  <EntityType Name="ligneprime">
+    <Key>
+      <PropertyRef Name="rubrique" />
+      <PropertyRef Name="matr" />
+      <PropertyRef Name="fiche" />
+      <PropertyRef Name="nligne" />
+    </Key>
+    <Property Name="rubrique" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="designarub" Type="varchar" MaxLength="30" />
+    <Property Name="montant" Type="float" />
+    <Property Name="matr" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="confirme" Type="varchar" MaxLength="1" />
+    <Property Name="fiche" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="libelle" Type="varchar" MaxLength="30" />
+    <Property Name="nligne" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="lignerub">
+    <Key>
+      <PropertyRef Name="codrubrique" />
+      <PropertyRef Name="condition" />
+      <PropertyRef Name="Ligne" />
+    </Key>
+    <Property Name="codrubrique" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="condition" Type="varchar" MaxLength="78" Nullable="false" />
+    <Property Name="Formule" Type="varchar" MaxLength="78" />
+    <Property Name="confirme" Type="varchar" MaxLength="1" />
+    <Property Name="Ligne" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="plafond" Type="double" />
+  </EntityType>
+  <EntityType Name="lmission">
+    <Key>
+      <PropertyRef Name="nummission" />
+      <PropertyRef Name="codeemp" />
+    </Key>
+    <Property Name="nummission" Type="varchar" MaxLength="9" Nullable="false" />
+    <Property Name="codeemp" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="libemp" Type="varchar" MaxLength="30" />
+    <Property Name="codequal" Type="varchar" MaxLength="3" />
+    <Property Name="libqual" Type="varchar" MaxLength="50" />
+    <Property Name="num" Type="double" />
+  </EntityType>
+  <EntityType Name="majconge">
+    <Key>
+      <PropertyRef Name="matricule" />
+      <PropertyRef Name="datedepart" />
+    </Key>
+    <Property Name="code" Type="varchar" MaxLength="6" />
+    <Property Name="libelle" Type="varchar" MaxLength="30" />
+    <Property Name="type" Type="varchar" MaxLength="10" />
+    <Property Name="nbrjour" Type="float" />
+    <Property Name="nbrheure" Type="float" />
+    <Property Name="matricule" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="nomprenom" Type="varchar" MaxLength="30" />
+    <Property Name="solde" Type="float" />
+    <Property Name="datedepart" Type="date" Nullable="false" />
+    <Property Name="datefin" Type="date" />
+    <Property Name="payer" Type="varchar" MaxLength="3" />
+    <Property Name="description" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="majconge1">
+    <Key>
+      <PropertyRef Name="matricule" />
+      <PropertyRef Name="datedepart" />
+    </Key>
+    <Property Name="code" Type="varchar" MaxLength="8" />
+    <Property Name="libelle" Type="varchar" MaxLength="30" />
+    <Property Name="type" Type="varchar" MaxLength="10" />
+    <Property Name="nbrjour" Type="float" />
+    <Property Name="nbrheure" Type="float" />
+    <Property Name="matricule" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="nomprenom" Type="varchar" MaxLength="30" />
+    <Property Name="solde" Type="float" />
+    <Property Name="datedepart" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="datefin" Type="varchar" MaxLength="10" />
+    <Property Name="payer" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="majpret">
+    <Key>
+      <PropertyRef Name="code" />
+      <PropertyRef Name="datepret" />
+      <PropertyRef Name="matricule" />
+    </Key>
+    <Property Name="code" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="designa" Type="varchar" MaxLength="30" />
+    <Property Name="date1ret" Type="date" />
+    <Property Name="datepret" Type="date" Nullable="false" />
+    <Property Name="blocage" Type="varchar" MaxLength="1" />
+    <Property Name="matricule" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="nomprenom" Type="varchar" MaxLength="30" />
+    <Property Name="montret" Type="float" />
+    <Property Name="montpret" Type="float" />
+    <Property Name="montrest" Type="float" />
+    <Property Name="fiche" Type="varchar" MaxLength="3" />
+    <Property Name="desifich" Type="varchar" MaxLength="30" />
+    <Property Name="dated" Type="date" />
+    <Property Name="datef" Type="date" />
+    <Property Name="MontInit" Type="float" />
+  </EntityType>
+  <EntityType Name="mission">
+    <Key>
+      <PropertyRef Name="nummission" />
+    </Key>
+    <Property Name="nummission" Type="varchar" MaxLength="9" Nullable="false" />
+    <Property Name="datesortie" Type="date" />
+    <Property Name="dateretour" Type="date" />
+    <Property Name="numao" Type="varchar" MaxLength="20" />
+    <Property Name="nbjour" Type="double" />
+    <Property Name="projet" Type="text" />
+    <Property Name="lieuint" Type="varchar" MaxLength="50" />
+    <Property Name="codecli" Type="varchar" MaxLength="8" />
+    <Property Name="rscli" Type="varchar" MaxLength="200" />
+    <Property Name="perscontac" Type="varchar" MaxLength="150" />
+    <Property Name="codsui" Type="varchar" MaxLength="6" />
+    <Property Name="dessui" Type="varchar" MaxLength="30" />
+    <Property Name="description" Type="text" />
+    <Property Name="coddemand" Type="varchar" MaxLength="6" />
+    <Property Name="libdemand" Type="varchar" MaxLength="30" />
+    <Property Name="compterendu" Type="text" />
+    <Property Name="generer" Type="varchar" MaxLength="1" />
+    <Property Name="heurrdv" Type="varchar" MaxLength="6" />
+    <Property Name="typeint" Type="varchar" MaxLength="1" />
+    <Property Name="nbhest" Type="varchar" MaxLength="5" />
+    <Property Name="cloture" Type="int" />
+  </EntityType>
+  <EntityType Name="nbrjour">
+    <Key>
+      <PropertyRef Name="nbrJour" />
+      <PropertyRef Name="matricule" />
+    </Key>
+    <Property Name="nbrJour" Type="int" Nullable="false" />
+    <Property Name="matricule" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="nomjour" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="nomjour">
+    <Key>
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+      <PropertyRef Name="nbjour" />
+    </Key>
+    <Property Name="annee" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="mois" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nbjour" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="nomjour" Type="varchar" MaxLength="12" />
+  </EntityType>
+  <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'def.grpaie.nomtable' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
+  <EntityType Name="nomtable">
+    <Key>
+      <PropertyRef Name="nomtable" />
+    </Key>
+    <Property Name="nomtable" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <!--Erreurs détectées durant la génération :
+avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.grpaie.parametre' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
+        <EntityType Name="parametre">
+          <Property Name="j1" Type="double" />
+          <Property Name="j2" Type="double" />
+          <Property Name="j3" Type="double" />
+          <Property Name="j4" Type="double" />
+          <Property Name="j5" Type="double" />
+          <Property Name="j6" Type="double" />
+          <Property Name="j7" Type="double" />
+          <Property Name="j8" Type="double" />
+          <Property Name="j9" Type="double" />
+          <Property Name="j10" Type="double" />
+          <Property Name="j11" Type="double" />
+          <Property Name="j12" Type="double" />
+          <Property Name="h1" Type="double" />
+          <Property Name="h2" Type="double" />
+          <Property Name="h3" Type="double" />
+          <Property Name="h4" Type="double" />
+          <Property Name="h5" Type="double" />
+          <Property Name="h6" Type="double" />
+          <Property Name="h7" Type="double" />
+          <Property Name="h8" Type="double" />
+          <Property Name="h9" Type="double" />
+          <Property Name="h10" Type="double" />
+          <Property Name="h11" Type="double" />
+          <Property Name="h12" Type="double" />
+          <Property Name="n1" Type="double" />
+          <Property Name="n2" Type="double" />
+          <Property Name="n3" Type="double" />
+          <Property Name="n4" Type="double" />
+          <Property Name="n5" Type="double" />
+          <Property Name="n6" Type="double" />
+          <Property Name="n7" Type="double" />
+          <Property Name="n8" Type="double" />
+          <Property Name="n9" Type="double" />
+          <Property Name="n10" Type="double" />
+          <Property Name="n11" Type="double" />
+          <Property Name="n12" Type="double" />
+        </EntityType>-->
+  <EntityType Name="persarchive">
+    <Key>
+      <PropertyRef Name="MATR" />
+    </Key>
+    <Property Name="MATR" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="CAISSE" Type="varchar" MaxLength="1" />
+    <Property Name="ECHELON" Type="varchar" MaxLength="2" />
+    <Property Name="PAYEMENT" Type="varchar" MaxLength="8" />
+    <Property Name="NATIONAL" Type="varchar" MaxLength="1" />
+    <Property Name="TRV_AN" Type="int" />
+    <Property Name="NOMPRENOM1" Type="varchar" MaxLength="30" />
+    <Property Name="PRENOM1" Type="varchar" MaxLength="20" />
+    <Property Name="PRENOM2" Type="varchar" MaxLength="20" />
+    <Property Name="PRENOM3" Type="varchar" MaxLength="20" />
+    <Property Name="PRENOM4" Type="varchar" MaxLength="20" />
+    <Property Name="NBRENFANT" Type="int" />
+    <Property Name="CIN" Type="varchar" MaxLength="10" />
+    <Property Name="NUMCNSS" Type="varchar" MaxLength="11" />
+    <Property Name="SERV" Type="varchar" MaxLength="3" />
+    <Property Name="REGIME2" Type="varchar" MaxLength="2" />
+    <Property Name="REGIME1" Type="varchar" MaxLength="1" />
+    <Property Name="nomregime1" Type="varchar" MaxLength="30" />
+    <Property Name="SALB" Type="float" />
+    <Property Name="TIT" Type="varchar" MaxLength="3" />
+    <Property Name="SITF" Type="varchar" MaxLength="1" />
+    <Property Name="TXHOR" Type="float" />
+    <Property Name="TXCNSS" Type="float" />
+    <Property Name="TELEPHONE" Type="varchar" MaxLength="10" />
+    <Property Name="NOMPRENOM2" Type="varchar" MaxLength="30" />
+    <Property Name="BANQUESTE" Type="varchar" MaxLength="15" />
+    <Property Name="BANQUEPER" Type="varchar" MaxLength="15" />
+    <Property Name="numcompte" Type="varchar" MaxLength="20" />
+    <Property Name="DECIMPOT" Type="varchar" MaxLength="1" />
+    <Property Name="ARR1" Type="int" />
+    <Property Name="COMPTEC" Type="varchar" MaxLength="8" />
+    <Property Name="ATELIER" Type="varchar" MaxLength="3" />
+    <Property Name="ADRESSE" Type="varchar" MaxLength="40" />
+    <Property Name="CAT" Type="varchar" MaxLength="3" />
+    <Property Name="CHEF" Type="varchar" MaxLength="1" />
+    <Property Name="PRESENCE" Type="varchar" MaxLength="1" />
+    <Property Name="QUAL" Type="varchar" MaxLength="3" />
+    <Property Name="AFF" Type="varchar" MaxLength="3" />
+    <Property Name="SEXE" Type="varchar" MaxLength="1" />
+    <Property Name="DATECHE" Type="date" />
+    <Property Name="PROCHEECHE" Type="date" />
+    <Property Name="EMBO" Type="date" />
+    <Property Name="NAIS" Type="date" />
+    <Property Name="ACCtrv" Type="varchar" MaxLength="1" />
+    <Property Name="DATESIT" Type="date" />
+    <Property Name="NAIS1" Type="varchar" MaxLength="10" />
+    <Property Name="NAIS2" Type="varchar" MaxLength="10" />
+    <Property Name="NAIS3" Type="varchar" MaxLength="10" />
+    <Property Name="NAIS4" Type="varchar" MaxLength="10" />
+    <Property Name="imagepersonnel" Type="varchar" MaxLength="200" />
+    <Property Name="SMIG" Type="varchar" MaxLength="1" />
+    <Property Name="SUPH" Type="varchar" MaxLength="8" />
+    <Property Name="DATECIN" Type="date" />
+    <Property Name="SoldInit" Type="double" />
+    <Property Name="DroitCong" Type="double" />
+    <Property Name="Total" Type="double" />
+    <Property Name="assurance" Type="double" />
+    <Property Name="dates" Type="date" />
+  </EntityType>
+  <EntityType Name="personnel">
+    <Key>
+      <PropertyRef Name="MATR" />
+    </Key>
+    <Property Name="MATR" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="CAISSE" Type="varchar" MaxLength="1" />
+    <Property Name="ECHELON" Type="varchar" MaxLength="2" />
+    <Property Name="PAYEMENT" Type="varchar" MaxLength="8" />
+    <Property Name="NATIONAL" Type="varchar" MaxLength="1" />
+    <Property Name="TRV_AN" Type="int" />
+    <Property Name="NOMPRENOM1" Type="varchar" MaxLength="30" />
+    <Property Name="PRENOM1" Type="varchar" MaxLength="20" />
+    <Property Name="PRENOM2" Type="varchar" MaxLength="20" />
+    <Property Name="PRENOM3" Type="varchar" MaxLength="20" />
+    <Property Name="PRENOM4" Type="varchar" MaxLength="20" />
+    <Property Name="NBRENFANT" Type="int" />
+    <Property Name="CIN" Type="varchar" MaxLength="10" />
+    <Property Name="NUMCNSS" Type="varchar" MaxLength="11" />
+    <Property Name="SERV" Type="varchar" MaxLength="3" />
+    <Property Name="REGIME2" Type="varchar" MaxLength="2" />
+    <Property Name="REGIME1" Type="varchar" MaxLength="1" />
+    <Property Name="nomregime1" Type="varchar" MaxLength="30" />
+    <Property Name="SALB" Type="float" />
+    <Property Name="TIT" Type="varchar" MaxLength="3" />
+    <Property Name="SITF" Type="varchar" MaxLength="1" />
+    <Property Name="TXHOR" Type="float" />
+    <Property Name="TXCNSS" Type="float" />
+    <Property Name="TELEPHONE" Type="varchar" MaxLength="10" />
+    <Property Name="NOMPRENOM2" Type="varchar" MaxLength="60" />
+    <Property Name="BANQUESTE" Type="varchar" MaxLength="15" />
+    <Property Name="BANQUEPER" Type="varchar" MaxLength="15" />
+    <Property Name="numcompte" Type="varchar" MaxLength="20" />
+    <Property Name="DECIMPOT" Type="varchar" MaxLength="1" />
+    <Property Name="ARR1" Type="int" />
+    <Property Name="COMPTEC" Type="varchar" MaxLength="8" />
+    <Property Name="ATELIER" Type="varchar" MaxLength="3" />
+    <Property Name="ADRESSE" Type="varchar" MaxLength="40" />
+    <Property Name="CAT" Type="varchar" MaxLength="3" />
+    <Property Name="CHEF" Type="varchar" MaxLength="1" />
+    <Property Name="PRESENCE" Type="varchar" MaxLength="1" />
+    <Property Name="QUAL" Type="varchar" MaxLength="3" />
+    <Property Name="AFF" Type="varchar" MaxLength="3" />
+    <Property Name="SEXE" Type="varchar" MaxLength="1" />
+    <Property Name="DATECHE" Type="date" />
+    <Property Name="PROCHEECHE" Type="date" />
+    <Property Name="EMBO" Type="date" />
+    <Property Name="NAIS" Type="date" />
+    <Property Name="ACCtrv" Type="varchar" MaxLength="1" />
+    <Property Name="DATESIT" Type="date" />
+    <Property Name="NAIS1" Type="varchar" MaxLength="10" />
+    <Property Name="NAIS2" Type="varchar" MaxLength="10" />
+    <Property Name="NAIS3" Type="varchar" MaxLength="10" />
+    <Property Name="NAIS4" Type="varchar" MaxLength="10" />
+    <Property Name="imagepersonnel" Type="varchar" MaxLength="200" />
+    <Property Name="SMIG" Type="varchar" MaxLength="1" />
+    <Property Name="SUPH" Type="varchar" MaxLength="8" />
+    <Property Name="DATECIN" Type="date" />
+    <Property Name="SoldInit" Type="double" />
+    <Property Name="DroitCong" Type="double" />
+    <Property Name="Total" Type="double" />
+    <Property Name="assurance" Type="double" />
+    <Property Name="matpointeuse" Type="varchar" MaxLength="8" />
+    <Property Name="redevance" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="nbmois" Type="double" />
+    <Property Name="tfp" Type="double" Nullable="false" />
+    <Property Name="foprolos" Type="double" />
+    <Property Name="comptecb" Type="double" />
+    <Property Name="sel" Type="varchar" MaxLength="3" />
+    <Property Name="DateDepart" Type="date" />
+    <Property Name="imagepath" Type="varchar" MaxLength="150" />
+    <Property Name="image" Type="mediumblob" />
+    <Property Name="imagesize" Type="mediumint" />
+  </EntityType>
+  <EntityType Name="poijourtmp">
+    <Key>
+      <PropertyRef Name="codfich" />
+      <PropertyRef Name="codchan" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+      <PropertyRef Name="matricule" />
+    </Key>
+    <Property Name="codfich" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="codchan" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="annee" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="mois" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="matricule" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="j1" Type="varchar" MaxLength="5" />
+    <Property Name="j2" Type="varchar" MaxLength="5" />
+    <Property Name="j3" Type="varchar" MaxLength="5" />
+    <Property Name="j4" Type="varchar" MaxLength="5" />
+    <Property Name="j5" Type="varchar" MaxLength="5" />
+    <Property Name="j6" Type="varchar" MaxLength="5" />
+    <Property Name="j7" Type="varchar" MaxLength="5" />
+    <Property Name="j8" Type="varchar" MaxLength="5" />
+    <Property Name="j9" Type="varchar" MaxLength="5" />
+    <Property Name="j10" Type="varchar" MaxLength="5" />
+    <Property Name="j11" Type="varchar" MaxLength="5" />
+    <Property Name="j12" Type="varchar" MaxLength="5" />
+    <Property Name="j13" Type="varchar" MaxLength="5" />
+    <Property Name="j14" Type="varchar" MaxLength="5" />
+    <Property Name="j15" Type="varchar" MaxLength="5" />
+    <Property Name="j16" Type="varchar" MaxLength="5" />
+    <Property Name="j17" Type="varchar" MaxLength="5" />
+    <Property Name="j18" Type="varchar" MaxLength="5" />
+    <Property Name="j19" Type="varchar" MaxLength="5" />
+    <Property Name="j20" Type="varchar" MaxLength="5" />
+    <Property Name="j21" Type="varchar" MaxLength="5" />
+    <Property Name="j22" Type="varchar" MaxLength="5" />
+    <Property Name="j23" Type="varchar" MaxLength="5" />
+    <Property Name="j24" Type="varchar" MaxLength="5" />
+    <Property Name="j25" Type="varchar" MaxLength="5" />
+    <Property Name="j26" Type="varchar" MaxLength="5" />
+    <Property Name="j27" Type="varchar" MaxLength="5" />
+    <Property Name="j28" Type="varchar" MaxLength="5" />
+    <Property Name="j29" Type="varchar" MaxLength="5" />
+    <Property Name="j30" Type="varchar" MaxLength="5" />
+    <Property Name="j31" Type="varchar" MaxLength="5" />
+    <Property Name="totheure" Type="double" />
+    <Property Name="totjour" Type="double" />
+    <Property Name="type" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="poijourtmp1">
+    <Key>
+      <PropertyRef Name="codfich" />
+      <PropertyRef Name="codchan" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+      <PropertyRef Name="matricule" />
+    </Key>
+    <Property Name="codfich" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="codchan" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="annee" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="mois" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="matricule" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="j1" Type="varchar" MaxLength="5" />
+    <Property Name="j2" Type="varchar" MaxLength="5" />
+    <Property Name="j3" Type="varchar" MaxLength="5" />
+    <Property Name="j4" Type="varchar" MaxLength="5" />
+    <Property Name="j5" Type="varchar" MaxLength="5" />
+    <Property Name="j6" Type="varchar" MaxLength="5" />
+    <Property Name="j7" Type="varchar" MaxLength="5" />
+    <Property Name="j8" Type="varchar" MaxLength="5" />
+    <Property Name="j9" Type="varchar" MaxLength="5" />
+    <Property Name="j10" Type="varchar" MaxLength="5" />
+    <Property Name="j11" Type="varchar" MaxLength="5" />
+    <Property Name="j12" Type="varchar" MaxLength="5" />
+    <Property Name="j13" Type="varchar" MaxLength="5" />
+    <Property Name="j14" Type="varchar" MaxLength="5" />
+    <Property Name="j15" Type="varchar" MaxLength="5" />
+    <Property Name="j16" Type="varchar" MaxLength="5" />
+    <Property Name="j17" Type="varchar" MaxLength="5" />
+    <Property Name="j18" Type="varchar" MaxLength="5" />
+    <Property Name="j19" Type="varchar" MaxLength="5" />
+    <Property Name="j20" Type="varchar" MaxLength="5" />
+    <Property Name="j21" Type="varchar" MaxLength="5" />
+    <Property Name="j22" Type="varchar" MaxLength="5" />
+    <Property Name="j23" Type="varchar" MaxLength="5" />
+    <Property Name="j24" Type="varchar" MaxLength="5" />
+    <Property Name="j25" Type="varchar" MaxLength="5" />
+    <Property Name="j26" Type="varchar" MaxLength="5" />
+    <Property Name="j27" Type="varchar" MaxLength="5" />
+    <Property Name="j28" Type="varchar" MaxLength="5" />
+    <Property Name="j29" Type="varchar" MaxLength="5" />
+    <Property Name="j30" Type="varchar" MaxLength="5" />
+    <Property Name="j31" Type="varchar" MaxLength="5" />
+    <Property Name="totheure" Type="varchar" MaxLength="6" />
+    <Property Name="totjour" Type="varchar" MaxLength="5" />
+    <Property Name="type" Type="varchar" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="pointeuse">
+    <Key>
+      <PropertyRef Name="code_machine" />
+    </Key>
+    <Property Name="code_machine" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="libelle_machine" Type="varchar" MaxLength="50" />
+    <Property Name="frs_pointeuse" Type="varchar" MaxLength="20" />
+    <Property Name="nom_base" Type="varchar" MaxLength="30" />
+    <Property Name="nom_tab_pointage" Type="varchar" MaxLength="30" />
+    <Property Name="temp_pointage" Type="varchar" MaxLength="30" />
+    <Property Name="nom_tab_personnel" Type="varchar" MaxLength="30" />
+    <Property Name="code_personnel" Type="varchar" MaxLength="30" />
+    <Property Name="nom_personnel" Type="varchar" MaxLength="30" />
+    <Property Name="pre_personnel" Type="varchar" MaxLength="30" />
+    <Property Name="cheminbd" Type="varchar" MaxLength="100" />
+    <Property Name="type_code_utilisateur" Type="varchar" MaxLength="1" />
+    <Property Name="type_base" Type="varchar" MaxLength="20" />
+    <Property Name="defaut" Type="varchar" MaxLength="1" />
+    <Property Name="correction_p" Type="varchar" MaxLength="1" />
+    <Property Name="nbr_seance" Type="varchar" MaxLength="1" />
+    <Property Name="IP_Machine" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Port_Machine" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="ID_Machine" Type="varchar" MaxLength="10" />
+    <Property Name="EmpStd" Type="varchar" MaxLength="1" />
+    <Property Name="type_pointage" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="pointjour">
+    <Key>
+      <PropertyRef Name="codfich" />
+      <PropertyRef Name="codchan" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+      <PropertyRef Name="matricule" />
+      <PropertyRef Name="Type" />
+    </Key>
+    <Property Name="codfich" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="codchan" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="annee" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="mois" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="matricule" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="j1" Type="varchar" MaxLength="5" />
+    <Property Name="j2" Type="varchar" MaxLength="5" />
+    <Property Name="j3" Type="varchar" MaxLength="5" />
+    <Property Name="j4" Type="varchar" MaxLength="5" />
+    <Property Name="j5" Type="varchar" MaxLength="5" />
+    <Property Name="j6" Type="varchar" MaxLength="5" />
+    <Property Name="j7" Type="varchar" MaxLength="5" />
+    <Property Name="j8" Type="varchar" MaxLength="5" />
+    <Property Name="j9" Type="varchar" MaxLength="5" />
+    <Property Name="j10" Type="varchar" MaxLength="5" />
+    <Property Name="j11" Type="varchar" MaxLength="5" />
+    <Property Name="j12" Type="varchar" MaxLength="5" />
+    <Property Name="j13" Type="varchar" MaxLength="5" />
+    <Property Name="j14" Type="varchar" MaxLength="5" />
+    <Property Name="j15" Type="varchar" MaxLength="5" />
+    <Property Name="j16" Type="varchar" MaxLength="5" />
+    <Property Name="j17" Type="varchar" MaxLength="5" />
+    <Property Name="j18" Type="varchar" MaxLength="5" />
+    <Property Name="j19" Type="varchar" MaxLength="5" />
+    <Property Name="j20" Type="varchar" MaxLength="5" />
+    <Property Name="j21" Type="varchar" MaxLength="5" />
+    <Property Name="j22" Type="varchar" MaxLength="5" />
+    <Property Name="j23" Type="varchar" MaxLength="5" />
+    <Property Name="j24" Type="varchar" MaxLength="5" />
+    <Property Name="j25" Type="varchar" MaxLength="5" />
+    <Property Name="j26" Type="varchar" MaxLength="5" />
+    <Property Name="j27" Type="varchar" MaxLength="5" />
+    <Property Name="j28" Type="varchar" MaxLength="5" />
+    <Property Name="j29" Type="varchar" MaxLength="5" />
+    <Property Name="j30" Type="varchar" MaxLength="5" />
+    <Property Name="j31" Type="varchar" MaxLength="5" />
+    <Property Name="totheure" Type="varchar" MaxLength="6" />
+    <Property Name="totjour" Type="varchar" MaxLength="5" />
+    <Property Name="salbase" Type="double" />
+    <Property Name="totprime" Type="double" />
+    <Property Name="salbrut" Type="double" />
+    <Property Name="cnss" Type="double" />
+    <Property Name="salimpo" Type="double" />
+    <Property Name="impot" Type="double" />
+    <Property Name="salnet" Type="double" />
+    <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pret">
+    <Key>
+      <PropertyRef Name="codpret" />
+    </Key>
+    <Property Name="codpret" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="desipret" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="primepers">
+    <Key>
+      <PropertyRef Name="MATR" />
+      <PropertyRef Name="codRUBRIQUE" />
+    </Key>
+    <Property Name="MATR" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="codRUBRIQUE" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="MONTANT" Type="int" />
+  </EntityType>
+  <EntityType Name="qualification">
+    <Key>
+      <PropertyRef Name="codequalif" />
+    </Key>
+    <Property Name="codequalif" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="qualificat" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="rubrique">
+    <Key>
+      <PropertyRef Name="codrubrique" />
+    </Key>
+    <Property Name="codrubrique" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="designarub" Type="varchar" MaxLength="30" />
+    <Property Name="libelle" Type="varchar" MaxLength="8" />
+    <Property Name="ncompte" Type="varchar" MaxLength="8" />
+    <Property Name="type" Type="varchar" MaxLength="3" />
+    <Property Name="nature" Type="varchar" MaxLength="7" />
+    <Property Name="imposable" Type="varchar" MaxLength="1" />
+    <Property Name="cotisable" Type="varchar" MaxLength="1" />
+    <Property Name="regime" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="service">
+    <Key>
+      <PropertyRef Name="codservice" />
+    </Key>
+    <Property Name="codservice" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="designaser" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="situationadmin">
+    <Key>
+      <PropertyRef Name="codesit" />
+    </Key>
+    <Property Name="codesit" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="sitadminis" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="societe">
+    <Key>
+      <PropertyRef Name="CODSOC" />
+    </Key>
+    <Property Name="CODSOC" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="NOMSOCI" Type="varchar" MaxLength="20" />
+    <Property Name="ADRESSE" Type="varchar" MaxLength="100" />
+    <Property Name="NBUREAU" Type="varchar" MaxLength="2" />
+    <Property Name="CODETVA" Type="varchar" MaxLength="20" />
+    <Property Name="CODPOSTAL" Type="varchar" MaxLength="4" />
+    <Property Name="CODUSE" Type="varchar" MaxLength="1" />
+    <Property Name="DATCLOT" Type="varchar" MaxLength="10" />
+    <Property Name="DIRECTEUR" Type="varchar" MaxLength="30" />
+    <Property Name="FOPROLOS" Type="float" />
+    <Property Name="NUMCNSS" Type="varchar" MaxLength="11" />
+    <Property Name="TFP" Type="float" />
+    <Property Name="ACCTRV" Type="float" />
+    <Property Name="TXEMPLOYEUR" Type="float" />
+    <Property Name="TXEMPLOYER" Type="float" />
+    <Property Name="TELEFAX" Type="varchar" MaxLength="15" />
+    <Property Name="TELEX" Type="varchar" MaxLength="15" />
+    <Property Name="TELEPHONE" Type="varchar" MaxLength="31" />
+    <Property Name="VILLE" Type="varchar" MaxLength="15" />
+    <Property Name="MODELE" Type="varchar" MaxLength="1" />
+    <Property Name="TXARRONDI" Type="float" Nullable="false" />
+    <Property Name="TYPEIRPP" Type="varchar" MaxLength="1" />
+    <Property Name="jnormal" Type="float" />
+    <Property Name="hnormal" Type="float" />
+    <Property Name="clotfiches" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="tempautrepoint">
+    <Key>
+      <PropertyRef Name="rubrique" />
+      <PropertyRef Name="matr" />
+      <PropertyRef Name="codfich" />
+      <PropertyRef Name="codchantier" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+    </Key>
+    <Property Name="rubrique" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="libelle" Type="varchar" MaxLength="30" />
+    <Property Name="montant" Type="float" />
+    <Property Name="matr" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="nomprenom" Type="varchar" MaxLength="40" />
+    <Property Name="codfich" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="codchantier" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="annee" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="mois" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="confirme" Type="varchar" MaxLength="1" />
+    <Property Name="nummois" Type="int" />
+  </EntityType>
+  <EntityType Name="tempcot">
+    <Key>
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+      <PropertyRef Name="txcot" />
+      <PropertyRef Name="matricule" />
+      <PropertyRef Name="fiche" />
+    </Key>
+    <Property Name="annee" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="mois" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="txcot" Type="double" Nullable="false" />
+    <Property Name="matricule" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="fiche" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="salbrut" Type="double" />
+    <Property Name="nomprenom" Type="varchar" MaxLength="30" />
+    <Property Name="numcnss" Type="varchar" MaxLength="11" />
+    <Property Name="categorie" Type="varchar" MaxLength="3" />
+    <Property Name="sommek" Type="double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tempheursupp">
+    <Key>
+      <PropertyRef Name="codheursupp" />
+      <PropertyRef Name="codfich" />
+      <PropertyRef Name="codchantier" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+      <PropertyRef Name="matr" />
+    </Key>
+    <Property Name="codheursupp" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="taux" Type="int" />
+    <Property Name="libelle" Type="varchar" MaxLength="30" />
+    <Property Name="nbrheursupp" Type="float" />
+    <Property Name="codfich" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="codchantier" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="annee" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="mois" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="matr" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="nomprenom" Type="varchar" MaxLength="40" />
+    <Property Name="confirme" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="templignepointage">
+    <Key>
+      <PropertyRef Name="Matr" />
+      <PropertyRef Name="codfich" />
+      <PropertyRef Name="codchantier" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+    </Key>
+    <Property Name="Matr" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="Nomprenom" Type="varchar" MaxLength="40" />
+    <Property Name="regime" Type="varchar" MaxLength="1" />
+    <Property Name="jourtrv" Type="float" />
+    <Property Name="heuretrv" Type="float" />
+    <Property Name="Jourcong" Type="float" />
+    <Property Name="jourfer" Type="float" />
+    <Property Name="codfich" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="codchantier" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="annee" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="mois" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="confirme" Type="varchar" MaxLength="1" />
+    <Property Name="hcong" Type="double" />
+    <Property Name="hfer" Type="double" />
+    <Property Name="tfp" Type="double" />
+    <Property Name="foprolos" Type="double" />
+  </EntityType>
+  <EntityType Name="templigneprime">
+    <Key>
+      <PropertyRef Name="rubrique" />
+      <PropertyRef Name="matr" />
+      <PropertyRef Name="fiche" />
+      <PropertyRef Name="nligne" />
+    </Key>
+    <Property Name="rubrique" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="designarub" Type="varchar" MaxLength="30" />
+    <Property Name="montant" Type="float" />
+    <Property Name="matr" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="confirme" Type="varchar" MaxLength="1" />
+    <Property Name="fiche" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="libelle" Type="varchar" MaxLength="30" />
+    <Property Name="nligne" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="templignerub">
+    <Key>
+      <PropertyRef Name="codrubrique" />
+      <PropertyRef Name="condition" />
+      <PropertyRef Name="ligne" />
+    </Key>
+    <Property Name="codrubrique" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="condition" Type="varchar" MaxLength="78" Nullable="false" />
+    <Property Name="Formule" Type="varchar" MaxLength="78" />
+    <Property Name="confirme" Type="varchar" MaxLength="1" />
+    <Property Name="ligne" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="plafond" Type="double" />
+  </EntityType>
+  <EntityType Name="tempmajconge">
+    <Key>
+      <PropertyRef Name="matricule" />
+      <PropertyRef Name="datedepart" />
+    </Key>
+    <Property Name="code" Type="varchar" MaxLength="6" />
+    <Property Name="libelle" Type="varchar" MaxLength="30" />
+    <Property Name="type" Type="varchar" MaxLength="10" />
+    <Property Name="nbrjour" Type="float" />
+    <Property Name="nbrheure" Type="float" />
+    <Property Name="matricule" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="nomprenom" Type="varchar" MaxLength="30" />
+    <Property Name="solde" Type="float" />
+    <Property Name="datedepart" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="datefin" Type="varchar" MaxLength="10" />
+    <Property Name="payer" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="ths">
+    <Key>
+      <PropertyRef Name="codths" />
+    </Key>
+    <Property Name="codths" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="libelle" Type="varchar" MaxLength="30" />
+    <Property Name="taux" Type="int" />
+    <Property Name="regime" Type="varchar" MaxLength="50" />
+    <Property Name="MtSupp" Type="double" Nullable="false" />
+  </EntityType>
+  <!--Erreurs détectées durant la génération :
+avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.grpaie.tmpcnss' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
+        <EntityType Name="tmpcnss">
+          <Property Name="NCNSS" Type="varchar" MaxLength="11" />
+          <Property Name="Mat" Type="varchar" MaxLength="8" />
+          <Property Name="nomprenom" Type="varchar" MaxLength="40" />
+          <Property Name="Cat" Type="varchar" MaxLength="3" />
+          <Property Name="mois1" Type="double" />
+          <Property Name="mois2" Type="double" />
+          <Property Name="mois3" Type="double" />
+          <Property Name="Total" Type="double" />
+          <Property Name="page" Type="bigint" />
+          <Property Name="Compt" Type="bigint" />
+          <Property Name="TxAcTrv" Type="double" />
+          <Property Name="TAUX" Type="double" />
+        </EntityType>-->
+  <!--Erreurs détectées durant la génération :
+avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.grpaie.tmplcn' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
+        <EntityType Name="tmplcn">
+          <Property Name="annee" Type="varchar" MaxLength="4" />
+          <Property Name="trimestre" Type="varchar" MaxLength="1" />
+          <Property Name="txcot" Type="double" />
+          <Property Name="numcnss" Type="varchar" MaxLength="11" />
+          <Property Name="matricule" Type="varchar" MaxLength="8" />
+          <Property Name="Mois1" Type="double" />
+          <Property Name="Mois2" Type="double" />
+          <Property Name="Mois3" Type="double" />
+          <Property Name="page" Type="double" />
+          <Property Name="numerordre" Type="double" />
+          <Property Name="nomprenom" Type="varchar" MaxLength="30" />
+          <Property Name="categorie" Type="varchar" MaxLength="3" />
+        </EntityType>-->
+  <!--Erreurs détectées durant la génération :
+avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.grpaie.tmpmasse' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
+        <EntityType Name="tmpmasse">
+          <Property Name="code" Type="varchar" MaxLength="8" />
+          <Property Name="lib" Type="varchar" MaxLength="30" />
+          <Property Name="Brut" Type="double" />
+          <Property Name="Taux" Type="double" />
+          <Property Name="charge" Type="double" />
+          <Property Name="Total" Type="double" />
+        </EntityType>-->
+  <!--Erreurs détectées durant la génération :
+avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.grpaie.tmppers' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
+        <EntityType Name="tmppers">
+          <Property Name="matr" Type="varchar" MaxLength="8" />
+          <Property Name="nomprenom1" Type="varchar" MaxLength="30" />
+          <Property Name="qualification" Type="varchar" MaxLength="30" />
+          <Property Name="Prenom" Type="varchar" MaxLength="30" />
+          <Property Name="naissance" Type="date" />
+        </EntityType>-->
+  <!--Erreurs détectées durant la génération :
+avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.grpaie.tmppointmens' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
+        <EntityType Name="tmppointmens">
+          <Property Name="codfich" Type="varchar" MaxLength="3" />
+          <Property Name="codchantier" Type="varchar" MaxLength="3" />
+          <Property Name="Annee" Type="varchar" MaxLength="4" />
+          <Property Name="mois" Type="varchar" MaxLength="12" />
+          <Property Name="matr" Type="varchar" MaxLength="8" />
+          <Property Name="nomprenom" Type="varchar" MaxLength="40" />
+          <Property Name="regime" Type="varchar" MaxLength="20" />
+          <Property Name="jourtrv" Type="double" />
+          <Property Name="heuretrv" Type="double" />
+          <Property Name="Jourcong" Type="double" />
+          <Property Name="jourfer" Type="double" />
+          <Property Name="libelle" Type="varchar" MaxLength="100" />
+          <Property Name="hfer" Type="double" />
+          <Property Name="hcong" Type="double" />
+        </EntityType>-->
+  <!--Erreurs détectées durant la génération :
+avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.grpaie.tmppret' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
+        <EntityType Name="tmppret">
+          <Property Name="matr" Type="varchar" MaxLength="8" />
+          <Property Name="nomprenom1" Type="varchar" MaxLength="30" />
+          <Property Name="rubrique" Type="varchar" MaxLength="5" />
+          <Property Name="Mois" Type="double" />
+          <Property Name="annee" Type="double" />
+          <Property Name="Lib" Type="varchar" MaxLength="30" />
+          <Property Name="Gain" Type="double" />
+          <Property Name="retenue" Type="double" />
+          <Property Name="Rest" Type="double" />
+        </EntityType>-->
+  <!--Erreurs détectées durant la génération :
+avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.grpaie.tmprecap' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
+        <EntityType Name="tmprecap">
+          <Property Name="cod" Type="varchar" MaxLength="10" />
+          <Property Name="lib" Type="varchar" MaxLength="30" />
+          <Property Name="mt" Type="double" />
+          <Property Name="CODSERV" Type="varchar" MaxLength="10" />
+          <Property Name="SERV" Type="varchar" MaxLength="100" />
+          <Property Name="nombre" Type="double" />
+          <Property Name="ordre" Type="int" />
+        </EntityType>-->
+  <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'def.grpaie.trace_pointage' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
+  <EntityType Name="trace_pointage">
+    <Key>
+      <PropertyRef Name="Ancien_date" />
+      <PropertyRef Name="Ancien_time" />
+      <PropertyRef Name="nouv_date" />
+      <PropertyRef Name="nouv_time" />
+      <PropertyRef Name="matricule" />
+      <PropertyRef Name="Nom_Pre" />
+      <PropertyRef Name="date_maj" />
+      <PropertyRef Name="temp_maj" />
+      <PropertyRef Name="operation" />
+    </Key>
+    <Property Name="Ancien_date" Type="date" Nullable="false" />
+    <Property Name="Ancien_time" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="nouv_date" Type="date" Nullable="false" />
+    <Property Name="nouv_time" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="matricule" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Nom_Pre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="date_maj" Type="date" Nullable="false" />
+    <Property Name="temp_maj" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="operation" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="user" Type="varchar" MaxLength="2" />
+  </EntityType>
+  <!--Erreurs détectées durant la génération :
+avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.grpaie.userinfo' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
+        <EntityType Name="userinfo">
+          <Property Name="userid" Type="varchar" MaxLength="50" />
+          <Property Name="badgenumber" Type="text" />
+          <Property Name="SSN" Type="text" />
+          <Property Name="Name" Type="text" />
+          <Property Name="CardNo" Type="text" />
+          <Property Name="SENSORID" Type="text" />
+          <Property Name="Etat" Type="text" />
+          <Property Name="Sel" Type="int" />
+          <Property Name="choix" Type="varchar" MaxLength="50" />
+          <Property Name="actif" Type="varchar" MaxLength="1" />
+        </EntityType>-->
+  <EntityType Name="variable">
+    <Key>
+      <PropertyRef Name="codVariable" />
+    </Key>
+    <Property Name="codVariable" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Libelle" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="vnote">
+    <Key>
+      <PropertyRef Name="matricule" />
+      <PropertyRef Name="annee" />
+      <PropertyRef Name="mois" />
+    </Key>
+    <Property Name="matricule" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="annee" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="mois" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="note_rend" Type="float" />
+    <Property Name="note_prod" Type="int" />
+    <Property Name="nomprenom" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityContainer Name="grpaieModelStoreContainer">
+    <EntitySet Name="affectation" EntityType="Self.affectation" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="atelier" EntityType="Self.atelier" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="autrepoint" EntityType="Self.autrepoint" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="banque" EntityType="Self.banque" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="bpointage" EntityType="Self.bpointage" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="brouillardpoint" EntityType="Self.brouillardpoint" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="calendjf" EntityType="Self.calendjf" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="calendrier" EntityType="Self.calendrier" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="calendrierold" EntityType="Self.calendrierold" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="chantier" EntityType="Self.chantier" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="client" EntityType="Self.client" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="cnt" EntityType="Self.cnt" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="conge" EntityType="Self.conge" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="ebp" EntityType="Self.ebp" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="ebp_hist" EntityType="Self.ebp_hist" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="ebparchive" EntityType="Self.ebparchive" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="ebptemp" EntityType="Self.ebptemp" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="ecn" EntityType="Self.ecn" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="entpointage" EntityType="Self.entpointage" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="fich" EntityType="Self.fich" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="fpointage" EntityType="Self.fpointage" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="grille" EntityType="Self.grille" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="grillesalaire" EntityType="Self.grillesalaire" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="heursupp" EntityType="Self.heursupp" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="intervalle" EntityType="Self.intervalle" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="lbp" EntityType="Self.lbp" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="lbparchive" EntityType="Self.lbparchive" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="lbptemp" EntityType="Self.lbptemp" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="lcn" EntityType="Self.lcn" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="lignepointage" EntityType="Self.lignepointage" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="ligneprime" EntityType="Self.ligneprime" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="lignerub" EntityType="Self.lignerub" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="lmission" EntityType="Self.lmission" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="majconge" EntityType="Self.majconge" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="majconge1" EntityType="Self.majconge1" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="majpret" EntityType="Self.majpret" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="mission" EntityType="Self.mission" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="nbrjour" EntityType="Self.nbrjour" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="nomjour" EntityType="Self.nomjour" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="persarchive" EntityType="Self.persarchive" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="personnel" EntityType="Self.personnel" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="poijourtmp" EntityType="Self.poijourtmp" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="poijourtmp1" EntityType="Self.poijourtmp1" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="pointeuse" EntityType="Self.pointeuse" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="pointjour" EntityType="Self.pointjour" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="pret" EntityType="Self.pret" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="primepers" EntityType="Self.primepers" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="qualification" EntityType="Self.qualification" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="rubrique" EntityType="Self.rubrique" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="service" EntityType="Self.service" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="situationadmin" EntityType="Self.situationadmin" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="societe" EntityType="Self.societe" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="tempautrepoint" EntityType="Self.tempautrepoint" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="tempcot" EntityType="Self.tempcot" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="tempheursupp" EntityType="Self.tempheursupp" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="templignepointage" EntityType="Self.templignepointage" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="templigneprime" EntityType="Self.templigneprime" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="templignerub" EntityType="Self.templignerub" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="tempmajconge" EntityType="Self.tempmajconge" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="ths" EntityType="Self.ths" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="variable" EntityType="Self.variable" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="vnote" EntityType="Self.vnote" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="emploi_temp" EntityType="Self.emploi_temp" store:Type="Tables" store:Schema="grpaie">
+      <DefiningQuery>SELECT
+`emploi_temp`.`datedu1`, 
+`emploi_temp`.`dateau1`, 
+`emploi_temp`.`datedu2`, 
+`emploi_temp`.`dateau2`, 
+`emploi_temp`.`tluds`, 
+`emploi_temp`.`tmads`, 
+`emploi_temp`.`tmeds`, 
+`emploi_temp`.`tjeds`, 
+`emploi_temp`.`tveds`, 
+`emploi_temp`.`tsads`, 
+`emploi_temp`.`tdids`, 
+`emploi_temp`.`ttrds`, 
+`emploi_temp`.`tlusu`, 
+`emploi_temp`.`tmasu`, 
+`emploi_temp`.`tmesu`, 
+`emploi_temp`.`tjesu`, 
+`emploi_temp`.`tvesu`, 
+`emploi_temp`.`tsasu`, 
+`emploi_temp`.`tdisu`, 
+`emploi_temp`.`ttrsu`, 
+`emploi_temp`.`TE11`, 
+`emploi_temp`.`TE12`, 
+`emploi_temp`.`TE13`, 
+`emploi_temp`.`TE14`, 
+`emploi_temp`.`TE15`, 
+`emploi_temp`.`TE16`, 
+`emploi_temp`.`TE17`, 
+`emploi_temp`.`TS11`, 
+`emploi_temp`.`TS12`, 
+`emploi_temp`.`TS13`, 
+`emploi_temp`.`TS14`, 
+`emploi_temp`.`TS15`, 
+`emploi_temp`.`TS16`, 
+`emploi_temp`.`TS17`, 
+`emploi_temp`.`TE21`, 
+`emploi_temp`.`TE22`, 
+`emploi_temp`.`TE23`, 
+`emploi_temp`.`TE24`, 
+`emploi_temp`.`TE25`, 
+`emploi_temp`.`TE26`, 
+`emploi_temp`.`TE27`, 
+`emploi_temp`.`TS21`, 
+`emploi_temp`.`TS22`, 
+`emploi_temp`.`TS23`, 
+`emploi_temp`.`TS24`, 
+`emploi_temp`.`TS25`, 
+`emploi_temp`.`TS26`, 
+`emploi_temp`.`TS27`, 
+`emploi_temp`.`TEE11`, 
+`emploi_temp`.`TEE12`, 
+`emploi_temp`.`TEE13`, 
+`emploi_temp`.`TEE14`, 
+`emploi_temp`.`TEE15`, 
+`emploi_temp`.`TEE16`, 
+`emploi_temp`.`TEE17`, 
+`emploi_temp`.`TSS11`, 
+`emploi_temp`.`TSS12`, 
+`emploi_temp`.`TSS13`, 
+`emploi_temp`.`TSS14`, 
+`emploi_temp`.`TSS15`, 
+`emploi_temp`.`TSS16`, 
+`emploi_temp`.`TSS17`, 
+`emploi_temp`.`Code`, 
+`emploi_temp`.`libelle`
+FROM `emploi_temp` AS `emploi_temp`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="lbp_hist" EntityType="Self.lbp_hist" store:Type="Tables" store:Schema="grpaie">
+      <DefiningQuery>SELECT
+`lbp_hist`.`nbr`, 
+`lbp_hist`.`fiche`, 
+`lbp_hist`.`annee`, 
+`lbp_hist`.`mois`, 
+`lbp_hist`.`matricule`, 
+`lbp_hist`.`rubrique`, 
+`lbp_hist`.`libelle`, 
+`lbp_hist`.`nombre`, 
+`lbp_hist`.`retenue`, 
+`lbp_hist`.`gain`, 
+`lbp_hist`.`imposable`, 
+`lbp_hist`.`cotisable`, 
+`lbp_hist`.`Group1`, 
+`lbp_hist`.`numCalcul`
+FROM `lbp_hist` AS `lbp_hist`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="nomtable" EntityType="Self.nomtable" store:Type="Tables" store:Schema="grpaie">
+      <DefiningQuery>SELECT
+`nomtable`.`nomtable`
+FROM `nomtable` AS `nomtable`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="trace_pointage" EntityType="Self.trace_pointage" store:Type="Tables" store:Schema="grpaie">
+      <DefiningQuery>SELECT
+`trace_pointage`.`Ancien_date`, 
+`trace_pointage`.`Ancien_time`, 
+`trace_pointage`.`nouv_date`, 
+`trace_pointage`.`nouv_time`, 
+`trace_pointage`.`matricule`, 
+`trace_pointage`.`Nom_Pre`, 
+`trace_pointage`.`date_maj`, 
+`trace_pointage`.`temp_maj`, 
+`trace_pointage`.`operation`, 
+`trace_pointage`.`user`
+FROM `trace_pointage` AS `trace_pointage`</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
