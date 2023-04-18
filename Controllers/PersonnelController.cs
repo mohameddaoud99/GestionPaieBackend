@@ -31,7 +31,7 @@ namespace PaieBack.Controllers
                 utilisateur.compteuser = "0" + matr.ToString();
                 utilisateur.motdepasse = p.motdepasse;
                 utilisateur.DERSOC = p.DERSOC;
-                utilisateur.type = "Utilisateur";
+                utilisateur.type = "Personnel";
                 utilisateur.actif = "";
                 utilisateur.numvol = "";
 
@@ -46,7 +46,8 @@ namespace PaieBack.Controllers
                 return NotFound();
 
             }
-            return Ok(new { status = 200, isSuccess = true, message = "Ajouter", EmployeeDetails = utilisateur });
+            //  return Ok(new { status = 200, isSuccess = true, message = "Ajouter", EmployeeDetails = utilisateur });
+            return Ok(utilisateur);
 
         }
 
@@ -75,6 +76,18 @@ namespace PaieBack.Controllers
             }
 
             return Ok(utilisateur);
+        }
+
+
+        [HttpGet, ActionName("Getuserpaie")]
+        [Route("Getuserpaie")]
+        public object Getuserpaie(String DERSOC)
+        {
+           
+            return userpaie.Set<utilisateur>()
+                    .Where(c => c.DERSOC == DERSOC).Select(utilisateur => new {
+                        motdepasse = utilisateur.motdepasse,
+                    }).ToList();
         }
 
         [HttpGet, ActionName("mat")]
