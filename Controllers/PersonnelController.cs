@@ -78,16 +78,37 @@ namespace PaieBack.Controllers
             return Ok(utilisateur);
         }
 
-
         [HttpGet, ActionName("Getuserpaie")]
         [Route("Getuserpaie")]
         public object Getuserpaie(String DERSOC)
         {
-           
+
             return userpaie.Set<utilisateur>()
                     .Where(c => c.DERSOC == DERSOC).Select(utilisateur => new {
                         motdepasse = utilisateur.motdepasse,
                     }).ToList();
+        }
+
+
+        [HttpGet, ActionName("GetEmployee")]
+        [Route("GetEmployee")]
+        public IHttpActionResult GetEmployee(string CIN)
+        {
+
+           /* var user=  ChoixBD.MyDbContext.Set<personnel>().Where(c => c.CIN == Cin).Select(employee => new
+            {
+
+                NOMPRENOM1 = employee.NOMPRENOM1,
+            }).ToList();
+            return Ok(user);*/
+
+            personnel pers = ChoixBD.MyDbContext.Set<personnel>().Where(c => c.CIN == CIN).First();
+            if (pers == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(pers);
         }
 
         [HttpGet, ActionName("mat")]
@@ -212,6 +233,7 @@ namespace PaieBack.Controllers
                  personnel.imagepath= "";
                  personnel.image= null;
                  personnel.imagesize = 0;
+              
 
                 ChoixBD.MyDbContext.Set<personnel>().Add(personnel);
                 ChoixBD.MyDbContext.SaveChanges();

@@ -20,53 +20,85 @@ namespace PaieBack.Controllers
             return ChoixBD.MyDbContext.Set<majconge>().ToList();
         }
 
+
+        [HttpGet, ActionName("GetMajCogeUtilisateur")]
+        [Route("GetMajCogeUtilisateur")]
+        public object GetMajCogeUtilisateur(string matricule,string nomprenom)
+        {
+            return ChoixBD.MyDbContext.Set<majconge>()
+                .Where(x => x.matricule.Equals(matricule) && x.nomprenom.Equals(nomprenom))
+                .ToList();
+        }
+
+
         // POST: api/MajCoge
         [ResponseType(typeof(majconge))]
-        public IHttpActionResult PostMajCoge(majconge p)
+        public HttpResponseMessage PostMajCoge(majconge p)
         {
-            /*  if (ModelState.IsValid)
-              {
-
-                  var majconge = new majconge();
-
-                  majconge.code =  p.code;
-                  majconge.libelle = p.libelle;
-                  majconge.type = p.type;
-                  majconge.nbrjour = p.nbrjour;
-                  majconge.nbrheure = p.nbrheure;
-                  majconge.matricule = p.matricule;
-
-                  majconge.nomprenom = p.nomprenom;
-                  majconge.solde = p.solde;
-                  majconge.datedepart = p.datedepart;
-                  majconge.datefin = p.datefin;
-                  majconge.payer = "";
-                  majconge.description = p.description;
 
 
-                  ChoixBD.MyDbContext.Set<majconge>().Add(majconge);
-                  ChoixBD.MyDbContext.SaveChanges();
-
-
-                  return Ok(majconge);
-              }
-              else
-              {
-                  return NotFound();
-              }*/
-
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                return BadRequest(ModelState);
+                var majconge = new majconge();
+
+                majconge.code = p.code;
+                majconge.libelle = p.libelle;
+                majconge.type = "Payé";
+                majconge.nbrjour = 22;
+                majconge.nbrheure = 256;
+
+                majconge.matricule = p.matricule;
+                majconge.nomprenom = p.nomprenom;
+
+                majconge.solde = 0;
+                majconge.datedepart = p.datedepart;
+                majconge.datefin = p.datefin;
+                majconge.payer = null;
+
+                majconge.description = p.description;
+
+
+                ChoixBD.MyDbContext.Set<majconge>().Add(majconge);
+                ChoixBD.MyDbContext.SaveChanges();
+
+
+                // return Ok(new { status = 200, isSuccess = true, message = "Ajouter Existe", Details = p });
+                HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, p);
+               
+                return response;
             }
-            ChoixBD.MyDbContext.Set<majconge>().Add(p);
-            ChoixBD.MyDbContext.SaveChanges();
+            else
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+            }
+            /*  if (!ModelState.IsValid)
+              {
+                  return BadRequest(ModelState);
+              }
+              ChoixBD.MyDbContext.Set<majconge>().Add(p);
+              ChoixBD.MyDbContext.SaveChanges();
 
-            return Ok(new { status = 200, isSuccess = true, message = "Ajouter Existe", Details = p });
-
+              return Ok(new { status = 200, isSuccess = true, message = "Ajouter Existe", Details = p });
+            */
 
         }
 
+        [HttpDelete, ActionName("DeleteMajCogeUtilisateur")]
+        [Route("DeleteMajCogeUtilisateur")]
+        public IHttpActionResult DeleteMajCogeUtilisateur(string matricule, string nomprenom, DateTime datedepart)
+        {
+            majconge mc= ChoixBD.MyDbContext.Set<majconge>()
+                .Where(x => x.matricule.Equals(matricule) && x.nomprenom.Equals(nomprenom) &&  x.datedepart.Equals(datedepart))
+                .First();
+            if (mc == null)
+            {
+                return NotFound();
+            }
+
+            ChoixBD.MyDbContext.Set<majconge>().Remove(mc);
+            ChoixBD.MyDbContext.SaveChanges();
+            return Ok(mc);
+        }
 
         // PUT: api/Personnel?MATR=000167
         [ResponseType(typeof(void))]
@@ -76,16 +108,21 @@ namespace PaieBack.Controllers
             var majconge = ChoixBD.MyDbContext.Set<majconge>().Where(c => c.datedepart == datedepart).First();
 
 
+ 
+
             majconge.code = p.code;
             majconge.libelle = p.libelle;
-            majconge.type = p.type;
-            majconge.nbrjour = p.nbrjour;
-            majconge.nbrheure = p.nbrheure;
-            majconge.solde = p.solde;
-            majconge.datefin = p.datefin;
-            majconge.payer = "";
-            majconge.description = p.description;
+          
 
+            majconge.matricule = p.matricule;
+            majconge.nomprenom = p.nomprenom;
+
+           
+          
+            majconge.datefin = p.datefin;
+            
+
+            majconge.description = p.description;
 
             ChoixBD.MyDbContext.SaveChanges();
 
