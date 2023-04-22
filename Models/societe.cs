@@ -39,36 +39,5 @@ namespace PaieBack.Models
         public Nullable<float> jnormal { get; set; }
         public Nullable<float> hnormal { get; set; }
         public string clotfiches { get; set; }
-        public Nullable<double> CNAMEMPLOYEUR { get; set; }
-        public Nullable<double> CNAMEMPLOYE { get; set; }
-        public string hortra { get; set; }
-        public string GUTIL { get; set; }
-        public string chantier { get; set; }
-        public Nullable<int> nbrmois { get; set; }
-        public string pointrub { get; set; }
-        public Nullable<double> nbrheure { get; set; }
-        public string disquetcnss { get; set; }
-        public string suppbanque { get; set; }
-        public string liaison_pointeuse { get; set; }
-        public Nullable<double> mtredevance { get; set; }
-        public string txredevance { get; set; }
-        public string parampoint { get; set; }
-        public string Synchronisation { get; set; }
-        public string majred { get; set; }
-        public string impotshs { get; set; }
-        public string sdconj { get; set; }
-        public string ParamRappel { get; set; }
-        public string calhmens { get; set; }
-        public string enthpoint { get; set; }
-        public string calmmens { get; set; }
-        public string sortcal { get; set; }
-        public string rue { get; set; }
-        public string activite { get; set; }
-        public string numero { get; set; }
-        public string exercice { get; set; }
-        public string codeacte { get; set; }
-        public string TMAJO { get; set; }
-        public string mf { get; set; }
-        public string ParamAnn1 { get; set; }
     }
 }

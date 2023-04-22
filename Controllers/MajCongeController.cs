@@ -20,15 +20,31 @@ namespace PaieBack.Controllers
             return ChoixBD.MyDbContext.Set<majconge>().ToList();
         }
 
-
         [HttpGet, ActionName("GetMajCogeUtilisateur")]
         [Route("GetMajCogeUtilisateur")]
-        public object GetMajCogeUtilisateur(string matricule,string nomprenom)
+        public object GetMajCogeUtilisateur(string matricule, string nomprenom)
         {
             return ChoixBD.MyDbContext.Set<majconge>()
-                .Where(x => x.matricule.Equals(matricule) && x.nomprenom.Equals(nomprenom))
+                .Where(x => x.matricule.Equals(matricule) && x.nomprenom.Equals(nomprenom) && x.etat == "E")
                 .ToList();
         }
+
+        [HttpGet, ActionName("GetCongesAccepterByIdE")]
+        [Route("GetCongesAccepterByIdE")]
+        public IEnumerable<majconge> GetCongesAccepterByIdEmployee(string matricule)
+        {
+            return ChoixBD.MyDbContext.Set<majconge>().Where(c => c.matricule == matricule && c.etat == "A").ToList();
+        }
+
+
+        [HttpGet, ActionName("GetCongesRefuserByIdE")]
+        [Route("GetCongesRefuserByIdE")]
+        public IEnumerable<majconge> GetCongesRefuserByIdE(string matricule)
+        {
+            return ChoixBD.MyDbContext.Set<majconge>().Where(c => c.matricule == matricule && c.etat == "R").ToList();
+        }
+
+
 
 
         // POST: api/MajCoge
@@ -43,9 +59,17 @@ namespace PaieBack.Controllers
 
                 majconge.code = p.code;
                 majconge.libelle = p.libelle;
-                majconge.type = "Payé";
-                majconge.nbrjour = 22;
-                majconge.nbrheure = 256;
+                majconge.type = p.type;
+                DateTime dateDebut = p.datedepart;
+                DateTime dateF = (DateTime)p.datefin;
+                TimeSpan nombreDeJours = dateF - dateDebut;
+                majconge.nbrjour = nombreDeJours.Days;
+
+                int dureeTotaleEnHeuresParJour = 8;
+                int nombreTotalDHeures = nombreDeJours.Days * dureeTotaleEnHeuresParJour;
+
+
+                majconge.nbrheure = nombreTotalDHeures;
 
                 majconge.matricule = p.matricule;
                 majconge.nomprenom = p.nomprenom;
@@ -56,6 +80,7 @@ namespace PaieBack.Controllers
                 majconge.payer = null;
 
                 majconge.description = p.description;
+                majconge.etat = "E";
 
 
                 ChoixBD.MyDbContext.Set<majconge>().Add(majconge);
@@ -112,15 +137,28 @@ namespace PaieBack.Controllers
 
             majconge.code = p.code;
             majconge.libelle = p.libelle;
-          
+            majconge.type = p.type;
 
             majconge.matricule = p.matricule;
             majconge.nomprenom = p.nomprenom;
 
            
-          
+
             majconge.datefin = p.datefin;
-            
+
+            DateTime dateDebut = datedepart;
+            DateTime dateF = (DateTime)p.datefin;
+            TimeSpan nombreDeJours = dateF - dateDebut;
+            majconge.nbrjour = nombreDeJours.Days;
+            int nombreDeJour = nombreDeJours.Days;
+
+            int dureeTotaleEnHeuresParJour = 8;
+            int nombreTotalDHeures = nombreDeJour * dureeTotaleEnHeuresParJour;
+
+
+            majconge.nbrheure = nombreTotalDHeures;
+
+
 
             majconge.description = p.description;
 
@@ -144,6 +182,9 @@ namespace PaieBack.Controllers
             ChoixBD.MyDbContext.SaveChanges();
             return Ok(maj);
         }
+
+
+   
 
     }
 }

@@ -82,5 +82,6 @@ namespace PaieBack.Models
         public string imagepath { get; set; }
         public byte[] image { get; set; }
         public Nullable<int> imagesize { get; set; }
+        public string email { get; set; }
     }
 }

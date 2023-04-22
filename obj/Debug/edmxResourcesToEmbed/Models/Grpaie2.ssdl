@@ -171,21 +171,6 @@
     <Property Name="codchantier" Type="varchar" MaxLength="3" Nullable="false" />
     <Property Name="libelle" Type="varchar" MaxLength="30" />
   </EntityType>
-  <!--Erreurs détectées durant la génération :
-avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.grpaie2.checkinout' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
-        <EntityType Name="checkinout">
-          <Property Name="USERID" Type="varchar" MaxLength="50" />
-          <Property Name="CHECKTIME" Type="datetime" Precision="0" />
-          <Property Name="CHECKTYPE" Type="text" />
-          <Property Name="VERIFYCODE" Type="int" />
-          <Property Name="SENSORID" Type="text" />
-          <Property Name="Memoinfo" Type="text" />
-          <Property Name="WorkCode" Type="text" />
-          <Property Name="sn" Type="text" />
-          <Property Name="UserExtFmt" Type="int" />
-          <Property Name="choix" Type="varchar" MaxLength="50" />
-          <Property Name="type" Type="varchar" MaxLength="1" />
-        </EntityType>-->
   <EntityType Name="client">
     <Key>
       <PropertyRef Name="code" />
@@ -336,12 +321,6 @@ avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.g
     <Property Name="Libelle" Type="varchar" MaxLength="40" />
     <Property Name="Valid" Type="varchar" MaxLength="1" />
   </EntityType>
-  <!--Erreurs détectées durant la génération :
-avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.grpaie2.cond_for' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
-        <EntityType Name="cond_for">
-          <Property Name="valformule" Type="float" />
-          <Property Name="valcondition" Type="varchar" MaxLength="1" />
-        </EntityType>-->
   <EntityType Name="conge">
     <Key>
       <PropertyRef Name="code" />
@@ -353,50 +332,6 @@ avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.g
     <Property Name="edition" Type="varchar" MaxLength="5" />
     <Property Name="AutreType" Type="varchar" MaxLength="30" />
   </EntityType>
-  <!--Erreurs détectées durant la génération :
-avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.grpaie2.cumul' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
-        <EntityType Name="cumul">
-          <Property Name="MMMMM" Type="varchar" MaxLength="5" />
-          <Property Name="JJMMAAAA" Type="varchar" MaxLength="12" />
-          <Property Name="TTT" Type="varchar" MaxLength="3" />
-          <Property Name="E1" Type="varchar" MaxLength="4" />
-          <Property Name="S1" Type="varchar" MaxLength="4" />
-          <Property Name="E2" Type="varchar" MaxLength="4" />
-          <Property Name="S2" Type="varchar" MaxLength="4" />
-          <Property Name="ES1" Type="varchar" MaxLength="4" />
-          <Property Name="SS1" Type="varchar" MaxLength="4" />
-          <Property Name="ES2" Type="varchar" MaxLength="4" />
-          <Property Name="SS2" Type="varchar" MaxLength="4" />
-          <Property Name="SA1" Type="varchar" MaxLength="4" />
-          <Property Name="EA1" Type="varchar" MaxLength="4" />
-          <Property Name="SA2" Type="varchar" MaxLength="4" />
-          <Property Name="EA2" Type="varchar" MaxLength="4" />
-          <Property Name="CM1" Type="varchar" MaxLength="4" />
-          <Property Name="CS1" Type="varchar" MaxLength="4" />
-          <Property Name="CA1" Type="varchar" MaxLength="4" />
-          <Property Name="sAN" Type="varchar" MaxLength="4" />
-          <Property Name="RED" Type="varchar" MaxLength="4" />
-          <Property Name="TOT" Type="varchar" MaxLength="4" />
-          <Property Name="MAT" Type="varchar" MaxLength="2" />
-          <Property Name="RET" Type="varchar" MaxLength="4" />
-          <Property Name="CAB" Type="varchar" MaxLength="2" />
-          <Property Name="JOU" Type="varchar" MaxLength="2" />
-          <Property Name="HSN" Type="varchar" MaxLength="4" />
-          <Property Name="AJO" Type="varchar" MaxLength="4" />
-          <Property Name="HAB" Type="varchar" MaxLength="4" />
-          <Property Name="AUT" Type="varchar" MaxLength="4" />
-          <Property Name="JUS" Type="varchar" MaxLength="4" />
-          <Property Name="NON" Type="varchar" MaxLength="4" />
-          <Property Name="HSJF" Type="varchar" MaxLength="4" />
-          <Property Name="HSNF" Type="varchar" MaxLength="4" />
-          <Property Name="HSJR" Type="varchar" MaxLength="4" />
-          <Property Name="HSNR" Type="varchar" MaxLength="4" />
-        </EntityType>-->
-  <!--Erreurs détectées durant la génération :
-avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.grpaie2.cumul1' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
-        <EntityType Name="cumul1">
-          <Property Name="pointage" Type="text" />
-        </EntityType>-->
   <EntityType Name="ebp">
     <Key>
       <PropertyRef Name="fiche" />
@@ -916,22 +851,6 @@ avertissement 6002: La table/vue 'def.grpaie2.emploi_temp' n'a pas de clé prima
     <Property Name="nomprenom" Type="varchar" MaxLength="40" />
     <Property Name="confirme" Type="varchar" MaxLength="1" />
   </EntityType>
-  <!--Erreurs détectées durant la génération :
-avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.grpaie2.historiquepret' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
-        <EntityType Name="historiquepret">
-          <Property Name="code" Type="varchar" MaxLength="2" />
-          <Property Name="designa" Type="varchar" MaxLength="30" />
-          <Property Name="date1ret" Type="varchar" MaxLength="8" />
-          <Property Name="datepret" Type="varchar" MaxLength="8" />
-          <Property Name="blocage" Type="varchar" MaxLength="1" />
-          <Property Name="matricule" Type="varchar" MaxLength="8" />
-          <Property Name="nomprenom" Type="varchar" MaxLength="30" />
-          <Property Name="montret" Type="float" />
-          <Property Name="montpret" Type="float" />
-          <Property Name="montrest" Type="float" />
-          <Property Name="fiche" Type="varchar" MaxLength="3" />
-          <Property Name="desifich" Type="varchar" MaxLength="30" />
-        </EntityType>-->
   <EntityType Name="intervalle">
     <Key>
       <PropertyRef Name="Interv" />
@@ -1062,17 +981,6 @@ avertissement 6002: La table/vue 'def.grpaie2.lbp_hist' n'a pas de clé primaire
     <Property Name="mois3k" Type="double" />
     <Property Name="sel" Type="int" />
   </EntityType>
-  <!--Erreurs détectées durant la génération :
-avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.grpaie2.lignecalendrier' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
-        <EntityType Name="lignecalendrier">
-          <Property Name="num" Type="varchar" MaxLength="5" />
-          <Property Name="matr" Type="varchar" MaxLength="8" />
-          <Property Name="userid" Type="varchar" MaxLength="8" />
-          <Property Name="nomprenom" Type="varchar" MaxLength="30" />
-          <Property Name="dateau" Type="date" />
-          <Property Name="datedu" Type="date" />
-          <Property Name="libelle" Type="varchar" MaxLength="50" />
-        </EntityType>-->
   <EntityType Name="lignepointage">
     <Key>
       <PropertyRef Name="Matr" />
@@ -1156,6 +1064,7 @@ avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.g
     <Property Name="datefin" Type="date" />
     <Property Name="payer" Type="varchar" MaxLength="3" />
     <Property Name="description" Type="varchar" MaxLength="500" />
+    <Property Name="etat" Type="varchar" MaxLength="1" Nullable="false" />
   </EntityType>
   <EntityType Name="majconge1">
     <Key>
@@ -1250,46 +1159,6 @@ avertissement 6002: La table/vue 'def.grpaie2.nomtable' n'a pas de clé primaire
     </Key>
     <Property Name="nomtable" Type="varchar" MaxLength="30" Nullable="false" />
   </EntityType>
-  <!--Erreurs détectées durant la génération :
-avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.grpaie2.parametre' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
-        <EntityType Name="parametre">
-          <Property Name="j1" Type="double" />
-          <Property Name="j2" Type="double" />
-          <Property Name="j3" Type="double" />
-          <Property Name="j4" Type="double" />
-          <Property Name="j5" Type="double" />
-          <Property Name="j6" Type="double" />
-          <Property Name="j7" Type="double" />
-          <Property Name="j8" Type="double" />
-          <Property Name="j9" Type="double" />
-          <Property Name="j10" Type="double" />
-          <Property Name="j11" Type="double" />
-          <Property Name="j12" Type="double" />
-          <Property Name="h1" Type="double" />
-          <Property Name="h2" Type="double" />
-          <Property Name="h3" Type="double" />
-          <Property Name="h4" Type="double" />
-          <Property Name="h5" Type="double" />
-          <Property Name="h6" Type="double" />
-          <Property Name="h7" Type="double" />
-          <Property Name="h8" Type="double" />
-          <Property Name="h9" Type="double" />
-          <Property Name="h10" Type="double" />
-          <Property Name="h11" Type="double" />
-          <Property Name="h12" Type="double" />
-          <Property Name="n1" Type="double" />
-          <Property Name="n2" Type="double" />
-          <Property Name="n3" Type="double" />
-          <Property Name="n4" Type="double" />
-          <Property Name="n5" Type="double" />
-          <Property Name="n6" Type="double" />
-          <Property Name="n7" Type="double" />
-          <Property Name="n8" Type="double" />
-          <Property Name="n9" Type="double" />
-          <Property Name="n10" Type="double" />
-          <Property Name="n11" Type="double" />
-          <Property Name="n12" Type="double" />
-        </EntityType>-->
   <EntityType Name="persarchive">
     <Key>
       <PropertyRef Name="MATR" />
@@ -1425,6 +1294,7 @@ avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.g
     <Property Name="imagepath" Type="varchar" MaxLength="150" />
     <Property Name="image" Type="mediumblob" />
     <Property Name="imagesize" Type="mediumint" />
+    <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="poijourtmp">
     <Key>
@@ -1828,99 +1698,6 @@ avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.g
     <Property Name="MtSupp" Type="double" Nullable="false" />
   </EntityType>
   <!--Erreurs détectées durant la génération :
-avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.grpaie2.tmpcnss' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
-        <EntityType Name="tmpcnss">
-          <Property Name="NCNSS" Type="varchar" MaxLength="11" />
-          <Property Name="Mat" Type="varchar" MaxLength="8" />
-          <Property Name="nomprenom" Type="varchar" MaxLength="40" />
-          <Property Name="Cat" Type="varchar" MaxLength="3" />
-          <Property Name="mois1" Type="double" />
-          <Property Name="mois2" Type="double" />
-          <Property Name="mois3" Type="double" />
-          <Property Name="Total" Type="double" />
-          <Property Name="page" Type="bigint" />
-          <Property Name="Compt" Type="bigint" />
-          <Property Name="TxAcTrv" Type="double" />
-          <Property Name="TAUX" Type="double" />
-        </EntityType>-->
-  <!--Erreurs détectées durant la génération :
-avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.grpaie2.tmplcn' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
-        <EntityType Name="tmplcn">
-          <Property Name="annee" Type="varchar" MaxLength="4" />
-          <Property Name="trimestre" Type="varchar" MaxLength="1" />
-          <Property Name="txcot" Type="double" />
-          <Property Name="numcnss" Type="varchar" MaxLength="11" />
-          <Property Name="matricule" Type="varchar" MaxLength="8" />
-          <Property Name="Mois1" Type="double" />
-          <Property Name="Mois2" Type="double" />
-          <Property Name="Mois3" Type="double" />
-          <Property Name="page" Type="double" />
-          <Property Name="numerordre" Type="double" />
-          <Property Name="nomprenom" Type="varchar" MaxLength="30" />
-          <Property Name="categorie" Type="varchar" MaxLength="3" />
-        </EntityType>-->
-  <!--Erreurs détectées durant la génération :
-avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.grpaie2.tmpmasse' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
-        <EntityType Name="tmpmasse">
-          <Property Name="code" Type="varchar" MaxLength="8" />
-          <Property Name="lib" Type="varchar" MaxLength="30" />
-          <Property Name="Brut" Type="double" />
-          <Property Name="Taux" Type="double" />
-          <Property Name="charge" Type="double" />
-          <Property Name="Total" Type="double" />
-        </EntityType>-->
-  <!--Erreurs détectées durant la génération :
-avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.grpaie2.tmppers' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
-        <EntityType Name="tmppers">
-          <Property Name="matr" Type="varchar" MaxLength="8" />
-          <Property Name="nomprenom1" Type="varchar" MaxLength="30" />
-          <Property Name="qualification" Type="varchar" MaxLength="30" />
-          <Property Name="Prenom" Type="varchar" MaxLength="30" />
-          <Property Name="naissance" Type="date" />
-        </EntityType>-->
-  <!--Erreurs détectées durant la génération :
-avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.grpaie2.tmppointmens' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
-        <EntityType Name="tmppointmens">
-          <Property Name="codfich" Type="varchar" MaxLength="3" />
-          <Property Name="codchantier" Type="varchar" MaxLength="3" />
-          <Property Name="Annee" Type="varchar" MaxLength="4" />
-          <Property Name="mois" Type="varchar" MaxLength="12" />
-          <Property Name="matr" Type="varchar" MaxLength="8" />
-          <Property Name="nomprenom" Type="varchar" MaxLength="40" />
-          <Property Name="regime" Type="varchar" MaxLength="20" />
-          <Property Name="jourtrv" Type="double" />
-          <Property Name="heuretrv" Type="double" />
-          <Property Name="Jourcong" Type="double" />
-          <Property Name="jourfer" Type="double" />
-          <Property Name="libelle" Type="varchar" MaxLength="100" />
-          <Property Name="hfer" Type="double" />
-          <Property Name="hcong" Type="double" />
-        </EntityType>-->
-  <!--Erreurs détectées durant la génération :
-avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.grpaie2.tmppret' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
-        <EntityType Name="tmppret">
-          <Property Name="matr" Type="varchar" MaxLength="8" />
-          <Property Name="nomprenom1" Type="varchar" MaxLength="30" />
-          <Property Name="rubrique" Type="varchar" MaxLength="5" />
-          <Property Name="Mois" Type="double" />
-          <Property Name="annee" Type="double" />
-          <Property Name="Lib" Type="varchar" MaxLength="30" />
-          <Property Name="Gain" Type="double" />
-          <Property Name="retenue" Type="double" />
-          <Property Name="Rest" Type="double" />
-        </EntityType>-->
-  <!--Erreurs détectées durant la génération :
-avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.grpaie2.tmprecap' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
-        <EntityType Name="tmprecap">
-          <Property Name="cod" Type="varchar" MaxLength="10" />
-          <Property Name="lib" Type="varchar" MaxLength="30" />
-          <Property Name="mt" Type="double" />
-          <Property Name="CODSERV" Type="varchar" MaxLength="10" />
-          <Property Name="SERV" Type="varchar" MaxLength="100" />
-          <Property Name="nombre" Type="double" />
-          <Property Name="ordre" Type="int" />
-        </EntityType>-->
-  <!--Erreurs détectées durant la génération :
 avertissement 6002: La table/vue 'def.grpaie2.trace_pointage' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
   <EntityType Name="trace_pointage">
     <Key>
@@ -1945,20 +1722,6 @@ avertissement 6002: La table/vue 'def.grpaie2.trace_pointage' n'a pas de clé pr
     <Property Name="operation" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="user" Type="varchar" MaxLength="2" />
   </EntityType>
-  <!--Erreurs détectées durant la génération :
-avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.grpaie2.userinfo' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
-        <EntityType Name="userinfo">
-          <Property Name="userid" Type="varchar" MaxLength="50" />
-          <Property Name="badgenumber" Type="text" />
-          <Property Name="SSN" Type="text" />
-          <Property Name="Name" Type="text" />
-          <Property Name="CardNo" Type="text" />
-          <Property Name="SENSORID" Type="text" />
-          <Property Name="Etat" Type="text" />
-          <Property Name="Sel" Type="int" />
-          <Property Name="choix" Type="varchar" MaxLength="50" />
-          <Property Name="actif" Type="varchar" MaxLength="1" />
-        </EntityType>-->
   <EntityType Name="variable">
     <Key>
       <PropertyRef Name="codVariable" />

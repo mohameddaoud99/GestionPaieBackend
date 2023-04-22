@@ -853,6 +853,7 @@
     <EntitySetMapping Name="majconge">
       <EntityTypeMapping TypeName="grpaie2Model.majconge">
         <MappingFragment StoreEntitySet="majconge">
+          <ScalarProperty Name="etat" ColumnName="etat" />
           <ScalarProperty Name="code" ColumnName="code" />
           <ScalarProperty Name="libelle" ColumnName="libelle" />
           <ScalarProperty Name="type" ColumnName="type" />
@@ -1019,6 +1020,7 @@
     <EntitySetMapping Name="personnel">
       <EntityTypeMapping TypeName="grpaie2Model.personnel">
         <MappingFragment StoreEntitySet="personnel">
+          <ScalarProperty Name="email" ColumnName="email" />
           <ScalarProperty Name="MATR" ColumnName="MATR" />
           <ScalarProperty Name="CAISSE" ColumnName="CAISSE" />
           <ScalarProperty Name="ECHELON" ColumnName="ECHELON" />

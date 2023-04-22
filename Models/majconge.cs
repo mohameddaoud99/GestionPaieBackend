@@ -26,5 +26,6 @@ namespace PaieBack.Models
         public Nullable<System.DateTime> datefin { get; set; }
         public string payer { get; set; }
         public string description { get; set; }
+        public string etat { get; set; }
     }
 }

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="userpaieModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="userpaieModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <!--Erreurs détectées durant la génération :
 avertissement 6002: La table/vue 'def.userpaie.acceemodule__' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
         <EntityType Name="acceemodule__">
@@ -32,15 +32,6 @@ avertissement 6002: La table/vue 'def.userpaie.acceemodule__' n'a pas de clé pr
           <Property Name="nomfichier" Type="varchar" MaxLength="30" />
           <Property Name="nomtable" Type="varchar" MaxLength="30" />
         </EntityType>
-        <!--Erreurs détectées durant la génération :
-avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.userpaie.isfile' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
-        <EntityType Name="isfile">
-          <Property Name="NTABLE" Type="varchar" MaxLength="50" />
-          <Property Name="CHAMP" Type="varchar" MaxLength="50" />
-          <Property Name="TAILLE" Type="int" />
-          <Property Name="TYPEC" Type="varchar" MaxLength="50" />
-          <Property Name="vide" Type="varchar" MaxLength="1" />
-        </EntityType>-->
         <EntityType Name="menu">
           <Key>
             <PropertyRef Name="menu" />
@@ -63,11 +54,6 @@ avertissement 6002: La table/vue 'def.userpaie.nomtable' n'a pas de clé primair
           </Key>
           <Property Name="nomtable" Type="varchar" MaxLength="30" Nullable="false" />
         </EntityType>
-        <!--Erreurs détectées durant la génération :
-avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.userpaie.numserie' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
-        <EntityType Name="numserie">
-          <Property Name="numserie" Type="varchar" MaxLength="20" />
-        </EntityType>-->
         <EntityType Name="paramaitre">
           <Key>
             <PropertyRef Name="compteuser" />
@@ -157,18 +143,6 @@ avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.u
           <Property Name="SUPPRIMER" Type="varchar" MaxLength="1" />
           <Property Name="MODIFIER" Type="varchar" MaxLength="1" />
         </EntityType>
-        <!--Erreurs détectées durant la génération :
-avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.userpaie.usermodule' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
-        <EntityType Name="usermodule">
-          <Property Name="codeuser" Type="varchar" MaxLength="50" />
-          <Property Name="module" Type="varchar" MaxLength="50" />
-          <Property Name="accee" Type="varchar" MaxLength="1" />
-          <Property Name="ecriture" Type="varchar" MaxLength="1" />
-          <Property Name="societe" Type="varchar" MaxLength="8" />
-          <Property Name="AJOUTER" Type="varchar" MaxLength="1" />
-          <Property Name="supprimer" Type="varchar" MaxLength="1" />
-          <Property Name="MODIFIER" Type="varchar" MaxLength="1" />
-        </EntityType>-->
         <EntityType Name="usersoc">
           <Key>
             <PropertyRef Name="CODEUSER" />
@@ -221,8 +195,7 @@ FROM `acceemodule__` AS `acceemodule__`</DefiningQuery>
 FROM `nomtable` AS `nomtable`</DefiningQuery>
           </EntitySet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="userpaieModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">

@@ -1,4 +1,4 @@
-﻿// La génération de code T4 est activée pour le modèle 'D:\2eme Génie info\PFA\version2\demo1\back\PaieBack\Models\UserPaie.edmx'. 
+﻿// La génération de code T4 est activée pour le modèle 'F:\2ingeneur\StagePfa\GestiondePaieBackendPFA\Models\UserPaie.edmx'. 
 // Pour activer la génération de code héritée, définissez la valeur de la propriété
 // du concepteur 'Stratégie de génération de code' sur 'ObjectContext hérité'. Cette propriété est disponible dans la fenêtre Propriétés lorsque le modèle
 //  est ouvert dans le concepteur.

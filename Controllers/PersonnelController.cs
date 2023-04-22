@@ -140,7 +140,7 @@ namespace PaieBack.Controllers
                         BANQUEPER = employee.BANQUEPER,
                         numcompte = employee.numcompte,
                         PAYEMENT = employee.PAYEMENT,
-                      
+                        email = employee.email,
                         nbmois = employee.nbmois,
                         
 
@@ -164,6 +164,8 @@ namespace PaieBack.Controllers
                 personnel.ADRESSE = p.ADRESSE;
                 personnel.SEXE = p.SEXE;
                 personnel.NAIS = p.NAIS;
+
+                personnel.email = p.email;
 
                  personnel.BANQUESTE = "ATTIJARI";
                  personnel.BANQUEPER = p.BANQUEPER;
@@ -284,6 +286,7 @@ namespace PaieBack.Controllers
             personnel.numcompte = p.numcompte;
             personnel.PAYEMENT = p.PAYEMENT;
             personnel.nbmois = p.nbmois;
+            personnel.email = p.email;
 
             ChoixBD.MyDbContext.SaveChanges();
             
