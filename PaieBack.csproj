@@ -346,7 +346,7 @@
       <DependentUpon>Grpaie2.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\nomtable.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>UserPaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\paramaitre.cs">
       <DependentUpon>UserPaie.tt</DependentUpon>
@@ -391,7 +391,7 @@
       <DependentUpon>UserPaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\societe.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>UserPaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tempautrepoint.cs">
       <DependentUpon>Grpaie2.tt</DependentUpon>
