@@ -32,6 +32,15 @@ avertissement 6002: La table/vue 'def.userpaie.acceemodule__' n'a pas de clé pr
           <Property Name="nomfichier" Type="varchar" MaxLength="30" />
           <Property Name="nomtable" Type="varchar" MaxLength="30" />
         </EntityType>
+        <!--Erreurs détectées durant la génération :
+avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.userpaie.isfile' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
+        <EntityType Name="isfile">
+          <Property Name="NTABLE" Type="varchar" MaxLength="50" />
+          <Property Name="CHAMP" Type="varchar" MaxLength="50" />
+          <Property Name="TAILLE" Type="int" />
+          <Property Name="TYPEC" Type="varchar" MaxLength="50" />
+          <Property Name="vide" Type="varchar" MaxLength="1" />
+        </EntityType>-->
         <EntityType Name="menu">
           <Key>
             <PropertyRef Name="menu" />
@@ -54,6 +63,11 @@ avertissement 6002: La table/vue 'def.userpaie.nomtable' n'a pas de clé primair
           </Key>
           <Property Name="nomtable" Type="varchar" MaxLength="30" Nullable="false" />
         </EntityType>
+        <!--Erreurs détectées durant la génération :
+avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.userpaie.numserie' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
+        <EntityType Name="numserie">
+          <Property Name="numserie" Type="varchar" MaxLength="20" />
+        </EntityType>-->
         <EntityType Name="paramaitre">
           <Key>
             <PropertyRef Name="compteuser" />
@@ -143,6 +157,18 @@ avertissement 6002: La table/vue 'def.userpaie.nomtable' n'a pas de clé primair
           <Property Name="SUPPRIMER" Type="varchar" MaxLength="1" />
           <Property Name="MODIFIER" Type="varchar" MaxLength="1" />
         </EntityType>
+        <!--Erreurs détectées durant la génération :
+avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.userpaie.usermodule' ; en outre, aucune clé primaire valide n'a pu être déduite. Cette table/vue a été exclue. Pour utiliser l'entité, vous devez passer en revue votre schéma, ajouter les clés appropriées et supprimer le commentaire associé.
+        <EntityType Name="usermodule">
+          <Property Name="codeuser" Type="varchar" MaxLength="50" />
+          <Property Name="module" Type="varchar" MaxLength="50" />
+          <Property Name="accee" Type="varchar" MaxLength="1" />
+          <Property Name="ecriture" Type="varchar" MaxLength="1" />
+          <Property Name="societe" Type="varchar" MaxLength="8" />
+          <Property Name="AJOUTER" Type="varchar" MaxLength="1" />
+          <Property Name="supprimer" Type="varchar" MaxLength="1" />
+          <Property Name="MODIFIER" Type="varchar" MaxLength="1" />
+        </EntityType>-->
         <EntityType Name="usersoc">
           <Key>
             <PropertyRef Name="CODEUSER" />
