@@ -8,12 +8,13 @@ using PaieBack.Models;
 using System.Web.Http.Description;
 using System.Web.Http.Cors;
 using System.Data.Entity.Infrastructure;
+using System.Net.Mail;
 
 namespace PaieBack.Controllers
 {
     [RoutePrefix("api/Personnel")]
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-/*teeeeeeeeeeeeeeeeeeeeeeeeeeeeeeesttttttt*/
+
     public class PersonnelController : ApiController
     {
          userpaieEntities userpaie = new userpaieEntities();
@@ -21,19 +22,57 @@ namespace PaieBack.Controllers
 
         [HttpPost, ActionName("Postuserpaie")]
         [Route("Postuserpaie")]
-        public IHttpActionResult Postuserpaie(utilisateur p)
+        public IHttpActionResult Postuserpaie(utilisateur p,string email)
         {
             
 
                 var utilisateur = new utilisateur();
                 int matr = userpaie.Set<utilisateur>().Select(utilisateurcompteuser => new { compteuser = utilisateurcompteuser.compteuser, }).ToList().Count() + 1;
 
-                utilisateur.compteuser = "0" + matr.ToString();
+            string to = email;
+
+            MailMessage mm = new MailMessage();
+
+            mm.From = new MailAddress("SfaxSociete@gmail.com");
+            mm.To.Add(to);
+
+            mm.Subject = "Confirmation d'inscription réussie";
+
+            mm.Body = "<html>" +
+                "<body>" +
+                "<p>Bonjour <b>"  + "</b></p>" +
+                "" +
+                "Nous sommes heureux de vous informer que votre compte a été créé avec succès . En tant que nouvel employé de notre entreprise, vous aurez maintenant accès à toutes les fonctionnalités du site." +
+                "<br>Vos informations de connexion sont les suivantes: <br>" +
+                "<h3> Code de compte user: " + "0" + matr.ToString() + "</h3>" +
+                 "<h3>Mot de passe : " + p.motdepasse + "</h3>" +
+                 "Si vous avez des questions ou des problèmes, n'hésitez pas à contacter notre équipe de support à l'adresse suivante : <b>sfaxsociete@gmail.com</b> ." +
+                 "<br>Nous espérons que vous apprécierez l'utilisation de notre site web et que vous vous y sentirez à l'aise. Bienvenue dans notre équipe " +
+                 "<br><br>Cordialement"
+                 + "</body></html>";
+
+            mm.IsBodyHtml = true;
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com");
+
+
+            smtp.UseDefaultCredentials = true;
+
+            smtp.Port = 587;
+
+            smtp.EnableSsl = true;
+
+            smtp.Credentials = new System.Net.NetworkCredential("SfaxSociete@gmail.com", "bbxgyidifhsmdleo");
+            smtp.Send(mm);
+
+
+            utilisateur.compteuser = "0" + matr.ToString();
                 utilisateur.motdepasse = p.motdepasse;
                 utilisateur.DERSOC = p.DERSOC;
                 utilisateur.type = "Personnel";
                 utilisateur.actif = "";
                 utilisateur.numvol = "";
+
+
 
             try
             {
@@ -53,12 +92,11 @@ namespace PaieBack.Controllers
 
         [HttpPut, ActionName("Putuserpaie")]
         [Route("Putuserpaie")]
-        public IHttpActionResult Putuserpaie(string compteuser, utilisateur u)
+        public IHttpActionResult Putuserpaie(string motdepasse, utilisateur u)
         {
 
-
        
-            var utilisateur = userpaie.Set<utilisateur>().Where(c => c.compteuser == compteuser).First();
+            var utilisateur = userpaie.Set<utilisateur>().Where(c => c.motdepasse == motdepasse).First();
 
 
             utilisateur.motdepasse = u.motdepasse;
@@ -157,6 +195,7 @@ namespace PaieBack.Controllers
                 var personnel = new personnel();
                 int matr = ChoixBD.MyDbContext.Set<personnel>().Select(employee => new { MATR = employee.MATR, }).ToList().Count() + 1;
 
+
                 personnel.MATR = "0000" + matr.ToString();
                 personnel.NOMPRENOM1 = p.NOMPRENOM1;
                 personnel.CIN = p.CIN;
@@ -235,7 +274,11 @@ namespace PaieBack.Controllers
                  personnel.imagepath= "";
                  personnel.image= null;
                  personnel.imagesize = 0;
+
+
               
+
+             
 
                 ChoixBD.MyDbContext.Set<personnel>().Add(personnel);
                 ChoixBD.MyDbContext.SaveChanges();
