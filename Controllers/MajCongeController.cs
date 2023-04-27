@@ -167,6 +167,50 @@ namespace PaieBack.Controllers
             return Ok(p);
         }
 
+        [HttpPut, ActionName("PutAccepter")]
+        [Route("PutAccepter")]
+        public IHttpActionResult PutAccepter(DateTime datedepart)
+        {
+            var existingconge = ChoixBD.MyDbContext.Set<majconge>().Where(c => c.datedepart == datedepart).First();
+            existingconge.etat = "A";
+
+                ChoixBD.MyDbContext.SaveChanges();
+            
+           
+            return Ok(existingconge);
+        }
+
+
+        [HttpPut, ActionName("PutCongeRefuser")]
+        [Route("PutCongeRefuser")]
+        public IHttpActionResult PutCongeRefuser(DateTime datedepart)
+        {
+            var existingconge = ChoixBD.MyDbContext.Set<majconge>().Where(c => c.datedepart == datedepart).First();
+            existingconge.etat = "R";
+
+            ChoixBD.MyDbContext.SaveChanges();
+
+
+            return Ok(existingconge);
+        }
+
+        [HttpGet, ActionName("GetAllCongeAccepter")]
+        [Route("GetAllCongeAccepter")]
+        public IEnumerable<majconge> GetAllCongeAccepter()
+        {
+            
+            return ChoixBD.MyDbContext.Set<majconge>().Where(c => c.etat == "A").ToList();
+
+        }
+
+        [HttpGet, ActionName("GetAllCongeRefuser")]
+        [Route("GetAllCongeRefuser")]
+        public IEnumerable<majconge> GetAllCongeRefuser()
+        {
+
+            return ChoixBD.MyDbContext.Set<majconge>().Where(c => c.etat == "R").ToList();
+
+        }
 
         // DELETE:/api/Personnel?MATR=2023-04-13
         [HttpDelete]
