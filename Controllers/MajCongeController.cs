@@ -194,6 +194,24 @@ namespace PaieBack.Controllers
             return Ok(existingconge);
         }
 
+        [HttpGet, ActionName("GetAllCongeAccepter")]
+        [Route("GetAllCongeAccepter")]
+        public IEnumerable<majconge> GetAllCongeAccepter()
+        {
+            
+            return ChoixBD.MyDbContext.Set<majconge>().Where(c => c.etat == "A").ToList();
+
+        }
+
+        [HttpGet, ActionName("GetAllCongeRefuser")]
+        [Route("GetAllCongeRefuser")]
+        public IEnumerable<majconge> GetAllCongeRefuser()
+        {
+
+            return ChoixBD.MyDbContext.Set<majconge>().Where(c => c.etat == "R").ToList();
+
+        }
+
         // DELETE:/api/Personnel?MATR=2023-04-13
         [HttpDelete]
         public IHttpActionResult DeleteMajCoge(DateTime datedepart)
