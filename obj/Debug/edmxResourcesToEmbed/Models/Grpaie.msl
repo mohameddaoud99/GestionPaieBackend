@@ -853,6 +853,7 @@
     <EntitySetMapping Name="majconge">
       <EntityTypeMapping TypeName="grpaieModel.majconge">
         <MappingFragment StoreEntitySet="majconge">
+          <ScalarProperty Name="etat" ColumnName="etat" />
           <ScalarProperty Name="code" ColumnName="code" />
           <ScalarProperty Name="libelle" ColumnName="libelle" />
           <ScalarProperty Name="type" ColumnName="type" />
@@ -1019,6 +1020,7 @@
     <EntitySetMapping Name="personnel">
       <EntityTypeMapping TypeName="grpaieModel.personnel">
         <MappingFragment StoreEntitySet="personnel">
+          <ScalarProperty Name="email" ColumnName="email" />
           <ScalarProperty Name="MATR" ColumnName="MATR" />
           <ScalarProperty Name="CAISSE" ColumnName="CAISSE" />
           <ScalarProperty Name="ECHELON" ColumnName="ECHELON" />
@@ -1602,6 +1604,20 @@
           <ScalarProperty Name="temp_maj" ColumnName="temp_maj" />
           <ScalarProperty Name="operation" ColumnName="operation" />
           <ScalarProperty Name="user" ColumnName="user" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="autorisation">
+      <EntityTypeMapping TypeName="grpaieModel.autorisation">
+        <MappingFragment StoreEntitySet="autorisation">
+          <ScalarProperty Name="etat" ColumnName="etat" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="payer" ColumnName="payer" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="solde" ColumnName="solde" />
+          <ScalarProperty Name="nomprenom" ColumnName="nomprenom" />
+          <ScalarProperty Name="matricule" ColumnName="matricule" />
+          <ScalarProperty Name="nbrheure" ColumnName="nbrheure" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

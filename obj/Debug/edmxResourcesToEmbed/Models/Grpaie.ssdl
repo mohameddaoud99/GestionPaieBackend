@@ -15,6 +15,20 @@
     <Property Name="libelleatelier" Type="varchar" MaxLength="40" />
     <Property Name="sel" Type="int" Nullable="false" />
   </EntityType>
+  <EntityType Name="autorisation">
+    <Key>
+      <PropertyRef Name="matricule" />
+      <PropertyRef Name="date" />
+    </Key>
+    <Property Name="nbrheure" Type="int" />
+    <Property Name="matricule" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="nomprenom" Type="varchar" MaxLength="30" />
+    <Property Name="solde" Type="float" />
+    <Property Name="date" Type="date" Nullable="false" />
+    <Property Name="payer" Type="varchar" MaxLength="3" />
+    <Property Name="description" Type="varchar" MaxLength="500" />
+    <Property Name="etat" Type="varchar" MaxLength="1" />
+  </EntityType>
   <EntityType Name="autrepoint">
     <Key>
       <PropertyRef Name="rubrique" />
@@ -1156,6 +1170,7 @@ avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.g
     <Property Name="datefin" Type="date" />
     <Property Name="payer" Type="varchar" MaxLength="3" />
     <Property Name="description" Type="varchar" MaxLength="500" />
+    <Property Name="etat" Type="varchar" MaxLength="1" Nullable="false" />
   </EntityType>
   <EntityType Name="majconge1">
     <Key>
@@ -1425,6 +1440,7 @@ avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.g
     <Property Name="imagepath" Type="varchar" MaxLength="150" />
     <Property Name="image" Type="mediumblob" />
     <Property Name="imagesize" Type="mediumint" />
+    <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="poijourtmp">
     <Key>
@@ -1982,6 +1998,7 @@ avertissement 6013: Aucune clé primaire n'est définie pour la table/vue 'def.g
   <EntityContainer Name="grpaieModelStoreContainer">
     <EntitySet Name="affectation" EntityType="Self.affectation" Schema="grpaie" store:Type="Tables" />
     <EntitySet Name="atelier" EntityType="Self.atelier" Schema="grpaie" store:Type="Tables" />
+    <EntitySet Name="autorisation" EntityType="Self.autorisation" Schema="grpaie" store:Type="Tables" />
     <EntitySet Name="autrepoint" EntityType="Self.autrepoint" Schema="grpaie" store:Type="Tables" />
     <EntitySet Name="banque" EntityType="Self.banque" Schema="grpaie" store:Type="Tables" />
     <EntitySet Name="bpointage" EntityType="Self.bpointage" Schema="grpaie" store:Type="Tables" />

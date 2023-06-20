@@ -1801,5 +1801,20 @@
     <EntitySet Name="lbp_hist" EntityType="Self.lbp_hist" />
     <EntitySet Name="nomtable" EntityType="Self.nomtable" />
     <EntitySet Name="trace_pointage" EntityType="Self.trace_pointage" />
+    <EntitySet Name="autorisation" EntityType="grpaie2Model.autorisation" />
   </EntityContainer>
+  <EntityType Name="autorisation">
+    <Key>
+      <PropertyRef Name="matricule" />
+      <PropertyRef Name="date" />
+    </Key>
+    <Property Name="nbrheure" Type="Int32" />
+    <Property Name="matricule" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="nomprenom" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="solde" Type="Single" />
+    <Property Name="date" Type="DateTime" Nullable="false" />
+    <Property Name="payer" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="etat" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
 </Schema>

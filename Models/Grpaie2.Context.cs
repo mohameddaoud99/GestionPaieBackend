@@ -91,5 +91,6 @@ namespace PaieBack.Models
         public DbSet<lbp_hist> lbp_hist { get; set; }
         public DbSet<nomtable> nomtable { get; set; }
         public DbSet<trace_pointage> trace_pointage { get; set; }
+        public DbSet<autorisation> autorisation { get; set; }
     }
 }

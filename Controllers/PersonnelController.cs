@@ -24,8 +24,7 @@ namespace PaieBack.Controllers
         [Route("Postuserpaie")]
         public IHttpActionResult Postuserpaie(utilisateur p,string email)
         {
-            
-
+           
                 var utilisateur = new utilisateur();
                 int matr = userpaie.Set<utilisateur>().Select(utilisateurcompteuser => new { compteuser = utilisateurcompteuser.compteuser, }).ToList().Count() + 1;
 
@@ -65,7 +64,7 @@ namespace PaieBack.Controllers
             smtp.Send(mm);
 
 
-            utilisateur.compteuser = "0" + matr.ToString();
+                utilisateur.compteuser = "0" + matr.ToString();
                 utilisateur.motdepasse = p.motdepasse;
                 utilisateur.DERSOC = p.DERSOC;
                 utilisateur.type = "Personnel";
@@ -178,6 +177,8 @@ namespace PaieBack.Controllers
                         BANQUEPER = employee.BANQUEPER,
                         numcompte = employee.numcompte,
                         PAYEMENT = employee.PAYEMENT,
+                        SALB =employee.SALB,
+                        TXCNSS = employee.TXCNSS,
                         email = employee.email,
                         nbmois = employee.nbmois,
                         
@@ -210,6 +211,8 @@ namespace PaieBack.Controllers
                  personnel.BANQUEPER = p.BANQUEPER;
                  personnel.numcompte = p.numcompte;
                  personnel.PAYEMENT = p.PAYEMENT;
+                 //personnel.SALB = p.SALB;
+                 //personnel.TXCNSS = p.TXCNSS;
                  personnel.nbmois = p.nbmois;
 
 
@@ -228,11 +231,11 @@ namespace PaieBack.Controllers
                  personnel.REGIME2= null;
                  
                  personnel.nomregime1= "";
-                 personnel.SALB= null;
+                 personnel.SALB= p.SALB;
                  personnel.TIT= "";
                  personnel.SITF= "";
                  personnel.TXHOR= null;
-                 personnel.TXCNSS= null;
+                 personnel.TXCNSS= p.TXCNSS;
                  personnel.NOMPRENOM2= "";
                 
                  
@@ -301,15 +304,54 @@ namespace PaieBack.Controllers
         public IHttpActionResult DeleteConge(string MATR)
         {
             personnel pers = ChoixBD.MyDbContext.Set<personnel>().Where(c => c.MATR == MATR).First();
+
             if (pers == null)
             {
                 return NotFound();
             }
 
+
+           /* List<majconge> mcList = ChoixBD.MyDbContext.Set<majconge>()
+       .Where(x => x.matricule.Equals(MATR))
+       .ToList();
+
+            if (mcList.Count == 0)
+            {
+                return NotFound();
+            }
+
+            List<autorisation> autList = ChoixBD.MyDbContext.Set<autorisation>()
+                .Where(x => x.matricule.Equals(MATR))
+                .ToList();
+
+            if (autList.Count == 0)
+            {
+                return NotFound();
+            }
+
+            foreach (var mc in mcList)
+            {
+                ChoixBD.MyDbContext.Set<majconge>().Remove(mc);
+            }
+
+            foreach (var aut in autList)
+            {
+                ChoixBD.MyDbContext.Set<autorisation>().Remove(aut);
+            }
+           */
+
+            //utilisateur userpai = userpaie.Set<utilisateur>().Where(c => c.motdepasse == MATR).First();
+            // userpaie.Set<utilisateur>().Remove(userpai);
+
+
             ChoixBD.MyDbContext.Set<personnel>().Remove(pers);
             ChoixBD.MyDbContext.SaveChanges();
             return Ok(pers);
+
+
         }
+
+
 
         // PUT: api/Personnel?MATR=000167
         [ResponseType(typeof(void))]
@@ -318,7 +360,7 @@ namespace PaieBack.Controllers
 
             var personnel = ChoixBD.MyDbContext.Set<personnel>().Where(c => c.MATR == MATR).First();
 
-           
+          
             personnel.NOMPRENOM1 = p.NOMPRENOM1;
             personnel.CIN = p.CIN;
             personnel.TELEPHONE = p.TELEPHONE;
@@ -328,6 +370,8 @@ namespace PaieBack.Controllers
             personnel.BANQUEPER = p.BANQUEPER;
             personnel.numcompte = p.numcompte;
             personnel.PAYEMENT = p.PAYEMENT;
+            personnel.SALB = p.SALB;
+            personnel.TXCNSS = p.TXCNSS;
             personnel.nbmois = p.nbmois;
             personnel.email = p.email;
 

@@ -71,6 +71,7 @@
         <EntityTypeShape EntityType="grpaieModel.lbp_hist" Width="1.5" PointX="20.75" PointY="26.75" IsExpanded="true" />
         <EntityTypeShape EntityType="grpaieModel.nomtable" Width="1.5" PointX="26.75" PointY="27.75" IsExpanded="true" />
         <EntityTypeShape EntityType="grpaieModel.trace_pointage" Width="1.5" PointX="28.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="grpaieModel.autorisation" Width="1.5" PointX="13.375" PointY="28.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

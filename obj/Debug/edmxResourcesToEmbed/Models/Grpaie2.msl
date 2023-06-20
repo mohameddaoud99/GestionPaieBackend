@@ -1607,5 +1607,19 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="autorisation">
+      <EntityTypeMapping TypeName="grpaie2Model.autorisation">
+        <MappingFragment StoreEntitySet="autorisation">
+          <ScalarProperty Name="etat" ColumnName="etat" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="payer" ColumnName="payer" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="solde" ColumnName="solde" />
+          <ScalarProperty Name="nomprenom" ColumnName="nomprenom" />
+          <ScalarProperty Name="matricule" ColumnName="matricule" />
+          <ScalarProperty Name="nbrheure" ColumnName="nbrheure" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

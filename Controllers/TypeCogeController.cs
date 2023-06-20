@@ -23,11 +23,15 @@ namespace PaieBack.Controllers
 
                 var conge = new conge();
 
-                conge.code = c.code;
-                conge.payer = c.payer;
+                // conge.code = c.code;
+                int matr = ChoixBD.MyDbContext.Set<conge>().Select(codeType => new { code = codeType.code, }).ToList().Count() + 1;
+
+                conge.code = "0" + matr.ToString();
+
+                //conge.payer = null;
                 conge.libelle = c.libelle;
                 conge.type = c.type;
-                conge.edition = c.edition;
+                //conge.edition = null;
                 conge.AutreType = c.AutreType;
 
                 /*  grpaie.conge.Add(conge);
@@ -50,9 +54,67 @@ namespace PaieBack.Controllers
         [Route("GetTypeCoge")]
         public object GetTypeCoge()
         {
-          //  return grpaie.conge.ToList();
+            //  return grpaie.conge.ToList();
             return ChoixBD.MyDbContext.Set<conge>().ToList();
         }
 
-    }
+        [HttpDelete, ActionName("DeleteTypeCoge")]
+        [Route("DeleteTypeCoge")]
+        public IHttpActionResult DeleteTypeCoge(string code)
+        {
+            conge aut = ChoixBD.MyDbContext.Set<conge>()
+                .Where(x => x.code.Equals(code))
+                .First();
+            if (aut == null)
+            {
+                return NotFound();
+            }
+
+            ChoixBD.MyDbContext.Set<conge>().Remove(aut);
+            ChoixBD.MyDbContext.SaveChanges();
+            return Ok(aut);
+        }
+
+
+
+
+        [ResponseType(typeof(void))]
+        public IHttpActionResult PutTypeCoge(string code, conge c)
+        {
+
+            var conge = ChoixBD.MyDbContext.Set<conge>().Where(cc => cc.code == code).First();
+
+            //conge.payer = c.payer;
+            conge.libelle = c.libelle;
+            conge.type = c.type;
+            //conge.edition = c.edition;
+            conge.AutreType = c.AutreType;
+
+            ChoixBD.MyDbContext.SaveChanges();
+
+            return Ok(c);
+        }
+
+
+
+
+            [HttpGet, ActionName("NbCongeParMoisAccepte")]
+            [Route("NbCongeParMoisAccepte")]
+            public object NbCongeParMoisAccepte()
+            {
+                DateTime currentDate = DateTime.Now;
+                return ChoixBD.MyDbContext.Set<majconge>()
+
+
+
+                    .Where(x => x.datedepart.Month == currentDate.Month && x.etat == "A")
+
+                    .Select(majconge => majconge.code)
+                    .Count();
+            }
+        
+
+
+
+        }
 }

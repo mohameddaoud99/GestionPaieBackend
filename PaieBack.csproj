@@ -166,11 +166,15 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\AutorisationController.cs" />
     <Compile Include="Controllers\ChoixBDController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MajCongeController.cs" />
+    <Compile Include="Controllers\PayementController.cs" />
     <Compile Include="Controllers\PersonnelController.cs" />
+    <Compile Include="Controllers\StatistiqueController.cs" />
+    <Compile Include="Controllers\StatistiqueEmpController.cs" />
     <Compile Include="Controllers\TypeCogeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -180,80 +184,85 @@
       <DependentUpon>UserPaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\affectation.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\atelier.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\autorisation.cs">
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\autrepoint.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\banque.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\bpointage.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\brouillardpoint.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\calendjf.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\calendrier.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\calendrierold.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\chantier.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ChoixBD.cs" />
     <Compile Include="Models\client.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\cnt.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\conge.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\CorsActionFilter.cs" />
+    <Compile Include="Models\CorsModule.cs" />
     <Compile Include="Models\couleur.cs">
       <DependentUpon>UserPaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ebp.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ebparchive.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ebptemp.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ebp_hist.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ecn.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\emploi_temp.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\entpointage.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\fich.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\fpointage.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\grille.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\grillesalaire.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Grpaie.Context.cs">
       <AutoGen>True</AutoGen>
@@ -286,49 +295,49 @@
       <DependentUpon>Grpaie2.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\heursupp.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\importation.cs">
       <DependentUpon>UserPaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\intervalle.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lbp.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lbparchive.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lbptemp.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lbp_hist.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lcn.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lignepointage.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ligneprime.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lignerub.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lmission.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\majconge.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\majconge1.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\majpret.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\menu.cs">
       <DependentUpon>UserPaie.tt</DependentUpon>
@@ -337,13 +346,13 @@
       <DependentUpon>UserPaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\mission.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\nbrjour.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\nomjour.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\nomtable.cs">
       <DependentUpon>UserPaie.tt</DependentUpon>
@@ -351,41 +360,42 @@
     <Compile Include="Models\paramaitre.cs">
       <DependentUpon>UserPaie.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Payement.cs" />
     <Compile Include="Models\persarchive.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\personnel.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\poijourtmp.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\poijourtmp1.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\pointeuse.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\pointjour.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\pret.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\primepers.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\qualification.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\rubrique.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\service.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\situationadmin.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\size.cs">
       <DependentUpon>UserPaie.tt</DependentUpon>
@@ -393,35 +403,36 @@
     <Compile Include="Models\societe.cs">
       <DependentUpon>UserPaie.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Statistique.cs" />
     <Compile Include="Models\tempautrepoint.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tempcot.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tempheursupp.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\templignepointage.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\templigneprime.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\templignerub.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tempmajconge.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ths.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tmp.cs">
       <DependentUpon>UserPaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\trace_pointage.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\UserPaie.Context.cs">
       <AutoGen>True</AutoGen>
@@ -448,10 +459,10 @@
       <DependentUpon>UserPaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\variable.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\vnote.cs">
-      <DependentUpon>Grpaie2.tt</DependentUpon>
+      <DependentUpon>Grpaie.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
